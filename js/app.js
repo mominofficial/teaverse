@@ -356,10 +356,15 @@
           <div class="origin-preview-grid">
             ${TeaVerseData.origins.slice(0, 4).map(origin => `
               <div class="origin-preview-card">
-                <div class="origin-preview-title">${origin.country}</div>
-                <div class="origin-preview-native">${origin.nativeName}</div>
-                <div class="origin-preview-desc">${origin.description}</div>
-                <a href="#/explore?country=${encodeURIComponent(origin.country)}" class="btn btn-secondary btn-sm" style="margin-top: 16px;">
+                <div style="height: 140px; border-radius: var(--radius-md); overflow: hidden; margin-bottom: 16px; background: var(--color-cream);">
+                  <img src="${origin.image}" alt="${origin.country}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80'">
+                </div>
+                <div>
+                  <div class="origin-preview-title">${origin.flag || ''} ${origin.country}</div>
+                  <div class="origin-preview-native">${origin.nativeName}</div>
+                  <p class="origin-preview-desc">${origin.description}</p>
+                </div>
+                <a href="#/explore?country=${encodeURIComponent(origin.country)}" class="btn btn-secondary btn-sm" style="margin-top: 8px;">
                   Explore ${origin.country} Teas →
                 </a>
               </div>
@@ -381,7 +386,7 @@
 
     return `
       <div>
-        <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 16px;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 16px; gap: 12px;">
           <div>
             <span class="label-caps" style="color: var(--color-olive);">Recommendation for:</span>
             <h3 style="font-family: var(--font-serif); font-size: 2rem; color: var(--color-charcoal); margin: 4px 0;">${sit.title}</h3>
@@ -393,19 +398,8 @@
           ${sit.explanation}
         </p>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
-          ${recTeas.map(t => `
-            <a href="#/tea/${t.slug}" class="tea-card" style="text-decoration: none;">
-              <div class="tea-card-image-wrap" style="height: 140px;">
-                <img src="${t.heroImage}" alt="${t.name}" class="tea-card-image" onerror="this.src='https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80'">
-                <div class="tea-card-category-badge">${t.origin.country}</div>
-              </div>
-              <div class="tea-card-body" style="padding: 16px;">
-                <h4 style="font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 4px; color: var(--color-charcoal);">${t.name}</h4>
-                <div style="font-size: 0.8rem; color: var(--text-muted);">${t.brewingDetails.temperature} · ${t.brewingDetails.steepingTime}</div>
-              </div>
-            </a>
-          `).join('')}
+        <div class="tea-grid" style="grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px;">
+          ${recTeas.map(t => renderTeaCard(t)).join('')}
         </div>
       </div>
     `;
@@ -1372,10 +1366,13 @@
           <div style="display: grid; grid-template-columns: 1fr; gap: 32px;">
             ${TeaVerseData.origins.map(origin => `
               <div class="detail-card-panel" style="display: grid; grid-template-columns: 1fr; gap: 20px;">
-                <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border-subtle); padding-bottom: 16px; flex-wrap: wrap;">
+                <div style="height: 180px; border-radius: var(--radius-md); overflow: hidden; background: var(--color-cream);">
+                  <img src="${origin.image}" alt="${origin.country}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=800&q=80'">
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border-subtle); padding-bottom: 16px; flex-wrap: wrap; gap: 12px;">
                   <div>
                     <span class="label-caps">${origin.nativeName}</span>
-                    <h2 style="font-family: var(--font-serif); font-size: 2.2rem; color: var(--color-charcoal); margin: 4px 0;">${origin.country}</h2>
+                    <h2 style="font-family: var(--font-serif); font-size: 2.2rem; color: var(--color-charcoal); margin: 4px 0;">${origin.flag || ''} ${origin.country}</h2>
                   </div>
                   <a href="#/explore?country=${encodeURIComponent(origin.country)}" class="btn btn-secondary btn-sm">Explore ${origin.country} Teas →</a>
                 </div>

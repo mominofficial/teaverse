@@ -3,16 +3,17 @@
    Cards, Detail Views, Timeline, Brewing Calculator, Interactive Timer, Modals
    ========================================================================== */
 
-/* --- Tea Card Component --- */
-.tea-card-grid {
+/* --- Tea Grid & Card Component --- */
+.tea-grid, .tea-card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 28px;
+  width: 100%;
 }
 
 .tea-card {
   background: var(--bg-surface);
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--border-subtle);
   display: flex;
@@ -22,53 +23,59 @@
   color: inherit;
   box-shadow: var(--shadow-sm);
   position: relative;
+  height: 100%;
 }
 
 .tea-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
   border-color: var(--color-sage);
 }
 
-.tea-card-media {
+.tea-card-image-wrap, .tea-card-media {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 11;
+  height: 190px;
+  max-height: 190px;
   overflow: hidden;
   background: var(--color-cream);
+  display: block;
 }
 
-.tea-card-img {
+.tea-card-image, .tea-card-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
   transition: transform var(--transition-slow);
 }
 
+.tea-card:hover .tea-card-image,
 .tea-card:hover .tea-card-img {
   transform: scale(1.05);
 }
 
 .tea-card-category-badge {
   position: absolute;
-  top: 16px;
-  left: 16px;
-  padding: 4px 12px;
-  background: rgba(248, 245, 237, 0.92);
+  top: 12px;
+  left: 12px;
+  padding: 4px 10px;
+  background: rgba(248, 245, 237, 0.94);
   backdrop-filter: blur(8px);
   border-radius: var(--radius-full);
   font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--color-charcoal);
   box-shadow: var(--shadow-sm);
+  z-index: 2;
 }
 
 .tea-card-origin-badge {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 12px;
+  right: 12px;
   padding: 4px 10px;
   background: rgba(41, 42, 36, 0.85);
   backdrop-filter: blur(8px);
@@ -76,36 +83,48 @@
   font-size: 0.72rem;
   font-weight: 600;
   color: #FFFFFF;
+  z-index: 2;
 }
 
 .tea-card-body {
-  padding: 24px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   justify-content: space-between;
 }
 
-.tea-card-header {
-  margin-bottom: 12px;
+.tea-card-origin-text {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 6px;
 }
 
-.tea-card-native-name {
-  font-family: var(--font-serif);
-  font-size: 0.95rem;
+.origin-flag {
   color: var(--color-olive);
-  margin-bottom: 2px;
+  font-weight: 600;
 }
 
 .tea-card-title {
   font-family: var(--font-serif);
-  font-size: 1.65rem;
+  font-size: 1.4rem;
   color: var(--color-charcoal);
-  line-height: 1.15;
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+
+.tea-card-title-link {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-fast);
+}
+
+.tea-card-title-link:hover {
+  color: var(--color-olive);
 }
 
 .tea-card-desc {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--text-secondary);
   line-height: 1.55;
   margin-bottom: 16px;
@@ -119,45 +138,186 @@
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
-.flavor-tag {
-  font-size: 0.72rem;
+.flavor-tag, .pill-tag {
+  font-size: 0.75rem;
   font-weight: 500;
-  padding: 3px 8px;
+  padding: 4px 8px;
   background: var(--color-cream);
   border-radius: var(--radius-xs);
   color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
 }
 
 .tea-card-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 16px;
+  padding-top: 14px;
   border-top: 1px solid var(--border-subtle);
-  font-size: 0.85rem;
-  color: var(--color-olive-dark);
-  font-weight: 600;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 500;
 }
 
-.tea-card-link-text {
-  display: inline-flex;
-  align-items: center;
+.tea-card-prep-info {
+  display: flex;
   gap: 6px;
+  align-items: center;
 }
 
-.tea-card-link-text svg {
-  transition: transform var(--transition-fast);
+/* --- Global Terroirs / Origin Preview Cards --- */
+.origin-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  width: 100%;
 }
 
-.tea-card:hover .tea-card-link-text svg {
-  transform: translateX(4px);
+.origin-preview-card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-normal);
+}
+
+.origin-preview-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-sage);
+}
+
+.origin-preview-title {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--color-charcoal);
+  margin-bottom: 2px;
+}
+
+.origin-preview-native {
+  font-size: 0.88rem;
+  color: var(--color-olive);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.origin-preview-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 16px;
 }
 
 /* --- Explore / Search & Filter Controls --- */
-.explore-controls-wrapper {
+.filter-controls-card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 36px;
+}
+
+.search-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-input-wrap svg {
+  position: absolute;
+  left: 18px;
+  color: var(--color-olive);
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 14px 44px 14px 48px;
+  font-size: 1rem;
+  background: var(--color-canvas);
+  border: 1.5px solid var(--border-medium);
+  border-radius: var(--radius-full);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  transition: all var(--transition-fast);
+}
+
+.search-input:focus {
+  border-color: var(--color-olive);
+  background: #FFFFFF;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(119, 122, 97, 0.15);
+}
+
+.filter-pills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.filter-pill {
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.84rem;
+  font-weight: 600;
+  background: var(--color-cream);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-pill:hover, .filter-pill.active {
+  background: var(--color-charcoal);
+  color: var(--color-canvas);
+  border-color: var(--color-charcoal);
+}
+
+.filter-dropdowns-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  align-items: flex-end;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 16px;
+}
+
+.filter-select-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.filter-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.filter-select {
+  padding: 9px 12px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border-medium);
+  background: var(--color-canvas);
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: var(--color-charcoal);
+  width: 100%;
+}
+
   background: var(--bg-surface);
   border-radius: var(--radius-xl);
   padding: 32px;
