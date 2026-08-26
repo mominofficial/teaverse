@@ -1,22 +1,26 @@
 /**
  * TeaVerse — Global Tea Encyclopedia & Brewing Guide
- * Client-Side Router, Search & Filter Engine, Live Timer, Interactive Views
+ * Complete Client-Side Router, Search & Filter Engine, Live Timer, Interactive Experiences
+ * Developed by Momin Ali · Planned & UI by Opi Sultana Nira
  */
 
 (function () {
   'use strict';
 
-  // State Management
+  // Application State
   const State = {
     currentRoute: '',
     searchQuery: '',
     selectedCategory: 'all',
     selectedCountry: 'all',
     selectedCaffeine: 'all',
+    selectedFlavor: 'all',
+    selectedTimeOfDay: 'all',
     selectedMood: 'all',
+    selectedSituation: 'tired',
     sortBy: 'popular',
-    tempUnit: 'C', // 'C' or 'F'
-    // Timer state
+    tempUnit: 'C',
+    // Live Steeping Timer
     timer: {
       interval: null,
       totalSeconds: 180,
@@ -25,7 +29,7 @@
     }
   };
 
-  // Audio Chime Generator using Web Audio API (Zero external assets)
+  // Web Audio API Chime (zero external audio file dependency)
   function playBrewingChime() {
     try {
       const ctx = new (window.AudioContext || window.webkitAudioContext)();
@@ -46,7 +50,7 @@
       osc.start();
       osc.stop(ctx.currentTime + 1.2);
     } catch (e) {
-      console.log('Audio not supported or permitted');
+      console.log('Audio chime not permitted or supported');
     }
   }
 
@@ -61,69 +65,89 @@
   }
 
   function handleRouting() {
-    const route = getRoute();
-    State.currentRoute = route;
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const rawRoute = getRoute();
+    const [pathPart, queryPart] = rawRoute.split('?');
+    State.currentRoute = pathPart;
 
-    // Update nav active states
-    document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(el => {
-      const href = el.getAttribute('href').replace('#', '');
-      if (route === href || (route === '/' && href === '/')) {
-        el.classList.add('active');
-      } else if (href !== '/' && route.startsWith(href)) {
-        el.classList.add('active');
-      } else {
-        el.classList.remove('active');
-      }
-    });
+    // Parse URL params
+    const params = new URLSearchParams(queryPart || '');
+    if (params.has('category')) State.selectedCategory = params.get('category');
+    if (params.has('country')) State.selectedCountry = params.get('country');
+    if (params.has('flavor')) State.selectedFlavor = params.get('flavor');
+    if (params.has('caffeine')) State.selectedCaffeine = params.get('caffeine');
+    if (params.has('mood')) State.selectedMood = params.get('mood');
+    if (params.has('search')) State.searchQuery = params.get('search');
+    if (params.has('time')) State.selectedTimeOfDay = params.get('time');
 
     const appContainer = document.getElementById('app-view-container');
     if (!appContainer) return;
 
-    if (route === '/' || route === '') {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+
+    // Route matching
+    if (pathPart === '/' || pathPart === '') {
       renderHomePage(appContainer);
-    } else if (route === '/explore') {
+    } else if (pathPart === '/explore') {
       renderExplorePage(appContainer);
-    } else if (route.startsWith('/tea/')) {
-      const slug = route.replace('/tea/', '');
+    } else if (pathPart.startsWith('/tea/')) {
+      const slug = pathPart.replace('/tea/', '');
       renderDetailPage(appContainer, slug);
-    } else if (route === '/brewing') {
-      renderBrewingGuidePage(appContainer);
-    } else if (route === '/origins') {
+    } else if (pathPart === '/find-tea') {
+      renderFindTeaPage(appContainer);
+    } else if (pathPart === '/wellness') {
+      renderWellnessPage(appContainer);
+    } else if (pathPart === '/brewing') {
+      renderBrewingPage(appContainer);
+    } else if (pathPart === '/origins') {
       renderOriginsPage(appContainer);
-    } else if (route === '/guide') {
+    } else if (pathPart === '/guide') {
       renderClassificationPage(appContainer);
-    } else if (route === '/about') {
+    } else if (pathPart === '/about') {
       renderAboutPage(appContainer);
     } else {
       renderNotFoundPage(appContainer);
     }
+
+    updateActiveNavLinks();
+  }
+
+  function updateActiveNavLinks() {
+    const currentHash = '#' + State.currentRoute;
+    document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
+      const linkHash = link.getAttribute('href');
+      if (linkHash === currentHash || (currentHash === '#/' && linkHash === '#/')) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
   }
 
   // --- Views ---
 
   // 1. HOMEPAGE
   function renderHomePage(container) {
-    const featuredTeas = TeaVerseData.teas.slice(0, 6);
-    const categories = TeaVerseData.categories.filter(c => c.id !== 'all');
+    const bdTeas = TeaVerseData.teas.filter(t => t.countryCategory === 'bangladesh');
+    const featuredBdTeas = bdTeas.slice(0, 6);
+    const globalHighlights = TeaVerseData.teas.filter(t => t.countryCategory !== 'bangladesh').slice(0, 4);
 
     container.innerHTML = `
-      <!-- Hero Section -->
+      <!-- Hero Section with User's Uploaded Hero Image -->
       <section class="hero-section">
         <div class="container">
           <div class="hero-grid">
             <div class="hero-content">
               <div class="hero-badge-pill">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                Global Tea Encyclopedia
+                Global Botanical Encyclopedia
               </div>
               <h1 class="hero-title">A World of Tea, One Leaf at a Time.</h1>
               <p class="hero-subtitle">
-                Discover the world's finest teas, their ancient origins, botanical ingredients, exquisite flavors, living traditions, and the mindful art of brewing them.
+                Explore every leaf, discover every brew. A visual botanical encyclopedia and practical brewing guide for authentic teas, terroirs, ingredients, and living traditions from around the world.
               </p>
               <div class="hero-cta-group">
-                <a href="#/explore" class="btn btn-primary btn-lg">Explore Teas →</a>
-                <a href="#/brewing" class="btn btn-secondary btn-lg">Brewing Guide</a>
+                <a href="#/explore?category=bangladesh" class="btn btn-primary btn-lg">Explore Bangladesh Teas →</a>
+                <a href="#/explore" class="btn btn-secondary btn-lg">Global Catalog</a>
                 <button id="hero-random-btn" class="btn btn-accent btn-lg" style="margin-left:auto;">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
                   Surprise Me
@@ -135,8 +159,8 @@
                   <div class="stat-label">Authentic Teas</div>
                 </div>
                 <div class="hero-stat-item">
-                  <div class="stat-num">${TeaVerseData.origins.length}</div>
-                  <div class="stat-label">Terroir Regions</div>
+                  <div class="stat-num">${bdTeas.length}</div>
+                  <div class="stat-label">Bangladesh Varieties</div>
                 </div>
                 <div class="hero-stat-item">
                   <div class="stat-num">100%</div>
@@ -147,7 +171,7 @@
             
             <div class="hero-media-wrapper">
               <div class="hero-card-frame">
-                <img src="./images/reference-teas.jpg" alt="Botanical herbal infusions" class="hero-card-img" onerror="this.src='https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=1000&q=80'">
+                <img src="./images/main-hero.jpg" alt="TeaVerse botanical herbal teas and ingredients" class="hero-card-img" onerror="this.src='./images/hero-teaverse.jpg'">
                 <div class="hero-floating-badge">
                   <div>
                     <div class="floating-badge-title">Pure Botanical Mastery</div>
@@ -161,7 +185,59 @@
         </div>
       </section>
 
-      <!-- Botanical Classification Banner -->
+      <!-- PROMINENT BANGLADESH SECTION: Tea of Bangladesh -->
+      <section class="section" style="background: var(--color-canvas); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); padding: 80px 0;">
+        <div class="container">
+          <div class="section-header">
+            <div class="label-caps" style="color: var(--color-olive);">Featured Heritage & Living Culture</div>
+            <h2 class="section-title" style="font-size: 2.8rem;">Discover the Tea of Bangladesh</h2>
+            <p class="section-subtitle">
+              Explore the tea gardens, regional traditions, processing styles, and unique tea culture of Bangladesh — from the 170-year historic hills of Sreemangal to the pioneering flatlands of Panchagarh and iconic roadside Tonger Cha.
+            </p>
+          </div>
+
+          <!-- Featured Bangladesh Teas Grid -->
+          <div class="tea-grid" style="margin-bottom: 40px;">
+            ${featuredBdTeas.map(tea => renderTeaCard(tea)).join('')}
+          </div>
+
+          <div style="text-align: center; margin-top: 32px; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+            <a href="#/explore?category=bangladesh" class="btn btn-primary btn-lg">
+              Explore All Bangladesh Teas (${bdTeas.length}) →
+            </a>
+            <a href="#/origins" class="btn btn-secondary btn-lg">
+              View Bangladesh Tea Regions
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTERACTIVE "FIND YOUR TEA" (Which Tea is Right for Me?) -->
+      <section class="section" id="interactive-find-tea" style="background: var(--color-cream); padding: 80px 0;">
+        <div class="container">
+          <div class="section-header">
+            <div class="label-caps">Interactive Selector</div>
+            <h2 class="section-title" style="font-size: 2.8rem;">Find Your Tea</h2>
+            <p class="section-subtitle">What are you looking for today? Select your current situation or craving for immediate personalized recommendations.</p>
+          </div>
+
+          <!-- Situation Selector Pills -->
+          <div class="mood-chips-scroll" style="margin-bottom: 32px; justify-content: center;">
+            ${TeaVerseData.situations.map(sit => `
+              <button class="mood-chip-btn ${State.selectedSituation === sit.id ? 'active' : ''}" data-situation="${sit.id}">
+                ${sit.title}
+              </button>
+            `).join('')}
+          </div>
+
+          <!-- Dynamic Situation Result Container -->
+          <div id="situation-results-box" class="detail-card-panel" style="background: var(--color-surface); border: 1.5px solid var(--color-sage); padding: 32px;">
+            ${renderSituationRecommendation(State.selectedSituation)}
+          </div>
+        </div>
+      </section>
+
+      <!-- BOTANICAL CLASSIFICATION BANNER -->
       <section class="classification-banner">
         <div class="container">
           <div class="classification-grid">
@@ -177,22 +253,22 @@
                 <span class="pill-tag">White Tea</span>
                 <span class="pill-tag">Oolong Tea</span>
                 <span class="pill-tag">Pu-erh</span>
-                <span class="pill-tag">Yellow Tea</span>
+                <span class="pill-tag">Ceremonial Matcha</span>
               </div>
             </div>
 
             <div class="classification-box herbal-tisane">
-              <div class="label-caps">Botanicals · Caffeine Free</div>
-              <h3 class="classification-title">Herbal & Spiced Tisanes</h3>
+              <div class="label-caps">Botanicals · Caffeine-Free</div>
+              <h3 class="classification-title">Herbal Infusions (Tisanes)</h3>
               <p class="classification-desc">
-                Herbal infusions (tisanes) are crafted from dried flowers, healing roots, aromatic barks, spices, and leaves of plants other than Camellia sinensis. Naturally caffeine-free and cherished across cultures for wellness.
+                Herbal teas contain zero <em>Camellia sinensis</em> leaves. Crafted from dried botanical roots (Ginger, Turmeric), soothing flower blossoms (Chamomile, Roselle), aromatic barks (Ceylon Cinnamon, Arjun), and leaves (Krishna Tulsi, Moringa, Rooibos).
               </p>
               <div class="classification-tags">
-                <span class="pill-tag">Chamomile Flowers</span>
+                <span class="pill-tag">Krishna Tulsi</span>
+                <span class="pill-tag">Rooibos</span>
+                <span class="pill-tag">Chamomile</span>
                 <span class="pill-tag">Ceylon Cinnamon</span>
-                <span class="pill-tag">Fresh Ginger</span>
-                <span class="pill-tag">Rooibos Bush</span>
-                <span class="pill-tag">Zanzibar Clove</span>
+                <span class="pill-tag">Ginger Root</span>
                 <span class="pill-tag">Moringa</span>
               </div>
             </div>
@@ -200,502 +276,604 @@
         </div>
       </section>
 
-      <!-- Category Exploration Section -->
-      <section class="section">
+      <!-- TEA BY TIME OF DAY -->
+      <section class="section" style="padding: 70px 0;">
         <div class="container">
           <div class="section-header">
-            <div class="label-caps">Taxonomy & Varieties</div>
-            <h2 class="section-title">Explore the Tea World</h2>
-            <p class="section-subtitle">Navigate through centuries of cultivation styles, processing traditions, and sensory landscapes.</p>
+            <div class="label-caps">Daily Routine</div>
+            <h2 class="section-title">Tea by Time of Day</h2>
+            <p class="section-subtitle">Choose teas balanced for your circadian rhythm based on natural caffeine levels and botanical characteristics.</p>
           </div>
 
-          <div class="category-grid">
-            ${categories.map(cat => `
-              <div class="category-card" onclick="window.location.hash='#/explore?category=${cat.id}'">
-                <div>
-                  <div class="category-card-header">
-                    <div class="category-icon-wrapper">
-                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 0 1 10 10c0 5.5-4.5 10-10 10S2 17.5 2 12A10 10 0 0 1 12 2z"/><path d="M12 6v6l4 2"/></svg>
-                    </div>
-                    <div class="category-count">${cat.count} Teas</div>
-                  </div>
-                  <h3 class="category-name">${cat.name}</h3>
-                  <p class="category-desc">${cat.description}</p>
-                </div>
-                <div style="margin-top: 16px; font-size: 0.85rem; font-weight: 600; color: var(--color-olive-dark);">
-                  Explore Category →
-                </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+            <div class="detail-card-panel" style="border-top: 4px solid var(--color-sage);">
+              <div class="label-caps">Morning (Wake Up)</div>
+              <h3 style="font-family: var(--font-serif); font-size: 1.6rem; margin: 8px 0 12px 0;">Invigorating & Brisk</h3>
+              <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px;">
+                Caffeinated teas to provide alert focus without the jittery crash of coffee.
+              </p>
+              <div style="font-size: 0.88rem; color: var(--color-charcoal); font-weight: 600; margin-bottom: 16px;">
+                Recommended: Sreemangal CTC, Matcha, Dudh Cha, Assam Orthodox
               </div>
-            `).join('')}
-          </div>
-        </div>
-      </section>
+              <a href="#/explore?time=Morning" class="btn btn-secondary btn-sm">Explore Morning Teas →</a>
+            </div>
 
-      <!-- Choose Your Tea Mood Section -->
-      <section class="section" style="padding-top: 0;">
-        <div class="container">
-          <div class="mood-selector-container">
-            <div class="label-caps">Sensory Experience</div>
-            <h2 style="font-family: var(--font-serif); font-size: 2.4rem; margin: 8px 0 12px 0;">Choose Your Tea Mood</h2>
-            <p style="color: var(--text-secondary); max-width: 540px; margin: 0 auto;">Select an intention or feeling, and let TeaVerse curate the ideal cup for your moment.</p>
-            
-            <div class="mood-chips-row">
-              ${TeaVerseData.moods.map(m => `
-                <button class="mood-chip" onclick="window.location.hash='#/explore?mood=${m.id}'">
-                  <span>${m.label}</span>
-                </button>
-              `).join('')}
+            <div class="detail-card-panel" style="border-top: 4px solid var(--color-beige);">
+              <div class="label-caps">Afternoon (Adda & Focus)</div>
+              <h3 style="font-family: var(--font-serif); font-size: 1.6rem; margin: 8px 0 12px 0;">Balanced & Refreshing</h3>
+              <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px;">
+                Moderate caffeine teas paired with digestive citrus, floral aromas, or rock oolongs.
+              </p>
+              <div style="font-size: 0.88rem; color: var(--color-charcoal); font-weight: 600; margin-bottom: 16px;">
+                Recommended: Lebu Cha with Bit Lobon, Tetulia Oolong, Longjing, Sencha
+              </div>
+              <a href="#/explore?time=Afternoon" class="btn btn-secondary btn-sm">Explore Afternoon Teas →</a>
+            </div>
+
+            <div class="detail-card-panel" style="border-top: 4px solid var(--color-olive);">
+              <div class="label-caps">Evening & Night (Unwind)</div>
+              <h3 style="font-family: var(--font-serif); font-size: 1.6rem; margin: 8px 0 12px 0;">Calming & Caffeine-Free</h3>
+              <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px;">
+                Naturally caffeine-free botanical tisanes or roasted teas that promote tranquil rest.
+              </p>
+              <div style="font-size: 0.88rem; color: var(--color-charcoal); font-weight: 600; margin-bottom: 16px;">
+                Recommended: Egyptian Chamomile, Krishna Tulsi, Rooibos, Hojicha
+              </div>
+              <a href="#/explore?time=Evening" class="btn btn-secondary btn-sm">Explore Evening Teas →</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Featured Teas Section -->
-      <section class="section" style="background: var(--color-cream); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <!-- TEA BY FLAVOR EXPLORER -->
+      <section class="section" style="background: var(--color-surface); padding: 70px 0; border-top: 1px solid var(--border-subtle);">
         <div class="container">
           <div class="section-header">
-            <div class="label-caps">Editorial Selection</div>
-            <h2 class="section-title">Iconic Global Harvests</h2>
-            <p class="section-subtitle">A curated tasting flight of celebrated orthodox teas and restorative herbal infusions.</p>
+            <div class="label-caps">Sensory Palate</div>
+            <h2 class="section-title">What Flavor Are You Craving?</h2>
+            <p class="section-subtitle">Click any flavor profile note to instantly filter our encyclopedia.</p>
           </div>
 
-          <div class="tea-card-grid">
-            ${featuredTeas.map(tea => renderTeaCardHtml(tea)).join('')}
-          </div>
-
-          <div style="text-align: center; margin-top: 48px;">
-            <a href="#/explore" class="btn btn-primary btn-lg">View Complete Tea Catalog (${TeaVerseData.teas.length} Teas) →</a>
+          <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 900px; margin: 0 auto;">
+            ${['Floral', 'Fruity', 'Earthy', 'Spicy', 'Sweet', 'Smoky', 'Nutty', 'Grassy', 'Umami', 'Malty', 'Refreshing', 'Strong', 'Light'].map(flavor => `
+              <a href="#/explore?flavor=${encodeURIComponent(flavor)}" class="pill-tag" style="font-size: 0.95rem; padding: 10px 18px; cursor: pointer; transition: all 0.2s ease;">
+                ${flavor}
+              </a>
+            `).join('')}
           </div>
         </div>
       </section>
 
-      <!-- Tea Origins Preview Section -->
+      <!-- GLOBAL TERROIRS PREVIEW -->
       <section class="section">
         <div class="container">
           <div class="section-header">
-            <div class="label-caps">Terroir & Geography</div>
-            <h2 class="section-title">Tea Around the World</h2>
-            <p class="section-subtitle">From misty Himalayan altitudes to volcanic Japanese valleys and ancient Chinese river basins.</p>
+            <div class="label-caps">Geography & Soil</div>
+            <h2 class="section-title">Global Terroirs & Heritage</h2>
+            <p class="section-subtitle">From Bangladesh's rain-drenched Sylhet hills to Mount Wuyi's volcanic cliffs and Kyoto's misty river basins.</p>
           </div>
 
-          <div class="category-grid">
+          <div class="origin-preview-grid">
             ${TeaVerseData.origins.slice(0, 4).map(origin => `
-              <div class="category-card" onclick="window.location.hash='#/origins'">
-                <div>
-                  <div class="label-caps" style="color: var(--color-olive-dark);">${origin.nativeName}</div>
-                  <h3 class="category-name" style="margin-top: 4px;">${origin.country}</h3>
-                  <p class="category-desc">${origin.description}</p>
-                </div>
-                <div style="margin-top: 16px; font-size: 0.85rem; font-weight: 600; color: var(--color-charcoal);">
-                  Explore Regions (${origin.regions.join(', ')}) →
-                </div>
+              <div class="origin-preview-card">
+                <div class="origin-preview-title">${origin.country}</div>
+                <div class="origin-preview-native">${origin.nativeName}</div>
+                <div class="origin-preview-desc">${origin.description}</div>
+                <a href="#/explore?country=${encodeURIComponent(origin.country)}" class="btn btn-secondary btn-sm" style="margin-top: 16px;">
+                  Explore ${origin.country} Teas →
+                </a>
               </div>
             `).join('')}
           </div>
-
-          <div style="text-align: center; margin-top: 36px;">
-            <a href="#/origins" class="btn btn-secondary">Explore All ${TeaVerseData.origins.length} Tea Producing Countries →</a>
+          <div style="text-align: center; margin-top: 32px;">
+            <a href="#/origins" class="btn btn-primary">View Global Terroirs Atlas →</a>
           </div>
         </div>
       </section>
     `;
 
-    // Attach Randomizer button event
-    const randomBtn = document.getElementById('hero-random-btn');
-    if (randomBtn) {
-      randomBtn.addEventListener('click', triggerTeaRandomizer);
-    }
+    setupHomePageInteractiveEvents();
   }
 
-  // 2. EXPLORE & DISCOVERY CATALOG VIEW
-  function renderExplorePage(container) {
-    const urlParams = new URLSearchParams(window.location.hash.split('?')[1] || '');
-    if (urlParams.has('category')) State.selectedCategory = urlParams.get('category');
-    if (urlParams.has('mood')) State.selectedMood = urlParams.get('mood');
-    if (urlParams.has('country')) State.selectedCountry = urlParams.get('country');
+  function renderSituationRecommendation(situationId) {
+    const sit = TeaVerseData.situations.find(s => s.id === situationId) || TeaVerseData.situations[0];
+    const recTeas = TeaVerseData.teas.filter(t => (sit.categoryIds || []).includes(t.id)).slice(0, 4);
 
+    return `
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 16px;">
+          <div>
+            <span class="label-caps" style="color: var(--color-olive);">Recommendation for:</span>
+            <h3 style="font-family: var(--font-serif); font-size: 2rem; color: var(--color-charcoal); margin: 4px 0;">${sit.title}</h3>
+          </div>
+          <a href="#/explore?situation=${sit.id}" class="btn btn-secondary btn-sm">View Full Collection →</a>
+        </div>
+
+        <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px;">
+          ${sit.explanation}
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+          ${recTeas.map(t => `
+            <a href="#/tea/${t.slug}" class="tea-card" style="text-decoration: none;">
+              <div class="tea-card-image-wrap" style="height: 140px;">
+                <img src="${t.heroImage}" alt="${t.name}" class="tea-card-image" onerror="this.src='https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80'">
+                <div class="tea-card-category-badge">${t.origin.country}</div>
+              </div>
+              <div class="tea-card-body" style="padding: 16px;">
+                <h4 style="font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 4px; color: var(--color-charcoal);">${t.name}</h4>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">${t.brewingDetails.temperature} · ${t.brewingDetails.steepingTime}</div>
+              </div>
+            </a>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  function setupHomePageInteractiveEvents() {
+    // Randomizer button in Hero
+    const randomBtn = document.getElementById('hero-random-btn');
+    if (randomBtn) {
+      randomBtn.addEventListener('click', triggerRandomTeaModal);
+    }
+
+    // Situation buttons
+    document.querySelectorAll('.mood-chip-btn[data-situation]').forEach(btn => {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('.mood-chip-btn[data-situation]').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        State.selectedSituation = this.dataset.situation;
+        const box = document.getElementById('situation-results-box');
+        if (box) {
+          box.innerHTML = renderSituationRecommendation(State.selectedSituation);
+        }
+      });
+    });
+  }
+
+  // 2. DISCOVERY CATALOG & MULTI-FILTER EXPLORER VIEW
+  function renderExplorePage(container) {
     container.innerHTML = `
       <section class="section" style="padding-top: 40px;">
         <div class="container">
-          <div class="section-header" style="margin-bottom: 36px; text-align: left; max-width: 100%;">
-            <div class="label-caps">Encyclopedia Catalog</div>
-            <h1 class="section-title" style="font-size: 3rem; margin-bottom: 8px;">Discover Your Next Cup</h1>
-            <p class="section-subtitle">Search by name, region, raw ingredients, flavor notes, or brewing style.</p>
+          <div class="section-header" style="text-align: left; max-width: 100%;">
+            <div class="label-caps">Search & Filter Catalog</div>
+            <h1 class="section-title" style="font-size: 3.2rem;">Explore the Global Tea Collection</h1>
+            <p class="section-subtitle">
+              Filter through authentic true teas, regional traditions, Bangladeshi heritage teas, and soothing botanical infusions.
+            </p>
           </div>
 
-          <!-- Search & Filter Bar -->
-          <div class="explore-controls-wrapper">
-            <div class="search-input-group">
-              <svg class="search-input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-              <input type="text" id="catalog-search-input" class="search-input" placeholder="Search tea by name, country, ingredient, flavor (e.g., 'Matcha', 'Assam', 'Ginger', 'Floral')..." value="${State.searchQuery}">
-              <button id="search-clear-btn" class="search-clear-btn" style="${State.searchQuery ? 'display:block;' : 'display:none;'}">✕</button>
+          <!-- Multi-Faceted Filter & Search Bar -->
+          <div class="filter-controls-card">
+            <div class="search-input-wrap">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+              <input type="text" id="explore-search-input" class="search-input" placeholder="Search by tea name, region, Bangladesh, ginger, floral, caffeine..." value="${State.searchQuery}">
+              ${State.searchQuery ? `<button id="clear-search-btn" style="border:none;background:none;cursor:pointer;color:var(--text-muted);">✕</button>` : ''}
             </div>
 
-            <!-- Categories Filter Pills -->
-            <div class="filter-bar-row">
-              <div class="filter-pills-scroll" id="category-filter-container">
-                ${TeaVerseData.categories.map(c => `
-                  <button class="filter-pill ${State.selectedCategory === c.id ? 'active' : ''}" data-category="${c.id}">
-                    ${c.name}
-                  </button>
-                `).join('')}
-              </div>
-
-              <!-- Sort Dropdown -->
-              <div class="sort-select-wrapper">
-                <label for="sort-select">Sort by:</label>
-                <select id="sort-select" class="sort-select">
-                  <option value="popular" ${State.sortBy === 'popular' ? 'selected' : ''}>Featured / Popular</option>
-                  <option value="az" ${State.sortBy === 'az' ? 'selected' : ''}>Name (A–Z)</option>
-                  <option value="country" ${State.sortBy === 'country' ? 'selected' : ''}>Origin Country</option>
-                  <option value="time" ${State.sortBy === 'time' ? 'selected' : ''}>Brewing Time</option>
-                </select>
-              </div>
+            <!-- Category Pills (Highlighting Bangladesh) -->
+            <div class="filter-pills-row">
+              <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted); align-self: center;">Category:</span>
+              ${TeaVerseData.categories.map(cat => `
+                <button class="filter-pill ${State.selectedCategory === cat.id ? 'active' : ''} ${cat.id === 'bangladesh' ? 'featured-bd-pill' : ''}" data-category="${cat.id}">
+                  ${cat.id === 'bangladesh' ? '🇧🇩 ' : ''}${cat.name}
+                </button>
+              `).join('')}
             </div>
 
-            <!-- Secondary Filters: Country, Caffeine, Mood -->
-            <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border-subtle);">
-              <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="font-size: 0.8rem; font-weight: 700; color: var(--color-olive); text-transform: uppercase;">Country:</span>
-                <select id="filter-country" class="sort-select" style="padding: 6px 12px; font-size: 0.85rem;">
-                  <option value="all">All Countries</option>
+            <!-- Secondary Filters Grid -->
+            <div class="filter-dropdowns-row">
+              <div class="filter-select-group">
+                <label class="filter-label">Country / Origin:</label>
+                <select id="filter-country-select" class="filter-select">
+                  <option value="all" ${State.selectedCountry === 'all' ? 'selected' : ''}>All Countries</option>
                   ${TeaVerseData.origins.map(o => `
                     <option value="${o.country}" ${State.selectedCountry === o.country ? 'selected' : ''}>${o.country}</option>
                   `).join('')}
                 </select>
               </div>
 
-              <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="font-size: 0.8rem; font-weight: 700; color: var(--color-olive); text-transform: uppercase;">Caffeine:</span>
-                <select id="filter-caffeine" class="sort-select" style="padding: 6px 12px; font-size: 0.85rem;">
+              <div class="filter-select-group">
+                <label class="filter-label">Caffeine Level:</label>
+                <select id="filter-caffeine-select" class="filter-select">
                   <option value="all" ${State.selectedCaffeine === 'all' ? 'selected' : ''}>All Levels</option>
-                  <option value="None" ${State.selectedCaffeine === 'None' ? 'selected' : ''}>Caffeine-Free (Tisanes)</option>
-                  <option value="Low" ${State.selectedCaffeine === 'Low' ? 'selected' : ''}>Low Caffeine</option>
-                  <option value="Medium" ${State.selectedCaffeine === 'Medium' ? 'selected' : ''}>Medium Caffeine</option>
-                  <option value="High" ${State.selectedCaffeine === 'High' ? 'selected' : ''}>High Caffeine</option>
+                  <option value="None" ${State.selectedCaffeine === 'None' ? 'selected' : ''}>Caffeine-Free (0 mg)</option>
+                  <option value="Low" ${State.selectedCaffeine === 'Low' ? 'selected' : ''}>Low (~15-25 mg)</option>
+                  <option value="Medium" ${State.selectedCaffeine === 'Medium' ? 'selected' : ''}>Moderate (~30-50 mg)</option>
+                  <option value="High" ${State.selectedCaffeine === 'High' ? 'selected' : ''}>Higher (~60-80 mg)</option>
                 </select>
               </div>
 
-              <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="font-size: 0.8rem; font-weight: 700; color: var(--color-olive); text-transform: uppercase;">Mood:</span>
-                <select id="filter-mood" class="sort-select" style="padding: 6px 12px; font-size: 0.85rem;">
-                  <option value="all">All Moods</option>
-                  ${TeaVerseData.moods.map(m => `
-                    <option value="${m.id}" ${State.selectedMood === m.id ? 'selected' : ''}>${m.label}</option>
+              <div class="filter-select-group">
+                <label class="filter-label">Flavor Profile:</label>
+                <select id="filter-flavor-select" class="filter-select">
+                  <option value="all" ${State.selectedFlavor === 'all' ? 'selected' : ''}>All Flavors</option>
+                  ${['Floral', 'Fruity', 'Earthy', 'Spicy', 'Sweet', 'Smoky', 'Nutty', 'Grassy', 'Umami', 'Malty', 'Refreshing', 'Strong', 'Light'].map(fl => `
+                    <option value="${fl}" ${State.selectedFlavor === fl ? 'selected' : ''}>${fl}</option>
                   `).join('')}
                 </select>
               </div>
 
-              ${(State.selectedCategory !== 'all' || State.selectedCountry !== 'all' || State.selectedCaffeine !== 'all' || State.selectedMood !== 'all' || State.searchQuery) ? `
-                <button id="reset-filters-btn" class="btn btn-secondary btn-sm" style="margin-left: auto;">Reset Filters</button>
-              ` : ''}
+              <div class="filter-select-group">
+                <label class="filter-label">Sort By:</label>
+                <select id="filter-sort-select" class="filter-select">
+                  <option value="popular" ${State.sortBy === 'popular' ? 'selected' : ''}>Featured / Curated</option>
+                  <option value="name" ${State.sortBy === 'name' ? 'selected' : ''}>Name (A–Z)</option>
+                  <option value="country" ${State.sortBy === 'country' ? 'selected' : ''}>Country / Origin</option>
+                  <option value="time" ${State.sortBy === 'time' ? 'selected' : ''}>Steeping Time</option>
+                </select>
+              </div>
+
+              <div style="display: flex; align-items: flex-end;">
+                <button id="reset-all-filters-btn" class="btn btn-secondary btn-sm" style="height: 42px;">Reset Filters</button>
+              </div>
             </div>
           </div>
 
-          <!-- Dynamic Results Meta Bar -->
-          <div class="results-meta-bar">
-            <div>Showing <span id="results-count-number" class="results-count-highlight">0</span> teas</div>
+          <!-- Active Filter Tags & Count -->
+          <div id="results-count-bar" style="margin-bottom: 24px; font-size: 0.95rem; color: var(--text-secondary); display: flex; justify-content: space-between; align-items: center;">
+            <!-- Rendered dynamically -->
           </div>
 
-          <!-- Cards Grid Container -->
-          <div id="catalog-cards-container" class="tea-card-grid"></div>
+          <!-- Tea Cards Grid -->
+          <div id="explore-tea-grid" class="tea-grid">
+            <!-- Rendered dynamically -->
+          </div>
         </div>
       </section>
     `;
 
-    // Attach Listeners
-    setupExploreListeners();
-    renderFilteredCatalog();
+    setupExplorePageEvents();
+    updateExploreResults();
   }
 
-  function setupExploreListeners() {
-    const searchInput = document.getElementById('catalog-search-input');
-    const clearBtn = document.getElementById('search-clear-btn');
-    const sortSelect = document.getElementById('sort-select');
-    const countrySelect = document.getElementById('filter-country');
-    const caffeineSelect = document.getElementById('filter-caffeine');
-    const moodSelect = document.getElementById('filter-mood');
-    const resetBtn = document.getElementById('reset-filters-btn');
+  function filterTeasDataset() {
+    return TeaVerseData.teas.filter(tea => {
+      // 1. Search Query
+      if (State.searchQuery) {
+        const q = State.searchQuery.toLowerCase().trim();
+        const matchesName = tea.name.toLowerCase().includes(q);
+        const matchesNative = tea.nativeName.toLowerCase().includes(q);
+        const matchesCountry = tea.origin.country.toLowerCase().includes(q);
+        const matchesRegion = tea.origin.region.toLowerCase().includes(q);
+        const matchesDesc = tea.description.toLowerCase().includes(q);
+        const matchesFlavors = tea.flavorProfile.primary.some(f => f.toLowerCase().includes(q));
+        const matchesIngredients = (tea.ingredients.core || []).some(i => i.toLowerCase().includes(q));
+        const matchesCategory = tea.category.toLowerCase().includes(q);
+        const matchesBd = q === 'bangladesh' && tea.countryCategory === 'bangladesh';
 
+        if (!matchesName && !matchesNative && !matchesCountry && !matchesRegion && !matchesDesc && !matchesFlavors && !matchesIngredients && !matchesCategory && !matchesBd) {
+          return false;
+        }
+      }
+
+      // 2. Category Filter
+      if (State.selectedCategory !== 'all') {
+        if (State.selectedCategory === 'bangladesh') {
+          if (tea.countryCategory !== 'bangladesh') return false;
+        } else if (tea.category !== State.selectedCategory) {
+          return false;
+        }
+      }
+
+      // 3. Country Filter
+      if (State.selectedCountry !== 'all') {
+        if (tea.origin.country !== State.selectedCountry) return false;
+      }
+
+      // 4. Caffeine Filter
+      if (State.selectedCaffeine !== 'all') {
+        if (tea.caffeine !== State.selectedCaffeine) return false;
+      }
+
+      // 5. Flavor Filter
+      if (State.selectedFlavor !== 'all') {
+        const fl = State.selectedFlavor.toLowerCase();
+        const hasFlavor = tea.flavorProfile.primary.some(f => f.toLowerCase().includes(fl));
+        if (!hasFlavor) return false;
+      }
+
+      // 6. Time of Day Filter
+      if (State.selectedTimeOfDay !== 'all') {
+        if (State.selectedTimeOfDay === 'Morning' && tea.caffeine === 'None') return false;
+        if (State.selectedTimeOfDay === 'Evening' && tea.caffeine === 'High') return false;
+      }
+
+      // 7. Mood Filter
+      if (State.selectedMood !== 'all') {
+        if (!tea.moods.includes(State.selectedMood)) return false;
+      }
+
+      return true;
+    }).sort((a, b) => {
+      if (State.sortBy === 'name') return a.name.localeCompare(b.name);
+      if (State.sortBy === 'country') return a.origin.country.localeCompare(b.origin.country);
+      if (State.sortBy === 'time') return a.brewingTime.localeCompare(b.brewingTime);
+      return 0;
+    });
+  }
+
+  function updateExploreResults() {
+    const filtered = filterTeasDataset();
+    const countBar = document.getElementById('results-count-bar');
+    const grid = document.getElementById('explore-tea-grid');
+
+    if (countBar) {
+      countBar.innerHTML = `
+        <div>Showing <strong>${filtered.length}</strong> of ${TeaVerseData.teas.length} teas</div>
+        ${State.selectedCategory === 'bangladesh' ? `<span class="pill-tag" style="background: var(--color-sage); color: #fff;">🇧🇩 Bangladesh Collection</span>` : ''}
+      `;
+    }
+
+    if (grid) {
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: var(--color-surface); border-radius: var(--radius-md); border: 1px dashed var(--border-subtle);">
+            <div style="font-size: 2.5rem; margin-bottom: 12px;">🍃</div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 8px;">No matching teas found</h3>
+            <p style="color: var(--text-secondary); max-width: 460px; margin: 0 auto 20px auto;">
+              Try adjusting your search terms, selecting "All Categories", or resetting the active filters.
+            </p>
+            <button id="empty-reset-btn" class="btn btn-primary btn-sm">Clear All Filters</button>
+          </div>
+        `;
+        const emptyBtn = document.getElementById('empty-reset-btn');
+        if (emptyBtn) {
+          emptyBtn.addEventListener('click', resetAllFilters);
+        }
+      } else {
+        grid.innerHTML = filtered.map(t => renderTeaCard(t)).join('');
+      }
+    }
+  }
+
+  function resetAllFilters() {
+    State.searchQuery = '';
+    State.selectedCategory = 'all';
+    State.selectedCountry = 'all';
+    State.selectedCaffeine = 'all';
+    State.selectedFlavor = 'all';
+    State.selectedTimeOfDay = 'all';
+    State.selectedMood = 'all';
+    State.sortBy = 'popular';
+
+    const searchInput = document.getElementById('explore-search-input');
+    if (searchInput) searchInput.value = '';
+
+    document.querySelectorAll('.filter-pill').forEach(p => {
+      p.classList.toggle('active', p.dataset.category === 'all');
+    });
+
+    const countrySelect = document.getElementById('filter-country-select');
+    if (countrySelect) countrySelect.value = 'all';
+    const caffeineSelect = document.getElementById('filter-caffeine-select');
+    if (caffeineSelect) caffeineSelect.value = 'all';
+    const flavorSelect = document.getElementById('filter-flavor-select');
+    if (flavorSelect) flavorSelect.value = 'all';
+    const sortSelect = document.getElementById('filter-sort-select');
+    if (sortSelect) sortSelect.value = 'popular';
+
+    updateExploreResults();
+  }
+
+  function setupExplorePageEvents() {
+    const searchInput = document.getElementById('explore-search-input');
     if (searchInput) {
       searchInput.addEventListener('input', (e) => {
         State.searchQuery = e.target.value;
-        if (clearBtn) clearBtn.style.display = State.searchQuery ? 'block' : 'none';
-        renderFilteredCatalog();
+        updateExploreResults();
       });
     }
 
-    if (clearBtn) {
-      clearBtn.addEventListener('click', () => {
+    const clearSearchBtn = document.getElementById('clear-search-btn');
+    if (clearSearchBtn) {
+      clearSearchBtn.addEventListener('click', () => {
         State.searchQuery = '';
         if (searchInput) searchInput.value = '';
-        clearBtn.style.display = 'none';
-        renderFilteredCatalog();
+        updateExploreResults();
       });
     }
 
-    if (sortSelect) {
-      sortSelect.addEventListener('change', (e) => {
-        State.sortBy = e.target.value;
-        renderFilteredCatalog();
+    // Category pills
+    document.querySelectorAll('.filter-pill').forEach(pill => {
+      pill.addEventListener('click', function () {
+        document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+        this.classList.add('active');
+        State.selectedCategory = this.dataset.category;
+        updateExploreResults();
       });
-    }
+    });
 
+    // Country select
+    const countrySelect = document.getElementById('filter-country-select');
     if (countrySelect) {
       countrySelect.addEventListener('change', (e) => {
         State.selectedCountry = e.target.value;
-        renderFilteredCatalog();
+        updateExploreResults();
       });
     }
 
+    // Caffeine select
+    const caffeineSelect = document.getElementById('filter-caffeine-select');
     if (caffeineSelect) {
       caffeineSelect.addEventListener('change', (e) => {
         State.selectedCaffeine = e.target.value;
-        renderFilteredCatalog();
+        updateExploreResults();
       });
     }
 
-    if (moodSelect) {
-      moodSelect.addEventListener('change', (e) => {
-        State.selectedMood = e.target.value;
-        renderFilteredCatalog();
+    // Flavor select
+    const flavorSelect = document.getElementById('filter-flavor-select');
+    if (flavorSelect) {
+      flavorSelect.addEventListener('change', (e) => {
+        State.selectedFlavor = e.target.value;
+        updateExploreResults();
       });
     }
 
+    // Sort select
+    const sortSelect = document.getElementById('filter-sort-select');
+    if (sortSelect) {
+      sortSelect.addEventListener('change', (e) => {
+        State.sortBy = e.target.value;
+        updateExploreResults();
+      });
+    }
+
+    // Reset button
+    const resetBtn = document.getElementById('reset-all-filters-btn');
     if (resetBtn) {
-      resetBtn.addEventListener('click', () => {
-        State.searchQuery = '';
-        State.selectedCategory = 'all';
-        State.selectedCountry = 'all';
-        State.selectedCaffeine = 'all';
-        State.selectedMood = 'all';
-        State.sortBy = 'popular';
-        renderExplorePage(document.getElementById('app-view-container'));
-      });
-    }
-
-    // Category Pill delegation
-    const catContainer = document.getElementById('category-filter-container');
-    if (catContainer) {
-      catContainer.addEventListener('click', (e) => {
-        const btn = e.target.closest('.filter-pill');
-        if (!btn) return;
-        const cat = btn.getAttribute('data-category');
-        State.selectedCategory = cat;
-        catContainer.querySelectorAll('.filter-pill').forEach(el => el.classList.remove('active'));
-        btn.classList.add('active');
-        renderFilteredCatalog();
-      });
+      resetBtn.addEventListener('click', resetAllFilters);
     }
   }
 
-  function renderFilteredCatalog() {
-    const gridContainer = document.getElementById('catalog-cards-container');
-    const countDisplay = document.getElementById('results-count-number');
-    if (!gridContainer) return;
-
-    let items = [...TeaVerseData.teas];
-
-    // Filter by Search Query
-    if (State.searchQuery.trim()) {
-      const q = State.searchQuery.trim().toLowerCase();
-      items = items.filter(t => {
-        return t.name.toLowerCase().includes(q) ||
-          t.nativeName.toLowerCase().includes(q) ||
-          t.origin.country.toLowerCase().includes(q) ||
-          t.origin.region.toLowerCase().includes(q) ||
-          t.description.toLowerCase().includes(q) ||
-          t.category.toLowerCase().includes(q) ||
-          t.flavorProfile.primary.some(f => f.toLowerCase().includes(q)) ||
-          t.ingredients.core.some(i => i.toLowerCase().includes(q));
-      });
-    }
-
-    // Filter by Category
-    if (State.selectedCategory !== 'all') {
-      items = items.filter(t => t.category === State.selectedCategory);
-    }
-
-    // Filter by Country
-    if (State.selectedCountry !== 'all') {
-      items = items.filter(t => t.origin.country.toLowerCase().includes(State.selectedCountry.toLowerCase()));
-    }
-
-    // Filter by Caffeine
-    if (State.selectedCaffeine !== 'all') {
-      items = items.filter(t => t.caffeine.toLowerCase().includes(State.selectedCaffeine.toLowerCase()));
-    }
-
-    // Filter by Mood
-    if (State.selectedMood !== 'all') {
-      items = items.filter(t => t.moods && t.moods.includes(State.selectedMood));
-    }
-
-    // Sort
-    if (State.sortBy === 'az') {
-      items.sort((a, b) => a.name.localeCompare(b.name));
-    } else if (State.sortBy === 'country') {
-      items.sort((a, b) => a.origin.country.localeCompare(b.origin.country));
-    } else if (State.sortBy === 'time') {
-      items.sort((a, b) => parseFloat(a.brewingTime) - parseFloat(b.brewingTime));
-    }
-
-    if (countDisplay) countDisplay.textContent = items.length;
-
-    if (items.length === 0) {
-      gridContainer.innerHTML = `
-        <div class="empty-state-box" style="grid-column: 1 / -1;">
-          <svg class="empty-state-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M8 11h6"/></svg>
-          <h3 class="empty-state-title">No Teas Found</h3>
-          <p class="empty-state-desc">We couldn't find any tea matching your search criteria. Try adjusting your filters or search query.</p>
-          <button onclick="window.location.hash='#/explore'" class="btn btn-secondary btn-sm">Clear All Filters</button>
-        </div>
-      `;
-      return;
-    }
-
-    gridContainer.innerHTML = items.map(t => renderTeaCardHtml(t)).join('');
-  }
-
-  // 3. INDIVIDUAL TEA DETAIL PAGE
+  // 3. INDIVIDUAL TEA DETAIL GUIDE VIEW
   function renderDetailPage(container, slug) {
-    const tea = TeaVerseData.teas.find(t => t.slug === slug);
+    const tea = TeaVerseData.teas.find(t => t.slug === slug || t.id === slug);
+
     if (!tea) {
       renderNotFoundPage(container);
       return;
     }
 
-    // Related teas
-    const related = TeaVerseData.teas.filter(t => tea.relatedTeas.includes(t.slug));
+    const related = TeaVerseData.teas
+      .filter(t => (tea.relatedTeas || []).includes(t.slug) || (tea.relatedTeas || []).includes(t.id))
+      .slice(0, 3);
 
     container.innerHTML = `
       <div class="tea-detail-container">
         <div class="container">
-          <!-- Back Nav -->
-          <div class="detail-back-nav">
-            <a href="#/explore" class="btn-back">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>
+          <!-- Back Link -->
+          <div style="margin-bottom: 24px;">
+            <a href="#/explore" class="back-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
               Back to Catalog
             </a>
           </div>
 
-          <!-- Hero Section -->
-          <div class="detail-hero-grid">
-            <div>
-              <div class="detail-header-badges">
-                <span class="badge-botanical-type">${tea.type}</span>
-                <span class="badge-origin-country">${tea.origin.country} · ${tea.origin.region}</span>
-              </div>
-              <div class="detail-native-title">${tea.nativeName}</div>
-              <h1 class="detail-main-title">${tea.name}</h1>
-              <p class="detail-hero-desc">${tea.description}</p>
-
-              <!-- Quick Specs Ribbon -->
-              <div class="specs-quick-ribbon">
-                <div class="spec-ribbon-item">
-                  <span class="spec-ribbon-label">Water Temp</span>
-                  <span class="spec-ribbon-val">${tea.brewingDetails.temperature.split('(')[0]}</span>
-                </div>
-                <div class="spec-ribbon-item">
-                  <span class="spec-ribbon-label">Leaf Amount</span>
-                  <span class="spec-ribbon-val">${tea.brewingDetails.teaAmount.split('(')[0]}</span>
-                </div>
-                <div class="spec-ribbon-item">
-                  <span class="spec-ribbon-label">Steep Time</span>
-                  <span class="spec-ribbon-val">${tea.brewingDetails.steepingTime.split('(')[0]}</span>
-                </div>
-                <div class="spec-ribbon-item">
-                  <span class="spec-ribbon-label">Caffeine</span>
-                  <span class="spec-ribbon-val">${tea.caffeine}</span>
-                </div>
-              </div>
-            </div>
-
+          <!-- Hero Banner Section -->
+          <div class="tea-detail-hero">
             <div class="detail-hero-media">
               <img src="${tea.heroImage}" alt="${tea.name}" class="detail-hero-img" onerror="this.src='https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=1000&q=80'">
             </div>
-          </div>
 
-          <!-- What You'll Need: Ingredients vs Equipment -->
-          <div class="detail-split-grid">
-            <div class="detail-card-panel">
-              <div class="panel-header-row">
-                <div class="panel-icon-circle">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 0 1 10 10c0 5.5-4.5 10-10 10S2 17.5 2 12A10 10 0 0 1 12 2z"/><path d="M12 6v6l4 2"/></svg>
-                </div>
-                <h3 class="panel-title">Required Ingredients</h3>
+            <div class="detail-hero-content">
+              <div class="detail-badge-row">
+                <span class="detail-type-badge">${tea.type}</span>
+                <span class="detail-category-badge">${tea.origin.country}</span>
+                ${tea.countryCategory === 'bangladesh' ? `<span class="detail-category-badge" style="background: var(--color-sage); color:#fff;">🇧🇩 Bangladesh Heritage</span>` : ''}
               </div>
 
-              <div class="label-caps" style="margin-bottom: 12px;">Core Essentials</div>
-              <ul style="margin-bottom: 24px;">
-                ${tea.ingredients.core.map(ing => `
-                  <li class="checklist-item">
-                    <span class="checklist-bullet">✓</span>
-                    <span>${ing}</span>
-                  </li>
-                `).join('')}
-              </ul>
+              <div class="detail-native-title">${tea.nativeName}</div>
+              <h1 class="detail-main-title">${tea.name}</h1>
+              <p class="detail-lead-desc">${tea.description}</p>
 
-              ${tea.ingredients.optional && tea.ingredients.optional.length ? `
-                <div class="label-caps" style="margin-bottom: 12px;">Optional Traditions & Garnishes</div>
-                <ul>
-                  ${tea.ingredients.optional.map(opt => `
-                    <li class="checklist-item" style="color: var(--text-secondary);">
-                      <span class="checklist-bullet" style="background: var(--color-cream);">+</span>
-                      <span>${opt}</span>
+              <!-- Quick Specs Grid -->
+              <div class="specs-grid">
+                <div class="spec-cell">
+                  <div class="spec-cell-label">Water Temp</div>
+                  <div class="spec-cell-val">${tea.brewingDetails.temperature}</div>
+                </div>
+                <div class="spec-cell">
+                  <div class="spec-cell-label">Leaf / Tea Amount</div>
+                  <div class="spec-cell-val">${tea.brewingDetails.teaAmount}</div>
+                </div>
+                <div class="spec-cell">
+                  <div class="spec-cell-label">Steeping Time</div>
+                  <div class="spec-cell-val">${tea.brewingDetails.steepingTime}</div>
+                </div>
+                <div class="spec-cell">
+                  <div class="spec-cell-label">Caffeine Level</div>
+                  <div class="spec-cell-val">${tea.caffeine}</div>
+                </div>
+                <div class="spec-cell">
+                  <div class="spec-cell-label">Difficulty</div>
+                  <div class="spec-cell-val">${tea.difficulty}</div>
+                </div>
+                <div class="spec-cell">
+                  <div class="spec-cell-label">Recommended Vessel</div>
+                  <div class="spec-cell-val">${tea.brewingDetails.vessel}</div>
+                </div>
+              </div>
+
+              <div style="margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap;">
+                <a href="#/brewing?tea=${tea.slug}" class="btn btn-primary">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  Open Live Steeping Timer
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 1: WHAT YOU'LL NEED (Ingredients & Equipment) -->
+          <div class="detail-card-panel" style="margin-bottom: 40px;">
+            <div class="label-caps" style="color: var(--color-olive);">Preparation Checklist</div>
+            <h2 class="panel-title" style="margin-bottom: 24px;">What You'll Need</h2>
+
+            <div class="detail-split-grid">
+              <!-- Raw Ingredients -->
+              <div style="background: var(--color-canvas); padding: 24px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                <h3 style="font-family: var(--font-serif); font-size: 1.4rem; margin-bottom: 12px; color: var(--color-charcoal);">
+                  Core Ingredients
+                </h3>
+                <ul class="checklist-items" style="list-style: none; padding: 0;">
+                  ${tea.ingredients.core.map(item => `
+                    <li class="checklist-item">
+                      <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span>${item}</span>
                     </li>
                   `).join('')}
                 </ul>
-              ` : ''}
-            </div>
 
-            <div class="detail-card-panel">
-              <div class="panel-header-row">
-                <div class="panel-icon-circle">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>
-                </div>
-                <h3 class="panel-title">Recommended Teaware</h3>
+                ${(tea.ingredients.optional && tea.ingredients.optional.length > 0) ? `
+                  <h4 style="font-family: var(--font-serif); font-size: 1.1rem; margin: 16px 0 8px 0; color: var(--text-secondary);">
+                    Optional Additions:
+                  </h4>
+                  <ul class="checklist-items" style="list-style: none; padding: 0;">
+                    ${tea.ingredients.optional.map(opt => `
+                      <li class="checklist-item" style="color: var(--text-secondary);">
+                        <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-sage)" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+                        <span>${opt}</span>
+                      </li>
+                    `).join('')}
+                  </ul>
+                ` : ''}
               </div>
 
-              <div class="label-caps" style="margin-bottom: 12px;">Equipment & Vessels</div>
-              <ul>
-                ${tea.equipment.map(eq => `
-                  <li class="checklist-item">
-                    <span class="checklist-bullet">◈</span>
-                    <span>${eq}</span>
-                  </li>
-                `).join('')}
-              </ul>
-
-              <div style="margin-top: 24px; padding: 16px; background: var(--color-canvas); border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
-                <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--color-olive); margin-bottom: 4px;">Serving Style</div>
-                <div style="font-size: 0.95rem; font-weight: 600; color: var(--color-charcoal);">${tea.brewingDetails.servingStyle}</div>
+              <!-- Required Equipment -->
+              <div style="background: var(--color-canvas); padding: 24px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                <h3 style="font-family: var(--font-serif); font-size: 1.4rem; margin-bottom: 12px; color: var(--color-charcoal);">
+                  Recommended Teaware & Equipment
+                </h3>
+                <ul class="checklist-items" style="list-style: none; padding: 0;">
+                  ${tea.equipment.map(eq => `
+                    <li class="checklist-item">
+                      <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                      <span>${eq}</span>
+                    </li>
+                  `).join('')}
+                </ul>
               </div>
             </div>
           </div>
 
-          <!-- How to Brew It: Step-by-Step Vertical Timeline -->
-          <div class="timeline-section">
-            <div class="section-header" style="margin-bottom: 24px; text-align: left;">
-              <div class="label-caps">Step-by-Step Preparation</div>
-              <h2 class="section-title" style="font-size: 2.6rem;">How to Brew ${tea.name}</h2>
-              <p class="section-subtitle">Follow these mindful procedures to extract maximum aroma, nuance, and sweetness.</p>
-            </div>
+          <!-- SECTION 2: HOW TO PREPARE (Step-by-Step Procedure) -->
+          <div class="detail-card-panel" style="margin-bottom: 40px;">
+            <div class="label-caps" style="color: var(--color-olive);">Master Brewing Procedure</div>
+            <h2 class="panel-title" style="margin-bottom: 24px;">How to Prepare (${tea.preparationTime} prep · ${tea.brewingTime} brew)</h2>
 
-            <div class="timeline-wrapper">
-              ${tea.preparationSteps.map(step => `
-                <div class="timeline-step-card">
-                  <div class="step-marker-col">
-                    <div class="step-num-badge">0${step.step}</div>
-                    <div class="step-connector-line"></div>
-                  </div>
-                  <div class="step-content-box">
-                    <h4 class="step-title">${step.title}</h4>
-                    <p class="step-instruction">${step.instruction}</p>
-                    ${step.tip ? `
-                      <div class="step-tip-callout">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-                        <span><strong>Master Tip:</strong> ${step.tip}</span>
+            <div class="timeline-steps">
+              ${tea.preparationSteps.map(stepObj => `
+                <div class="timeline-step-item">
+                  <div class="timeline-step-num">0${stepObj.step}</div>
+                  <div class="timeline-step-content">
+                    <h3 class="timeline-step-title">${stepObj.title}</h3>
+                    <p class="timeline-step-desc">${stepObj.instruction}</p>
+                    ${stepObj.tip ? `
+                      <div class="timeline-step-tip">
+                        <strong>Master Tip:</strong> ${stepObj.tip}
                       </div>
                     ` : ''}
                   </div>
@@ -704,73 +882,70 @@
             </div>
           </div>
 
-          <!-- Flavor Profile & Sensory Radar -->
-          <div class="flavor-profile-panel">
-            <div class="label-caps">Sensory Character</div>
-            <h3 style="font-family: var(--font-serif); font-size: 2rem; margin: 8px 0 16px 0;">Flavor Profile & Notes</h3>
-            <div class="tea-card-flavor-tags" style="margin-bottom: 24px;">
-              ${tea.flavorProfile.primary.map(f => `<span class="flavor-tag" style="font-size: 0.9rem; padding: 6px 14px; background: var(--color-canvas); border: 1px solid var(--border-medium);">${f}</span>`).join('')}
+          <!-- SECTION 3: FLAVOR PROFILE & SENSORY RADAR -->
+          <div class="detail-card-panel" style="margin-bottom: 40px;">
+            <div class="label-caps">Sensory Experience</div>
+            <h2 class="panel-title" style="margin-bottom: 16px;">Flavor Profile & Sensory Notes</h2>
+            <div class="flavor-pills-row" style="margin-bottom: 24px;">
+              ${tea.flavorProfile.primary.map(f => `<span class="flavor-pill">${f}</span>`).join('')}
             </div>
 
-            <div class="radar-bars-grid">
+            <!-- Visual Radar Progress Bars -->
+            <div class="sensory-bars-grid">
               ${Object.entries(tea.flavorProfile.radar).map(([key, val]) => `
-                <div class="radar-bar-item">
-                  <div class="radar-bar-header">
-                    <span>${key}</span>
-                    <span>${val}%</span>
+                <div class="sensory-bar-row">
+                  <div class="sensory-bar-label">
+                    <span>${key.charAt(0).toUpperCase() + key.slice(1)}</span>
+                    <span style="font-weight: 600;">${val}%</span>
                   </div>
-                  <div class="radar-bar-track">
-                    <div class="radar-bar-fill" style="width: ${val}%;"></div>
+                  <div class="sensory-progress-track">
+                    <div class="sensory-progress-fill" style="width: ${val}%;"></div>
                   </div>
                 </div>
               `).join('')}
             </div>
           </div>
 
-          <!-- Story & Cultural Heritage -->
-          <div class="detail-split-grid">
+          <!-- SECTION 4: STORY, TERROIR & CULTURAL LORE -->
+          <div class="detail-split-grid" style="margin-bottom: 40px;">
             <div class="detail-card-panel">
-              <div class="label-caps">Origin & Terroir</div>
-              <h3 class="panel-title" style="margin: 8px 0 16px 0;">Where It Comes From</h3>
-              <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
-                Harvested in <strong>${tea.origin.region}</strong> (${tea.origin.country}) at high mountain elevations of <strong>${tea.origin.elevation}</strong> during the prized <strong>${tea.origin.harvestSeason}</strong>.
+              <div class="label-caps">Historical Lore</div>
+              <h3 class="panel-title" style="margin-bottom: 16px;">Story & Heritage</h3>
+              <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.05rem;">
+                ${tea.story}
               </p>
-              <div style="padding: 16px; background: var(--color-cream); border-radius: var(--radius-md); font-size: 0.9rem; color: var(--color-olive-dark);">
-                <strong>Cultural Note:</strong> ${tea.culturalNotes}
-              </div>
+              ${tea.culturalNotes ? `
+                <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border-subtle); font-size: 0.95rem; color: var(--text-muted);">
+                  <strong>Cultural Context:</strong> ${tea.culturalNotes}
+                </div>
+              ` : ''}
             </div>
 
             <div class="detail-card-panel">
-              <div class="label-caps">Heritage & Lore</div>
-              <h3 class="panel-title" style="margin: 8px 0 16px 0;">The Story Behind the Leaf</h3>
-              <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.7;">
-                ${tea.story}
+              <div class="label-caps">Terroir & Origin</div>
+              <h3 class="panel-title" style="margin-bottom: 16px;">Geographic Provenance</h3>
+              <div style="margin-bottom: 16px; font-size: 1.1rem; color: var(--color-charcoal); font-weight: 600;">
+                ${tea.origin.region}, ${tea.origin.country}
+              </div>
+              <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">
+                Elevation: <strong>${tea.origin.elevation}</strong><br>
+                Harvest Season: <strong>${tea.origin.harvestSeason}</strong>
               </p>
+              ${tea.wellnessNotes ? `
+                <div style="background: var(--color-canvas); padding: 16px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                  <div class="label-caps" style="color: var(--color-olive); margin-bottom: 4px;">Botanical & Wellness Notes</div>
+                  <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">${tea.wellnessNotes}</div>
+                </div>
+              ` : ''}
             </div>
           </div>
 
-          <!-- Photo Gallery -->
-          ${tea.gallery && tea.gallery.length ? `
-            <div style="margin-bottom: 60px;">
-              <div class="label-caps" style="margin-bottom: 12px;">Visual Journey</div>
-              <h3 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 24px;">Tea Gallery</h3>
-              <div class="detail-gallery-grid">
-                ${tea.gallery.map(imgUrl => `
-                  <div class="gallery-photo-frame">
-                    <img src="${imgUrl}" alt="${tea.name}" class="gallery-photo-img" onerror="this.src='https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80'">
-                  </div>
-                `).join('')}
-              </div>
-            </div>
-          ` : ''}
-
-          <!-- Related Teas -->
-          ${related.length ? `
-            <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border-subtle);">
-              <div class="label-caps" style="margin-bottom: 12px;">Explore Further</div>
-              <h3 style="font-family: var(--font-serif); font-size: 2.2rem; margin-bottom: 32px;">You May Also Like</h3>
-              <div class="tea-card-grid">
-                ${related.map(r => renderTeaCardHtml(r)).join('')}
+          <!-- RELATED TEAS -->
+          ${related.length > 0 ? `
+            <div style="margin-top: 60px;">
+              <h3 style="font-family: var(--font-serif); font-size: 2.2rem; margin-bottom: 24px;">You May Also Enjoy</h3>
+              <div class="tea-grid">
+                ${related.map(r => renderTeaCard(r)).join('')}
               </div>
             </div>
           ` : ''}
@@ -779,84 +954,215 @@
     `;
   }
 
-  // 4. DEDICATED BREWING GUIDE PAGE & INTERACTIVE CALCULATOR
-  function renderBrewingGuidePage(container) {
+  // 4. "FIND YOUR TEA" / INTERACTIVE SELECTOR PAGE
+  function renderFindTeaPage(container) {
     container.innerHTML = `
-      <div class="brewing-guide-page-container">
+      <section class="section" style="padding-top: 40px;">
         <div class="container">
-          <div class="section-header" style="text-align: left; max-width: 100%;">
-            <div class="label-caps">Practical Brewing Science</div>
-            <h1 class="section-title" style="font-size: 3.2rem;">The Master Brewing Guide</h1>
-            <p class="section-subtitle">Master water chemistry, leaf ratios, precision temperatures, and interactive digital steeping.</p>
+          <div class="section-header">
+            <div class="label-caps">Interactive Selector</div>
+            <h1 class="section-title" style="font-size: 3.2rem;">Find Your Perfect Tea</h1>
+            <p class="section-subtitle">Select what you are feeling or looking for right now to receive immediate recommendations backed by botanical and tea characteristics.</p>
           </div>
 
-          <!-- Interactive Ratio Calculator & Live Steeping Timer App -->
-          <div class="calculator-app-wrapper">
-            <div class="calculator-grid">
-              <!-- Controls Column -->
-              <div class="calc-controls-col">
-                <div>
-                  <div class="label-caps" style="color: var(--color-olive);">Preset Variety</div>
-                  <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin: 4px 0 16px 0;">Select Your Tea Type</h3>
-                  <div class="filter-pills-scroll" id="calc-presets-row">
-                    <button class="filter-pill active" data-preset="green" data-grams="3" data-water="200" data-temp="80" data-time="120">Green Tea</button>
-                    <button class="filter-pill" data-preset="black" data-grams="3" data-water="220" data-temp="98" data-time="240">Black Tea</button>
-                    <button class="filter-pill" data-preset="oolong" data-grams="6" data-water="120" data-temp="95" data-time="30">Oolong (Gongfu)</button>
-                    <button class="filter-pill" data-preset="white" data-grams="4" data-water="180" data-temp="85" data-time="270">White Tea</button>
-                    <button class="filter-pill" data-preset="matcha" data-grams="2" data-water="75" data-temp="75" data-time="30">Matcha (Whisk)</button>
-                    <button class="filter-pill" data-preset="herbal" data-grams="4" data-water="250" data-temp="100" data-time="360">Herbal Tisane</button>
-                  </div>
-                </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-bottom: 40px;">
+            ${TeaVerseData.situations.map(sit => `
+              <div class="detail-card-panel situation-choice-card ${State.selectedSituation === sit.id ? 'active-situation' : ''}" data-sit-id="${sit.id}" style="cursor: pointer; transition: all 0.2s ease;">
+                <h3 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 6px; color: var(--color-charcoal);">${sit.title}</h3>
+                <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0;">${sit.description}</p>
+              </div>
+            `).join('')}
+          </div>
 
-                <!-- Tea Amount Slider -->
-                <div class="calc-control-group">
-                  <div class="calc-label-row">
-                    <span class="calc-label">Leaf Quantity</span>
-                    <span id="calc-grams-val" class="calc-current-val">3.0 g</span>
-                  </div>
-                  <input type="range" id="calc-grams-slider" class="calc-range-slider" min="1" max="15" step="0.5" value="3">
-                </div>
+          <div id="full-find-tea-results" class="detail-card-panel" style="background: var(--color-surface); border: 2px solid var(--color-sage); padding: 36px;">
+            ${renderSituationRecommendation(State.selectedSituation)}
+          </div>
+        </div>
+      </section>
+    `;
 
-                <!-- Water Volume Slider -->
-                <div class="calc-control-group">
-                  <div class="calc-label-row">
-                    <span class="calc-label">Water Volume</span>
-                    <span id="calc-water-val" class="calc-current-val">200 ml</span>
-                  </div>
-                  <input type="range" id="calc-water-slider" class="calc-range-slider" min="50" max="600" step="25" value="200">
-                </div>
+    document.querySelectorAll('.situation-choice-card').forEach(card => {
+      card.addEventListener('click', function () {
+        document.querySelectorAll('.situation-choice-card').forEach(c => c.classList.remove('active-situation'));
+        this.classList.add('active-situation');
+        State.selectedSituation = this.dataset.sitId;
+        const box = document.getElementById('full-find-tea-results');
+        if (box) {
+          box.innerHTML = renderSituationRecommendation(State.selectedSituation);
+        }
+      });
+    });
+  }
 
-                <!-- Temperature Slider -->
-                <div class="calc-control-group">
-                  <div class="calc-label-row">
-                    <span class="calc-label">Water Temperature</span>
-                    <span id="calc-temp-val" class="calc-current-val">80°C</span>
-                  </div>
-                  <input type="range" id="calc-temp-slider" class="calc-range-slider" min="50" max="100" step="1" value="80">
-                </div>
+  // 5. TEA & WELLNESS PAGE
+  function renderWellnessPage(container) {
+    container.innerHTML = `
+      <section class="section" style="padding-top: 40px;">
+        <div class="container" style="max-width: 960px;">
+          <div class="section-header" style="text-align: left;">
+            <div class="label-caps">Botanical Learning & Mindful Living</div>
+            <h1 class="section-title" style="font-size: 3.2rem;">Tea & Wellness</h1>
+            <p class="section-subtitle">
+              An educational overview of natural tea compounds, caffeine guidelines, and traditional botanical uses.
+            </p>
+          </div>
 
-                <!-- Steeping Duration Slider -->
-                <div class="calc-control-group">
-                  <div class="calc-label-row">
-                    <span class="calc-label">Steep Duration</span>
-                    <span id="calc-time-val" class="calc-current-val">2:00 min</span>
-                  </div>
-                  <input type="range" id="calc-time-slider" class="calc-range-slider" min="15" max="480" step="15" value="120">
-                </div>
+          <!-- Medical Disclaimer Notice -->
+          <div class="detail-card-panel" style="background: var(--color-cream); border-left: 4px solid var(--color-olive); margin-bottom: 36px;">
+            <h3 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 8px;">Educational Scope & Transparency</h3>
+            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin: 0;">
+              TeaVerse presents botanical and cultural information strictly for educational and cultural discovery. Tea is a wonderful natural beverage, but it is not intended to diagnose, treat, cure, or prevent any medical condition. Below, we clearly distinguish between <strong>Traditional Cultural Uses</strong> and <strong>Scientific Research Associations</strong>.
+            </p>
+          </div>
+
+          <!-- Section 1: Natural Compounds -->
+          <div class="detail-card-panel" style="margin-bottom: 32px;">
+            <div class="label-caps">Active Botanical Constituents</div>
+            <h2 class="panel-title" style="margin-bottom: 16px;">Key Natural Compounds in Tea</h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+              <div style="background: var(--color-canvas); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                <h4 style="font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 6px;">L-Theanine</h4>
+                <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+                  An amino acid concentrated in shade-grown green teas (Gyokuro, Matcha) and young spring buds that synergizes with caffeine to promote calm, focused alertness.
+                </p>
               </div>
 
-              <!-- Live Digital Steeping Timer Dial -->
-              <div class="timer-dial-panel">
-                <div class="label-caps" style="margin-bottom: 16px;">Live Steeping Clock</div>
-                
-                <div class="timer-circle-wrapper">
-                  <svg class="timer-svg" viewBox="0 0 200 200">
-                    <circle class="timer-bg-circle" cx="100" cy="100" r="90"></circle>
-                    <circle id="timer-progress-ring" class="timer-progress-circle" cx="100" cy="100" r="90"></circle>
+              <div style="background: var(--color-canvas); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                <h4 style="font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 6px;">EGCG Catechins</h4>
+                <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+                  Potent plant polyphenols abundant in minimally oxidized green and white teas, studied extensively for antioxidant cellular properties.
+                </p>
+              </div>
+
+              <div style="background: var(--color-canvas); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                <h4 style="font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 6px;">Theaflavins & Thearubigins</h4>
+                <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+                  Complex polyphenols formed during enzymatic black tea oxidation, responsible for rich copper color, maltiness, and brisk body.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 2: Caffeine Information & Extraction -->
+          <div class="detail-card-panel" style="margin-bottom: 32px;">
+            <div class="label-caps">Caffeine Guidance</div>
+            <h2 class="panel-title" style="margin-bottom: 16px;">Understanding Caffeine in Tea</h2>
+            <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
+              Caffeine content in a cup is not fixed solely by leaf type. It depends dynamically on:
+            </p>
+            <ul style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 24px; padding-left: 20px;">
+              <li><strong>Leaf Ratio:</strong> More grams of tea per cup release more caffeine.</li>
+              <li><strong>Water Temperature:</strong> Boiling water (100°C) extracts caffeine rapidly; cooler water (70°C–80°C) extracts significantly less.</li>
+              <li><strong>Steeping Time:</strong> Longer steeping times yield higher caffeine concentrations.</li>
+              <li><strong>Leaf Grade:</strong> Small broken CTC particles infuse caffeine faster than intact whole orthodox leaves.</li>
+            </ul>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; text-align: center;">
+              <div style="padding: 16px; background: var(--color-canvas); border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                <div style="font-size: 1.6rem; font-weight: 700; color: var(--color-olive);">0 mg</div>
+                <div style="font-weight: 600; margin-top: 4px;">Caffeine-Free</div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Chamomile, Tulsi, Rooibos, Ginger</div>
+              </div>
+
+              <div style="padding: 16px; background: var(--color-canvas); border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                <div style="font-size: 1.6rem; font-weight: 700; color: var(--color-sage);">15–25 mg</div>
+                <div style="font-weight: 600; margin-top: 4px;">Low Caffeine</div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Hojicha, Genmaicha, White Peony</div>
+              </div>
+
+              <div style="padding: 16px; background: var(--color-canvas); border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                <div style="font-size: 1.6rem; font-weight: 700; color: var(--color-charcoal);">30–50 mg</div>
+                <div style="font-weight: 600; margin-top: 4px;">Moderate Caffeine</div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Longjing, Oolong, Darjeeling</div>
+              </div>
+
+              <div style="padding: 16px; background: var(--color-canvas); border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                <div style="font-size: 1.6rem; font-weight: 700; color: var(--color-charcoal);">60–80 mg</div>
+                <div style="font-weight: 600; margin-top: 4px;">Higher Caffeine</div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Matcha, CTC Black, Dudh Cha</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    `;
+  }
+
+  // 6. DEDICATED BREWING GUIDE & LIVE TIMER VIEW
+  function renderBrewingPage(container) {
+    container.innerHTML = `
+      <div class="brewing-guide-container">
+        <div class="container">
+          <div class="section-header" style="text-align: left; max-width: 100%;">
+            <div class="label-caps">Mindful Steeping & Precision Ratios</div>
+            <h1 class="section-title" style="font-size: 3.2rem;">The Art of Brewing</h1>
+            <p class="section-subtitle">Fine-tune your water-to-leaf ratio, temperature, and steeping duration with our interactive calculator and precision audio timer.</p>
+          </div>
+
+          <div class="brewing-calc-grid">
+            <!-- Left: Interactive Ratio Calculator -->
+            <div class="calc-card-panel">
+              <h2 class="calc-panel-title">Brewing Ratio Calculator</h2>
+
+              <!-- Preset Variety Buttons -->
+              <div class="calc-preset-row">
+                <button class="calc-preset-btn active" data-preset="green">Green Tea</button>
+                <button class="calc-preset-btn" data-preset="black">Black Tea</button>
+                <button class="calc-preset-btn" data-preset="oolong">Oolong</button>
+                <button class="calc-preset-btn" data-preset="white">White Tea</button>
+                <button class="calc-preset-btn" data-preset="matcha">Matcha</button>
+                <button class="calc-preset-btn" data-preset="herbal">Herbal</button>
+              </div>
+
+              <!-- Sliders -->
+              <div class="calc-control-group">
+                <div class="calc-control-label">
+                  <span>Leaf Amount:</span>
+                  <span id="calc-grams-val" class="calc-control-val">3.0 g</span>
+                </div>
+                <input type="range" id="calc-grams-slider" class="range-slider" min="1.0" max="10.0" step="0.5" value="3.0">
+              </div>
+
+              <div class="calc-control-group">
+                <div class="calc-control-label">
+                  <span>Water Volume:</span>
+                  <span id="calc-water-val" class="calc-control-val">200 ml</span>
+                </div>
+                <input type="range" id="calc-water-slider" class="range-slider" min="50" max="500" step="25" value="200">
+              </div>
+
+              <div class="calc-control-group">
+                <div class="calc-control-label">
+                  <span>Water Temperature:</span>
+                  <span id="calc-temp-val" class="calc-control-val">80°C</span>
+                </div>
+                <input type="range" id="calc-temp-slider" class="range-slider" min="50" max="100" step="5" value="80">
+              </div>
+
+              <div class="calc-control-group">
+                <div class="calc-control-label">
+                  <span>Steeping Duration:</span>
+                  <span id="calc-time-val" class="calc-control-val">2.0 min (120s)</span>
+                </div>
+                <input type="range" id="calc-time-slider" class="range-slider" min="15" max="420" step="15" value="120">
+              </div>
+            </div>
+
+            <!-- Right: Live Steeping Timer with SVG Progress Dial -->
+            <div class="calc-card-panel" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+              <div class="label-caps" style="color: var(--color-olive);">Digital Steeping Clock</div>
+              <h2 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 24px;">Live Steeping Timer</h2>
+
+              <div class="timer-dial-wrapper">
+                <div class="timer-dial-svg-wrap">
+                  <svg width="220" height="220" viewBox="0 0 220 220">
+                    <circle cx="110" cy="110" r="95" class="timer-dial-bg"/>
+                    <circle cx="110" cy="110" r="95" id="timer-progress-ring" class="timer-dial-progress"/>
                   </svg>
                   <div class="timer-display-inner">
-                    <div id="timer-digits-text" class="timer-time-digits">02:00</div>
-                    <div id="timer-status-badge" class="timer-status-label">Ready to Steep</div>
+                    <div id="timer-countdown-text" class="timer-countdown-text">02:00</div>
+                    <div id="timer-status-text" class="timer-status-text">Ready to Steep</div>
                   </div>
                 </div>
 
@@ -869,26 +1175,6 @@
                   <button id="timer-add-30-btn" class="btn btn-secondary btn-sm">+30s</button>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <!-- Comprehensive Brewing Principles -->
-          <div class="detail-split-grid">
-            <div class="detail-card-panel">
-              <h3 class="panel-title" style="margin-bottom: 12px;">Water Chemistry & Quality</h3>
-              <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">
-                Tea is 99% water. For optimal flavor clarity, use fresh, filtered spring water with a neutral pH (6.8–7.4) and low total dissolved solids (TDS 50–120 ppm). Avoid distilled water (lacks minerals to carry aroma) and hard tap water (creates chalky scum).
-              </p>
-              <div class="label-caps" style="color: var(--color-olive);">Golden Rule: Never re-boil standing water</div>
-            </div>
-
-            <div class="detail-card-panel">
-              <h3 class="panel-title" style="margin-bottom: 12px;">Western vs. Gongfu Brewing</h3>
-              <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">
-                <strong>Western Style:</strong> Low leaf ratio (2–3g), large volume (250–350ml), long single infusion (3–5 min).<br>
-                <strong>Gongfu Cha:</strong> High leaf ratio (6–8g), small volume (100–120ml), rapid sequential infusions (10–30 sec). Reveals unfolding flavor layers.
-              </p>
-              <div class="label-caps" style="color: var(--color-olive);">Best for: Wuyi Yancha, Tieguanyin, Pu-erh</div>
             </div>
           </div>
         </div>
@@ -909,130 +1195,71 @@
     const tempVal = document.getElementById('calc-temp-val');
     const timeVal = document.getElementById('calc-time-val');
 
-    const timerDigits = document.getElementById('timer-digits-text');
-    const timerStatus = document.getElementById('timer-status-badge');
-    const timerProgress = document.getElementById('timer-progress-ring');
-    const startPauseBtn = document.getElementById('timer-start-pause-btn');
-    const resetBtn = document.getElementById('timer-reset-btn');
-    const add30Btn = document.getElementById('timer-add-30-btn');
-    const presetsContainer = document.getElementById('calc-presets-row');
+    const presets = {
+      green: { g: 3.0, w: 200, t: 80, s: 120 },
+      black: { g: 3.0, w: 220, t: 98, s: 210 },
+      oolong: { g: 5.0, w: 150, t: 92, s: 60 },
+      white: { g: 4.0, w: 180, t: 82, s: 240 },
+      matcha: { g: 2.0, w: 70, t: 75, s: 30 },
+      herbal: { g: 3.0, w: 250, t: 100, s: 300 }
+    };
 
-    function updateTimerDisplay() {
-      const mins = Math.floor(State.timer.remainingSeconds / 60);
-      const secs = State.timer.remainingSeconds % 60;
-      if (timerDigits) {
-        timerDigits.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+    function applyPreset(presetKey) {
+      const p = presets[presetKey];
+      if (!p) return;
+      if (gramsSlider) { gramsSlider.value = p.g; gramsVal.textContent = p.g.toFixed(1) + ' g'; }
+      if (waterSlider) { waterSlider.value = p.w; waterVal.textContent = p.w + ' ml'; }
+      if (tempSlider) { tempSlider.value = p.t; tempVal.textContent = p.t + '°C'; }
+      if (timeSlider) {
+        timeSlider.value = p.s;
+        timeVal.textContent = (p.s / 60).toFixed(1) + ' min (' + p.s + 's)';
+        State.timer.totalSeconds = p.s;
+        State.timer.remainingSeconds = p.s;
+        updateTimerDisplay();
       }
-
-      if (timerProgress) {
-        const circumference = 2 * Math.PI * 90; // 565.48
-        const progress = State.timer.remainingSeconds / State.timer.totalSeconds;
-        const offset = circumference * (1 - progress);
-        timerProgress.style.strokeDashoffset = isNaN(offset) ? 0 : offset;
-      }
     }
 
-    function setTimerSeconds(sec) {
-      clearInterval(State.timer.interval);
-      State.timer.isRunning = false;
-      State.timer.totalSeconds = sec;
-      State.timer.remainingSeconds = sec;
-      if (timerStatus) timerStatus.textContent = 'Ready to Steep';
-      if (startPauseBtn) startPauseBtn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> Start Timer`;
-      updateTimerDisplay();
-    }
-
-    if (gramsSlider) {
-      gramsSlider.addEventListener('input', (e) => {
-        if (gramsVal) gramsVal.textContent = `${parseFloat(e.target.value).toFixed(1)} g`;
+    document.querySelectorAll('.calc-preset-btn').forEach(btn => {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('.calc-preset-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        applyPreset(this.dataset.preset);
       });
-    }
+    });
 
-    if (waterSlider) {
-      waterSlider.addEventListener('input', (e) => {
-        if (waterVal) waterVal.textContent = `${e.target.value} ml`;
-      });
-    }
-
-    if (tempSlider) {
-      tempSlider.addEventListener('input', (e) => {
-        if (tempVal) tempVal.textContent = `${e.target.value}°C`;
-      });
-    }
-
+    if (gramsSlider) gramsSlider.addEventListener('input', (e) => { gramsVal.textContent = parseFloat(e.target.value).toFixed(1) + ' g'; });
+    if (waterSlider) waterSlider.addEventListener('input', (e) => { waterVal.textContent = e.target.value + ' ml'; });
+    if (tempSlider) tempSlider.addEventListener('input', (e) => { tempVal.textContent = e.target.value + '°C'; });
     if (timeSlider) {
       timeSlider.addEventListener('input', (e) => {
         const sec = parseInt(e.target.value, 10);
-        const mins = Math.floor(sec / 60);
-        const remSec = sec % 60;
-        if (timeVal) timeVal.textContent = `${mins}:${String(remSec).padStart(2, '0')} min`;
-        setTimerSeconds(sec);
-      });
-    }
-
-    // Presets
-    if (presetsContainer) {
-      presetsContainer.addEventListener('click', (e) => {
-        const btn = e.target.closest('.filter-pill');
-        if (!btn) return;
-        presetsContainer.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        const g = btn.getAttribute('data-grams');
-        const w = btn.getAttribute('data-water');
-        const t = btn.getAttribute('data-temp');
-        const s = btn.getAttribute('data-time');
-
-        if (gramsSlider) { gramsSlider.value = g; if (gramsVal) gramsVal.textContent = `${g} g`; }
-        if (waterSlider) { waterSlider.value = w; if (waterVal) waterVal.textContent = `${w} ml`; }
-        if (tempSlider) { tempSlider.value = t; if (tempVal) tempVal.textContent = `${t}°C`; }
-        if (timeSlider) {
-          timeSlider.value = s;
-          const mins = Math.floor(s / 60);
-          const remSec = s % 60;
-          if (timeVal) timeVal.textContent = `${mins}:${String(remSec).padStart(2, '0')} min`;
+        timeVal.textContent = (sec / 60).toFixed(1) + ' min (' + sec + 's)';
+        if (!State.timer.isRunning) {
+          State.timer.totalSeconds = sec;
+          State.timer.remainingSeconds = sec;
+          updateTimerDisplay();
         }
-        setTimerSeconds(parseInt(s, 10));
       });
     }
 
-    // Timer controls
+    // Timer Controls
+    const startPauseBtn = document.getElementById('timer-start-pause-btn');
+    const resetBtn = document.getElementById('timer-reset-btn');
+    const add30Btn = document.getElementById('timer-add-30-btn');
+
     if (startPauseBtn) {
       startPauseBtn.addEventListener('click', () => {
-        if (!State.timer.isRunning) {
-          // Start / Resume
-          if (State.timer.remainingSeconds <= 0) {
-            State.timer.remainingSeconds = State.timer.totalSeconds;
-          }
-          State.timer.isRunning = true;
-          if (timerStatus) timerStatus.textContent = 'Steeping in Progress...';
-          startPauseBtn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg> Pause`;
-
-          State.timer.interval = setInterval(() => {
-            State.timer.remainingSeconds--;
-            updateTimerDisplay();
-
-            if (State.timer.remainingSeconds <= 0) {
-              clearInterval(State.timer.interval);
-              State.timer.isRunning = false;
-              if (timerStatus) timerStatus.textContent = '✨ Steeping Complete! Pour Now.';
-              startPauseBtn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> Start`;
-              playBrewingChime();
-            }
-          }, 1000);
+        if (State.timer.isRunning) {
+          pauseTimer();
         } else {
-          // Pause
-          clearInterval(State.timer.interval);
-          State.timer.isRunning = false;
-          if (timerStatus) timerStatus.textContent = 'Paused';
-          startPauseBtn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> Resume`;
+          startTimer();
         }
       });
     }
 
     if (resetBtn) {
       resetBtn.addEventListener('click', () => {
-        setTimerSeconds(State.timer.totalSeconds);
+        resetTimer();
       });
     }
 
@@ -1047,42 +1274,124 @@
     updateTimerDisplay();
   }
 
-  // 5. TEA ORIGINS ATLAS VIEW
+  function startTimer() {
+    if (State.timer.isRunning) return;
+    State.timer.isRunning = true;
+    const startBtn = document.getElementById('timer-start-pause-btn');
+    const statusText = document.getElementById('timer-status-text');
+
+    if (startBtn) startBtn.innerHTML = `Pause`;
+    if (statusText) statusText.textContent = 'Steeping in Progress...';
+
+    State.timer.interval = setInterval(() => {
+      if (State.timer.remainingSeconds > 0) {
+        State.timer.remainingSeconds--;
+        updateTimerDisplay();
+      } else {
+        clearInterval(State.timer.interval);
+        State.timer.isRunning = false;
+        if (startBtn) startBtn.innerHTML = `Start Timer`;
+        if (statusText) statusText.textContent = '✨ Steeping Complete!';
+        playBrewingChime();
+      }
+    }, 1000);
+  }
+
+  function pauseTimer() {
+    clearInterval(State.timer.interval);
+    State.timer.isRunning = false;
+    const startBtn = document.getElementById('timer-start-pause-btn');
+    const statusText = document.getElementById('timer-status-text');
+    if (startBtn) startBtn.innerHTML = `Resume`;
+    if (statusText) statusText.textContent = 'Timer Paused';
+  }
+
+  function resetTimer() {
+    clearInterval(State.timer.interval);
+    State.timer.isRunning = false;
+    State.timer.remainingSeconds = State.timer.totalSeconds;
+    const startBtn = document.getElementById('timer-start-pause-btn');
+    const statusText = document.getElementById('timer-status-text');
+    if (startBtn) startBtn.innerHTML = `Start Timer`;
+    if (statusText) statusText.textContent = 'Ready to Steep';
+    updateTimerDisplay();
+  }
+
+  function updateTimerDisplay() {
+    const countdownEl = document.getElementById('timer-countdown-text');
+    const ringEl = document.getElementById('timer-progress-ring');
+    if (!countdownEl) return;
+
+    const min = Math.floor(State.timer.remainingSeconds / 60);
+    const sec = State.timer.remainingSeconds % 60;
+    countdownEl.textContent = `${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
+
+    if (ringEl && State.timer.totalSeconds > 0) {
+      const radius = 95;
+      const circumference = 2 * Math.PI * radius;
+      const progress = State.timer.remainingSeconds / State.timer.totalSeconds;
+      const offset = circumference * (1 - progress);
+      ringEl.style.strokeDasharray = `${circumference}`;
+      ringEl.style.strokeDashoffset = `${offset}`;
+    }
+  }
+
+  // 7. TEA ORIGINS & TERROIRS VIEW (Highlighting Bangladesh Regions)
   function renderOriginsPage(container) {
     container.innerHTML = `
       <section class="section" style="padding-top: 40px;">
         <div class="container">
           <div class="section-header" style="text-align: left; max-width: 100%;">
-            <div class="label-caps">Terroir & Geography</div>
+            <div class="label-caps">Terroirs, Soils & Climate</div>
             <h1 class="section-title" style="font-size: 3.2rem;">Tea Terroirs Around the World</h1>
             <p class="section-subtitle">Discover the microclimates, high-mountain mists, and historic origins shaping global tea culture.</p>
           </div>
 
+          <!-- Featured Bangladesh Tea Regions -->
+          <div class="detail-card-panel" style="margin-bottom: 40px; border: 2px solid var(--color-sage);">
+            <div class="label-caps" style="color: var(--color-olive);">Primary Focus</div>
+            <h2 style="font-family: var(--font-serif); font-size: 2.4rem; margin: 8px 0 16px 0;">Tea Regions of Bangladesh</h2>
+            <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px;">
+              Bangladesh is the 10th largest tea producer in the world with over 168 commercial tea gardens across Sylhet, Moulvibazar, Habiganj, Panchagarh, and Chattogram.
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+              ${TeaVerseData.bangladeshRegions.map(reg => `
+                <div style="background: var(--color-canvas); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                  <div class="label-caps" style="color: var(--color-olive); margin-bottom: 4px;">${reg.district}</div>
+                  <h3 style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--color-charcoal); margin-bottom: 4px;">${reg.name}</h3>
+                  <div style="font-size: 0.85rem; font-weight: 600; color: var(--color-sage); margin-bottom: 10px;">${reg.title}</div>
+                  <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 12px;">${reg.description}</p>
+                  <div style="font-size: 0.8rem; color: var(--text-muted);"><strong>Key Estates:</strong> ${reg.keyEstates.join(', ')}</div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+          <!-- Global Origins List -->
           <div style="display: grid; grid-template-columns: 1fr; gap: 32px;">
             ${TeaVerseData.origins.map(origin => `
-              <div class="detail-card-panel" style="display: grid; grid-template-columns: 1fr; gap: 24px;">
-                <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border-subtle); padding-bottom: 16px;">
+              <div class="detail-card-panel" style="display: grid; grid-template-columns: 1fr; gap: 20px;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border-subtle); padding-bottom: 16px; flex-wrap: wrap;">
                   <div>
                     <span class="label-caps">${origin.nativeName}</span>
-                    <h2 style="font-family: var(--font-serif); font-size: 2.2rem; color: var(--color-charcoal);">${origin.country}</h2>
+                    <h2 style="font-family: var(--font-serif); font-size: 2.2rem; color: var(--color-charcoal); margin: 4px 0;">${origin.country}</h2>
                   </div>
                   <a href="#/explore?country=${encodeURIComponent(origin.country)}" class="btn btn-secondary btn-sm">Explore ${origin.country} Teas →</a>
                 </div>
 
-                <div style="display: grid; grid-template-columns: 1fr; gap: 24px;">
-                  <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7;">
-                    ${origin.description}
-                  </p>
-                  
-                  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; background: var(--color-canvas); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
-                    <div>
-                      <div class="label-caps" style="margin-bottom: 4px;">Key Cultivation Regions</div>
-                      <div style="font-weight: 600; color: var(--color-charcoal);">${origin.regions.join(' · ')}</div>
-                    </div>
-                    <div>
-                      <div class="label-caps" style="margin-bottom: 4px;">Climate & Terroir</div>
-                      <div style="font-weight: 500; color: var(--text-secondary);">${origin.climate}</div>
-                    </div>
+                <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7;">
+                  ${origin.description}
+                </p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; background: var(--color-canvas); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                  <div>
+                    <div class="label-caps" style="margin-bottom: 4px;">Key Regions</div>
+                    <div style="font-weight: 600; color: var(--color-charcoal);">${origin.regions.join(' · ')}</div>
+                  </div>
+                  <div>
+                    <div class="label-caps" style="margin-bottom: 4px;">Climate & Soil</div>
+                    <div style="font-weight: 500; color: var(--text-secondary);">${origin.climate}</div>
                   </div>
                 </div>
               </div>
@@ -1093,27 +1402,27 @@
     `;
   }
 
-  // 6. CLASSIFICATION & BOTANY VIEW
+  // 8. CLASSIFICATION & BOTANY VIEW
   function renderClassificationPage(container) {
     container.innerHTML = `
       <section class="section" style="padding-top: 40px;">
         <div class="container">
           <div class="section-header" style="text-align: left; max-width: 100%;">
-            <div class="label-caps">Botanical Education</div>
-            <h1 class="section-title" style="font-size: 3.2rem;">Understanding True Tea vs. Tisanes</h1>
-            <p class="section-subtitle">A clear scientific and cultural guide to botanical taxonomy, oxidation levels, and raw plant materials.</p>
+            <div class="label-caps">Botanical Science & Processing</div>
+            <h1 class="section-title" style="font-size: 3.2rem;">Tea Botany & Taxonomy</h1>
+            <p class="section-subtitle">Understanding the science behind Camellia sinensis varieties and botanical infusions.</p>
           </div>
 
-          <div class="detail-split-grid">
-            <div class="detail-card-panel" style="border-left: 4px solid var(--color-olive);">
-              <div class="label-caps">The Sacred Camellia</div>
-              <h2 style="font-family: var(--font-serif); font-size: 2.2rem; margin: 8px 0 16px 0;">Camellia Sinensis (True Tea)</h2>
+          <div class="detail-split-grid" style="margin-bottom: 40px;">
+            <div class="detail-card-panel" style="border-left: 4px solid var(--color-sage);">
+              <div class="label-caps">True Teas</div>
+              <h2 style="font-family: var(--font-serif); font-size: 2.2rem; margin: 8px 0 16px 0;">Camellia Sinensis</h2>
               <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">
-                Every genuine cup of green, white, yellow, oolong, black, and pu-erh tea comes from the evergreen shrub <em>Camellia sinensis</em>. The two primary botanical varieties are:
+                Two primary botanical varieties account for almost all global tea production:
               </p>
-              <ul style="margin-bottom: 20px;">
-                <li class="checklist-item"><strong>Camellia sinensis var. sinensis:</strong> Small-leaf variety native to central and southern China, cold-hardy, creating delicate floral and sweet green, white, and rock oolong teas.</li>
-                <li class="checklist-item"><strong>Camellia sinensis var. assamica:</strong> Large-leaf variety indigenous to the tropical Assam river valleys and Yunnan, producing rich, malty black and deep fermented pu-erh teas.</li>
+              <ul>
+                <li class="checklist-item"><strong>Camellia sinensis var. sinensis:</strong> Small leaf, native to China, cold-hardy, delicate floral and sweet notes.</li>
+                <li class="checklist-item"><strong>Camellia sinensis var. assamica:</strong> Large leaf, native to Assam, tropical, high in theaflavins, bold maltiness. Found across Sylhet and Assam.</li>
               </ul>
             </div>
 
@@ -1121,13 +1430,13 @@
               <div class="label-caps">Botanicals & Tisanes</div>
               <h2 style="font-family: var(--font-serif); font-size: 2.2rem; margin: 8px 0 16px 0;">Herbal & Botanical Infusions</h2>
               <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px;">
-                Herbal teas (properly referred to as <em>Tisanes</em>) do not contain Camellia sinensis leaves and are naturally caffeine-free:
+                Herbal infusions (Tisanes) do not contain Camellia sinensis leaves and are naturally caffeine-free:
               </p>
               <ul>
-                <li class="checklist-item"><strong>Flowers:</strong> Chamomile, Hibiscus (Karkadeh), Lavender, Chrysanthemum.</li>
-                <li class="checklist-item"><strong>Roots & Barks:</strong> Fresh Ginger rhizome, True Ceylon Cinnamon quills, Turmeric root.</li>
-                <li class="checklist-item"><strong>Seeds & Spices:</strong> Whole Zanzibar Cloves, Green Cardamom pods.</li>
-                <li class="checklist-item"><strong>Endemic Shrubs:</strong> South African Rooibos and Honeybush.</li>
+                <li class="checklist-item"><strong>Flowers:</strong> Chamomile, Hibiscus (Chukair), Lavender.</li>
+                <li class="checklist-item"><strong>Leaves & Herbs:</strong> Krishna Tulsi, Moringa, Rooibos, Basak.</li>
+                <li class="checklist-item"><strong>Roots & Barks:</strong> Fresh Ginger, Ceylon True Cinnamon, Arjun tree bark.</li>
+                <li class="checklist-item"><strong>Seeds:</strong> Nigella Sativa (Kalo Jeera), Fenugreek (Methi), Clove.</li>
               </ul>
             </div>
           </div>
@@ -1136,7 +1445,7 @@
     `;
   }
 
-  // 7. ABOUT TEA-VERSE VIEW
+  // 9. ABOUT PAGE WITH CREATOR CREDITS
   function renderAboutPage(container) {
     container.innerHTML = `
       <section class="section" style="padding-top: 40px;">
@@ -1153,19 +1462,12 @@
               TeaVerse is an independent educational encyclopedia created for tea enthusiasts, curious learners, and mindful brewers worldwide. Our mission is to make authentic tea traditions accessible, scientifically grounded, and visually inspiring without the noise of commercial e-commerce.
             </p>
             <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8;">
-              Whether learning how to whisk ceremonial matcha in Kyoto, decocting spiced stovetop masala chai in Kolkata, or practicing Gongfu rock oolong steeping, TeaVerse provides exact ratios, water temperatures, and historical context for every cup.
-            </p>
-          </div>
-
-          <div class="detail-card-panel" style="background: var(--color-cream); margin-bottom: 32px;">
-            <h3 class="panel-title" style="margin-bottom: 16px;">Educational Accuracy & Standards</h3>
-            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7;">
-              TeaVerse does not invent traditional teas or make medical claims. We clearly distinguish authentic <em>Camellia sinensis</em> true teas from herbal tisanes. All brewing parameters are based on time-tested tea master standards.
+              Whether learning how to whisk ceremonial matcha in Kyoto, decocting spiced stovetop masala chai, tasting Malnicherra's 1854 heritage, or practicing Gongfu rock oolong steeping, TeaVerse provides exact ratios, water temperatures, and historical context for every cup.
             </p>
           </div>
 
           <!-- Project Authors & Credits -->
-          <div class="detail-card-panel" style="border: 1.5px solid var(--color-sage);">
+          <div class="detail-card-panel" style="border: 1.5px solid var(--color-sage); margin-bottom: 32px;">
             <div class="label-caps" style="color: var(--color-olive);">Project Team & Attribution</div>
             <h3 class="panel-title" style="margin: 8px 0 16px 0;">Creators & Design Leadership</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
@@ -1187,7 +1489,7 @@
     `;
   }
 
-  // 8. 404 NOT FOUND
+  // 10. 404 NOT FOUND
   function renderNotFoundPage(container) {
     container.innerHTML = `
       <section class="section" style="text-align: center; padding: 120px 24px;">
@@ -1200,151 +1502,151 @@
     `;
   }
 
-  // --- Helper: Render Tea Card HTML ---
-  function renderTeaCardHtml(tea) {
+  // --- Helper: Render Standard Tea Card ---
+  function renderTeaCard(tea) {
+    const isBd = tea.countryCategory === 'bangladesh';
     return `
-      <a href="#/tea/${tea.slug}" class="tea-card">
-        <div class="tea-card-media">
-          <img src="${tea.heroImage}" alt="${tea.name}" class="tea-card-img" onerror="this.src='https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80'">
-          <div class="tea-card-category-badge">${tea.category}</div>
-          <div class="tea-card-origin-badge">${tea.origin.country}</div>
-        </div>
+      <div class="tea-card">
+        <a href="#/tea/${tea.slug}" class="tea-card-image-wrap">
+          <img src="${tea.heroImage}" alt="${tea.name}" class="tea-card-image" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80'">
+          <div class="tea-card-category-badge ${isBd ? 'bd-badge' : ''}">
+            ${isBd ? '🇧🇩 ' : ''}${tea.origin.country}
+          </div>
+        </a>
+
         <div class="tea-card-body">
-          <div>
-            <div class="tea-card-header">
-              <div class="tea-card-native-name">${tea.nativeName}</div>
-              <h3 class="tea-card-title">${tea.name}</h3>
-            </div>
-            <p class="tea-card-desc">${tea.description}</p>
-            <div class="tea-card-flavor-tags">
-              ${tea.flavorProfile.primary.slice(0, 3).map(f => `<span class="flavor-tag">${f}</span>`).join('')}
-            </div>
+          <div class="tea-card-origin-text">
+            <span class="origin-flag">${tea.nativeName}</span> · ${tea.origin.region}
           </div>
+          <h3 class="tea-card-title">
+            <a href="#/tea/${tea.slug}" class="tea-card-title-link">${tea.name}</a>
+          </h3>
+          <p class="tea-card-desc">${tea.description}</p>
+
+          <div class="tea-card-flavor-tags">
+            ${tea.flavorProfile.primary.slice(0, 3).map(f => `<span class="pill-tag">${f}</span>`).join('')}
+          </div>
+
           <div class="tea-card-footer">
-            <span>${tea.brewingDetails.temperature.split('(')[0]} · ${tea.brewingTime}</span>
-            <span class="tea-card-link-text">
-              View Guide
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </span>
-          </div>
-        </div>
-      </a>
-    `;
-  }
-
-  // --- Randomizer Modal ("Surprise Me") ---
-  function triggerTeaRandomizer() {
-    const randomIndex = Math.floor(Math.random() * TeaVerseData.teas.length);
-    const randomTea = TeaVerseData.teas[randomIndex];
-
-    let modal = document.getElementById('random-tea-modal');
-    if (!modal) {
-      modal = document.createElement('div');
-      modal.id = 'random-tea-modal';
-      modal.className = 'modal-overlay';
-      document.body.appendChild(modal);
-    }
-
-    modal.innerHTML = `
-      <div class="modal-card">
-        <div class="modal-header">
-          <div class="modal-title">✨ Tea Recommendation for You</div>
-          <button id="modal-close-btn" class="modal-close-btn">✕</button>
-        </div>
-        <div class="modal-body">
-          <div style="border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 16/9; margin-bottom: 20px;">
-            <img src="${randomTea.heroImage}" alt="${randomTea.name}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80'">
-          </div>
-          <div class="label-caps">${randomTea.origin.country} · ${randomTea.type}</div>
-          <h2 style="font-family: var(--font-serif); font-size: 2.2rem; color: var(--color-charcoal); margin: 4px 0 12px 0;">${randomTea.name}</h2>
-          <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px;">${randomTea.description}</p>
-          
-          <div class="tea-card-flavor-tags" style="margin-bottom: 24px;">
-            ${randomTea.flavorProfile.primary.map(f => `<span class="flavor-tag">${f}</span>`).join('')}
-          </div>
-
-          <div style="display: flex; gap: 12px; justify-content: flex-end;">
-            <button id="modal-reroll-btn" class="btn btn-secondary btn-sm">Roll Again ↻</button>
-            <a href="#/tea/${randomTea.slug}" id="modal-view-tea-btn" class="btn btn-primary btn-sm">Explore Guide →</a>
+            <div class="tea-card-prep-info">
+              <span>${tea.brewingDetails.temperature}</span>
+              <span>·</span>
+              <span>${tea.brewingDetails.steepingTime}</span>
+            </div>
+            <a href="#/tea/${tea.slug}" class="btn btn-secondary btn-sm">Guide →</a>
           </div>
         </div>
       </div>
     `;
+  }
 
-    modal.classList.add('is-active');
+  // --- "Surprise Me" Randomizer Modal ---
+  function triggerRandomTeaModal() {
+    const teas = TeaVerseData.teas;
+    const randomTea = teas[Math.floor(Math.random() * teas.length)];
+    showRandomModal(randomTea);
+  }
 
-    document.getElementById('modal-close-btn').addEventListener('click', () => {
-      modal.classList.remove('is-active');
-    });
+  function showRandomModal(tea) {
+    let modal = document.getElementById('random-tea-modal');
+    if (!modal) {
+      modal = document.createElement('div');
+      modal.id = 'random-tea-modal';
+      modal.className = 'random-modal-backdrop';
+      document.body.appendChild(modal);
+    }
 
-    document.getElementById('modal-reroll-btn').addEventListener('click', () => {
-      triggerTeaRandomizer();
-    });
+    modal.innerHTML = `
+      <div class="random-modal-card">
+        <button id="modal-close-btn" class="modal-close-btn" aria-label="Close modal">✕</button>
+        <div class="label-caps" style="color: var(--color-sage);">Serendipitous Discovery</div>
+        <div style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 4px;">${tea.nativeName}</div>
+        <h2 style="font-family: var(--font-serif); font-size: 2.2rem; color: var(--color-charcoal); margin-bottom: 12px;">${tea.name}</h2>
+        
+        <div style="border-radius: var(--radius-md); overflow: hidden; height: 180px; margin-bottom: 16px;">
+          <img src="${tea.heroImage}" alt="${tea.name}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80'">
+        </div>
 
-    document.getElementById('modal-view-tea-btn').addEventListener('click', () => {
-      modal.classList.remove('is-active');
-    });
+        <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px; font-size: 0.95rem;">
+          ${tea.description}
+        </p>
+
+        <div style="display: flex; gap: 12px; justify-content: flex-end;">
+          <button id="modal-reroll-btn" class="btn btn-secondary btn-sm">Roll Again 🎲</button>
+          <a href="#/tea/${tea.slug}" id="modal-view-guide-btn" class="btn btn-primary btn-sm">Explore Guide →</a>
+        </div>
+      </div>
+    `;
+
+    modal.classList.add('visible');
+
+    const closeBtn = modal.querySelector('#modal-close-btn');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => modal.classList.remove('visible'));
+    }
+
+    const rerollBtn = modal.querySelector('#modal-reroll-btn');
+    if (rerollBtn) {
+      rerollBtn.addEventListener('click', () => {
+        const nextTea = TeaVerseData.teas[Math.floor(Math.random() * TeaVerseData.teas.length)];
+        showRandomModal(nextTea);
+      });
+    }
+
+    const viewBtn = modal.querySelector('#modal-view-guide-btn');
+    if (viewBtn) {
+      viewBtn.addEventListener('click', () => modal.classList.remove('visible'));
+    }
 
     modal.addEventListener('click', (e) => {
-      if (e.target === modal) modal.classList.remove('is-active');
+      if (e.target === modal) modal.classList.remove('visible');
     });
   }
 
-  // --- Initialize App ---
-  function init() {
-    // Hash routing
-    window.addEventListener('hashchange', handleRouting);
-    handleRouting();
+  // --- Mobile Drawer and Global Header Setup ---
+  function setupGlobalUI() {
+    const toggleBtn = document.getElementById('mobile-menu-toggle');
+    const drawer = document.getElementById('mobile-nav-drawer');
+    const backdrop = document.getElementById('drawer-backdrop');
+    const closeBtn = document.getElementById('drawer-close-btn');
 
-    // Sticky header shadow
-    window.addEventListener('scroll', () => {
-      const header = document.querySelector('.site-header');
-      if (header) {
-        if (window.scrollY > 20) {
-          header.classList.add('is-scrolled');
-        } else {
-          header.classList.remove('is-scrolled');
-        }
-      }
-    });
-
-    // Mobile Navigation Drawer Toggle
-    const mobileToggle = document.getElementById('mobile-menu-toggle');
-    const mobileDrawer = document.getElementById('mobile-nav-drawer');
-    const drawerBackdrop = document.getElementById('drawer-backdrop');
-    const drawerClose = document.getElementById('drawer-close-btn');
-
-    function toggleDrawer(open) {
-      if (mobileDrawer) mobileDrawer.classList.toggle('is-open', open);
-      if (drawerBackdrop) drawerBackdrop.classList.toggle('is-open', open);
+    function openDrawer() {
+      if (drawer) drawer.classList.add('open');
+      if (backdrop) backdrop.classList.add('visible');
     }
 
-    if (mobileToggle) mobileToggle.addEventListener('click', () => toggleDrawer(true));
-    if (drawerClose) drawerClose.addEventListener('click', () => toggleDrawer(false));
-    if (drawerBackdrop) drawerBackdrop.addEventListener('click', () => toggleDrawer(false));
+    function closeDrawer() {
+      if (drawer) drawer.classList.remove('open');
+      if (backdrop) backdrop.classList.remove('visible');
+    }
+
+    if (toggleBtn) toggleBtn.addEventListener('click', openDrawer);
+    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+    if (backdrop) backdrop.addEventListener('click', closeDrawer);
 
     document.querySelectorAll('.mobile-nav-link').forEach(link => {
-      link.addEventListener('click', () => toggleDrawer(false));
+      link.addEventListener('click', closeDrawer);
     });
 
-    // Header Quick Search Button
-    const headerSearchBtn = document.getElementById('header-search-trigger');
-    if (headerSearchBtn) {
-      headerSearchBtn.addEventListener('click', () => {
-        window.location.hash = '#/explore';
-        setTimeout(() => {
-          const input = document.getElementById('catalog-search-input');
-          if (input) input.focus();
-        }, 150);
+    const headerSearchTrigger = document.getElementById('header-search-trigger');
+    if (headerSearchTrigger) {
+      headerSearchTrigger.addEventListener('click', () => {
+        navigateTo('/explore');
       });
     }
   }
 
-  // Run on DOM ready
+  // Initialize App
+  function initApp() {
+    setupGlobalUI();
+    window.addEventListener('hashchange', handleRouting);
+    handleRouting();
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+    document.addEventListener('DOMContentLoaded', initApp);
   } else {
-    init();
+    initApp();
   }
 
 })();
