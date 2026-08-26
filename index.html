@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TeaVerse — Global Tea Encyclopedia & Practical Brewing Guide</title>
+  <meta name="description" content="Explore every leaf and discover every brew. A visual botanical encyclopedia and practical brewing guide for authentic teas and herbal infusions from around the world.">
+  <meta name="keywords" content="tea encyclopedia, matcha brewing guide, oolong tea origins, green tea, herbal infusions, masala chai recipe, pu-erh tea, tea traditions">
+  <meta name="author" content="TeaVerse">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TeaVerse — Global Tea Encyclopedia & Brewing Guide">
+  <meta property="og:description" content="Explore every leaf, discover every brew. A visual journey through the world's teas, origins, ingredients, and traditions.">
+  <meta property="og:image" content="./images/teaverse-logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./images/teaverse-logo.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/components.css">
+</head>
+<body>
+
+  <!-- Sticky Editorial Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="#/" class="brand-logo">
+        <img src="./images/teaverse-logo.png" alt="TeaVerse emblem" class="brand-logo-img">
+        <div class="brand-logo-text">
+          <span class="brand-name">TeaVerse</span>
+          <span class="brand-tagline-mini">Global Encyclopedia</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu">
+        <a href="#/" class="nav-link">Home</a>
+        <a href="#/explore" class="nav-link">Explore</a>
+        <a href="#/brewing" class="nav-link">Brewing Guide</a>
+        <a href="#/origins" class="nav-link">Origins</a>
+        <a href="#/guide" class="nav-link">Tea Botany</a>
+        <a href="#/about" class="nav-link">About</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button id="header-search-trigger" class="btn-header-search" aria-label="Search teas">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <span style="font-size: 0.85rem; font-weight: 500;">Search...</span>
+        </button>
+
+        <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Open mobile navigation">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="drawer-backdrop" class="drawer-backdrop"></div>
+  <aside id="mobile-nav-drawer" class="mobile-nav-drawer">
+    <div>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="brand-name" style="font-size: 1.8rem;">TeaVerse</div>
+        <button id="drawer-close-btn" style="font-size: 1.6rem; color: var(--color-charcoal); cursor: pointer;">✕</button>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="#/" class="mobile-nav-link">Home</a>
+        <a href="#/explore" class="mobile-nav-link">Explore Teas</a>
+        <a href="#/brewing" class="mobile-nav-link">Brewing Guide & Timer</a>
+        <a href="#/origins" class="mobile-nav-link">Global Origins</a>
+        <a href="#/guide" class="mobile-nav-link">Tea Botany & Tisanes</a>
+        <a href="#/about" class="mobile-nav-link">About TeaVerse</a>
+      </div>
+    </div>
+    <div style="font-size: 0.85rem; color: var(--text-muted); border-top: 1px solid var(--border-subtle); padding-top: 20px;">
+      Explore Every Leaf. Discover Every Brew.
+    </div>
+  </aside>
+
+  <!-- Main View Container for Client-Side Routing -->
+  <main id="app-view-container" role="main"></main>
+
+  <!-- Editorial Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-name">TeaVerse</div>
+          <p class="footer-tagline">
+            Explore Every Leaf. Discover Every Brew.<br>
+            A visual botanical encyclopedia and practical brewing guide for teas and tisanes from around the world.
+          </p>
+          <div class="label-caps" style="color: var(--color-sage);">100% Static & Open Knowledge</div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Explore</h4>
+          <div class="footer-links">
+            <a href="#/explore?category=green" class="footer-link">Green Teas</a>
+            <a href="#/explore?category=black" class="footer-link">Black Teas</a>
+            <a href="#/explore?category=oolong" class="footer-link">Oolong Teas</a>
+            <a href="#/explore?category=white" class="footer-link">White Teas</a>
+            <a href="#/explore?category=matcha" class="footer-link">Ceremonial Matcha</a>
+            <a href="#/explore?category=herbal" class="footer-link">Herbal Tisanes</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Guides & Terroirs</h4>
+          <div class="footer-links">
+            <a href="#/brewing" class="footer-link">Interactive Brewing Timer</a>
+            <a href="#/brewing" class="footer-link">Water & Temperature Guide</a>
+            <a href="#/origins" class="footer-link">Tea Producing Terroirs</a>
+            <a href="#/guide" class="footer-link">True Tea vs. Botanicals</a>
+            <a href="#/explore" class="footer-link">Search Catalog</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">About & Ethics</h4>
+          <div class="footer-links">
+            <a href="#/about" class="footer-link">About the Project</a>
+            <a href="#/about" class="footer-link">Botanical Standards</a>
+            <a href="#/about" class="footer-link">Educational Scope</a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer-link">Deploy on GitHub Pages</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          <div>© 2026 TeaVerse. Independent Educational Tea Encyclopedia.</div>
+          <div style="margin-top: 6px; font-weight: 600; color: var(--color-beige); font-size: 0.88rem;">
+            Developed by <span style="color: #FFFFFF;">Momin Ali</span> &nbsp;·&nbsp; Planned &amp; UI by <span style="color: #FFFFFF;">Opi Sultana Nira</span>
+          </div>
+        </div>
+        <div class="footer-notice">Information presented for cultural &amp; educational purposes. No medical claims.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./js/data.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>

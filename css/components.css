@@ -1,0 +1,936 @@
+/* ==========================================================================
+   TeaVerse — Components & View Styling
+   Cards, Detail Views, Timeline, Brewing Calculator, Interactive Timer, Modals
+   ========================================================================== */
+
+/* --- Tea Card Component --- */
+.tea-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.tea-card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+.tea-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-sage);
+}
+
+.tea-card-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+  background: var(--color-cream);
+}
+
+.tea-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.tea-card:hover .tea-card-img {
+  transform: scale(1.05);
+}
+
+.tea-card-category-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 4px 12px;
+  background: rgba(248, 245, 237, 0.92);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-charcoal);
+  box-shadow: var(--shadow-sm);
+}
+
+.tea-card-origin-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 4px 10px;
+  background: rgba(41, 42, 36, 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.tea-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.tea-card-header {
+  margin-bottom: 12px;
+}
+
+.tea-card-native-name {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: var(--color-olive);
+  margin-bottom: 2px;
+}
+
+.tea-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.65rem;
+  color: var(--color-charcoal);
+  line-height: 1.15;
+}
+
+.tea-card-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tea-card-flavor-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.flavor-tag {
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 3px 8px;
+  background: var(--color-cream);
+  border-radius: var(--radius-xs);
+  color: var(--text-secondary);
+}
+
+.tea-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.85rem;
+  color: var(--color-olive-dark);
+  font-weight: 600;
+}
+
+.tea-card-link-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tea-card-link-text svg {
+  transition: transform var(--transition-fast);
+}
+
+.tea-card:hover .tea-card-link-text svg {
+  transform: translateX(4px);
+}
+
+/* --- Explore / Search & Filter Controls --- */
+.explore-controls-wrapper {
+  background: var(--bg-surface);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 48px;
+}
+
+.search-input-group {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.search-input-icon {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-olive);
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 16px 20px 16px 54px;
+  font-size: 1.05rem;
+  background: var(--color-canvas);
+  border: 1.5px solid var(--border-medium);
+  border-radius: var(--radius-full);
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+
+.search-input:focus {
+  border-color: var(--color-olive);
+  background: #FFFFFF;
+  box-shadow: 0 0 0 4px rgba(119, 122, 97, 0.12);
+}
+
+.search-clear-btn {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+  display: none;
+}
+
+.filter-bar-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.filter-pills-scroll {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-pill {
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.84rem;
+  font-weight: 600;
+  background: var(--color-cream);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-pill:hover, .filter-pill.active {
+  background: var(--color-charcoal);
+  color: var(--color-canvas);
+  border-color: var(--color-charcoal);
+}
+
+.sort-select-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.sort-select {
+  padding: 8px 16px;
+  background: var(--color-canvas);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.results-meta-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.results-count-highlight {
+  font-weight: 700;
+  color: var(--color-charcoal);
+}
+
+/* Empty Search State */
+.empty-state-box {
+  text-align: center;
+  padding: 80px 24px;
+  background: var(--bg-surface);
+  border-radius: var(--radius-xl);
+  border: 1px dashed var(--border-medium);
+}
+
+.empty-state-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px auto;
+  color: var(--color-olive);
+}
+
+.empty-state-title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.empty-state-desc {
+  color: var(--text-secondary);
+  max-width: 440px;
+  margin: 0 auto 24px auto;
+}
+
+/* ==========================================================================
+   TEA DETAIL VIEW
+   ========================================================================== */
+.tea-detail-container {
+  padding: 40px 0 80px 0;
+}
+
+.detail-back-nav {
+  margin-bottom: 32px;
+}
+
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-olive-dark);
+  padding: 8px 16px;
+  background: var(--color-cream);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+}
+
+.btn-back:hover {
+  background: var(--color-beige-light);
+  transform: translateX(-4px);
+}
+
+/* Detail Hero */
+.detail-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+@media (min-width: 992px) {
+  .detail-hero-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+  }
+}
+
+.detail-hero-media {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 4 / 3.2;
+  background: var(--color-cream);
+  border: 1px solid var(--border-subtle);
+}
+
+.detail-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail-header-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.badge-botanical-type {
+  padding: 6px 14px;
+  background: var(--color-charcoal);
+  color: var(--color-canvas);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.badge-origin-country {
+  padding: 6px 14px;
+  background: var(--color-cream);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-olive-dark);
+}
+
+.detail-native-title {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--color-olive);
+  margin-bottom: 4px;
+}
+
+.detail-main-title {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  line-height: 1.1;
+  color: var(--color-charcoal);
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .detail-main-title {
+    font-size: 3.8rem;
+  }
+}
+
+.detail-hero-desc {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+/* Brewing Specs Quick Ribbon */
+.specs-quick-ribbon {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 16px;
+  background: var(--color-cream);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+}
+
+.spec-ribbon-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.spec-ribbon-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-olive);
+  margin-bottom: 4px;
+}
+
+.spec-ribbon-val {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-charcoal);
+}
+
+/* Split Cards: Ingredients vs Equipment */
+.detail-split-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+  .detail-split-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.detail-card-panel {
+  background: var(--bg-surface);
+  border-radius: var(--radius-xl);
+  padding: 36px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+}
+
+.panel-header-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.panel-icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: var(--color-cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-olive-dark);
+}
+
+.panel-title {
+  font-family: var(--font-serif);
+  font-size: 1.65rem;
+  color: var(--color-charcoal);
+}
+
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 0.98rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.checklist-bullet {
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-full);
+  background: var(--color-beige-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-olive-dark);
+  font-size: 0.75rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Step-by-Step Vertical Timeline */
+.timeline-section {
+  background: var(--color-cream);
+  border-radius: var(--radius-xl);
+  padding: 48px 32px;
+  border: 1px solid var(--border-subtle);
+  margin-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+  .timeline-section {
+    padding: 60px 48px;
+  }
+}
+
+.timeline-wrapper {
+  position: relative;
+  margin-top: 40px;
+}
+
+.timeline-step-card {
+  position: relative;
+  display: flex;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.timeline-step-card:last-child {
+  margin-bottom: 0;
+}
+
+.step-marker-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.step-num-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: var(--color-charcoal);
+  color: var(--color-canvas);
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: var(--shadow-md);
+}
+
+.step-connector-line {
+  position: absolute;
+  top: 48px;
+  bottom: -36px;
+  width: 2px;
+  background: var(--border-medium);
+  z-index: 1;
+}
+
+.timeline-step-card:last-child .step-connector-line {
+  display: none;
+}
+
+.step-content-box {
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  border: 1px solid var(--border-subtle);
+  flex-grow: 1;
+  box-shadow: var(--shadow-sm);
+}
+
+.step-title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  color: var(--color-charcoal);
+  margin-bottom: 8px;
+}
+
+.step-instruction {
+  font-size: 0.98rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.step-tip-callout {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: var(--color-canvas);
+  border-left: 3px solid var(--color-olive);
+  border-radius: var(--radius-xs);
+  font-size: 0.85rem;
+  color: var(--color-olive-dark);
+  font-style: italic;
+}
+
+/* Flavor Profile Matrix */
+.flavor-profile-panel {
+  background: var(--bg-surface);
+  border-radius: var(--radius-xl);
+  padding: 36px;
+  border: 1px solid var(--border-subtle);
+  margin-bottom: 60px;
+}
+
+.radar-bars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.radar-bar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.radar-bar-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.radar-bar-track {
+  width: 100%;
+  height: 8px;
+  background: var(--color-cream);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.radar-bar-fill {
+  height: 100%;
+  background: var(--color-olive);
+  border-radius: var(--radius-full);
+  transition: width 1s ease;
+}
+
+/* Image Gallery Grid */
+.detail-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.gallery-photo-frame {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--color-cream);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+}
+
+.gallery-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.gallery-photo-frame:hover .gallery-photo-img {
+  transform: scale(1.06);
+}
+
+/* ==========================================================================
+   INTERACTIVE BREWING CALCULATOR & LIVE TIMER
+   ========================================================================== */
+.brewing-guide-page-container {
+  padding: 40px 0 80px 0;
+}
+
+.calculator-app-wrapper {
+  background: var(--bg-surface);
+  border-radius: var(--radius-xl);
+  padding: 40px 32px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 60px;
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .calculator-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+
+.calc-controls-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.calc-control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.calc-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calc-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-charcoal);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.calc-current-val {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-olive-dark);
+}
+
+.calc-range-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--color-cream);
+  outline: none;
+  border: 1px solid var(--border-subtle);
+}
+
+.calc-range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  background: var(--color-charcoal);
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-fast);
+}
+
+.calc-range-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  background: var(--color-olive-dark);
+}
+
+/* Digital Steeping Timer Dial */
+.timer-dial-panel {
+  background: var(--color-canvas);
+  border-radius: var(--radius-xl);
+  padding: 36px 24px;
+  border: 1px solid var(--border-medium);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer-circle-wrapper {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 0 auto 24px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer-svg {
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+
+.timer-bg-circle {
+  fill: none;
+  stroke: var(--color-cream);
+  stroke-width: 8;
+}
+
+.timer-progress-circle {
+  fill: none;
+  stroke: var(--color-olive);
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 565.48;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear;
+}
+
+.timer-display-inner {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer-time-digits {
+  font-family: var(--font-serif);
+  font-size: 3.4rem;
+  font-weight: 700;
+  color: var(--color-charcoal);
+  line-height: 1;
+}
+
+.timer-status-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-olive);
+  margin-top: 4px;
+}
+
+.timer-button-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+/* ==========================================================================
+   RANDOMIZER MODAL ("Surprise Me")
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(41, 42, 36, 0.6);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+}
+
+.modal-overlay.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 580px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-lg);
+  transform: scale(0.92);
+  transition: transform var(--transition-normal);
+}
+
+.modal-overlay.is-active .modal-card {
+  transform: scale(1);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--color-cream);
+}
+
+.modal-title {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--color-charcoal);
+}
+
+.modal-close-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-charcoal);
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 28px 24px;
+}
