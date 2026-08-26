@@ -767,28 +767,28 @@
               <!-- Quick Specs Grid -->
               <div class="specs-grid">
                 <div class="spec-cell">
-                  <div class="spec-cell-label">Water Temp</div>
-                  <div class="spec-cell-val">${tea.brewingDetails.temperature}</div>
+                  <div class="spec-cell-label">Water Temperature</div>
+                  <div class="spec-cell-val">${tea.waterTemperature || tea.brewingDetails.temperature}</div>
                 </div>
                 <div class="spec-cell">
-                  <div class="spec-cell-label">Leaf / Tea Amount</div>
-                  <div class="spec-cell-val">${tea.brewingDetails.teaAmount}</div>
+                  <div class="spec-cell-label">Recommended Tea</div>
+                  <div class="spec-cell-val">${tea.teaQuantity || tea.brewingDetails.teaAmount}</div>
                 </div>
                 <div class="spec-cell">
-                  <div class="spec-cell-label">Steeping Time</div>
-                  <div class="spec-cell-val">${tea.brewingDetails.steepingTime}</div>
+                  <div class="spec-cell-label">Brewing / Steep Time</div>
+                  <div class="spec-cell-val">${tea.brewingTime || tea.brewingDetails.steepingTime}</div>
+                </div>
+                <div class="spec-cell">
+                  <div class="spec-cell-label">Serving Size</div>
+                  <div class="spec-cell-val">${tea.servingSize || "1 cup"}</div>
                 </div>
                 <div class="spec-cell">
                   <div class="spec-cell-label">Caffeine Level</div>
-                  <div class="spec-cell-val">${tea.caffeine}</div>
+                  <div class="spec-cell-val">${tea.caffeineLevel || tea.caffeine}</div>
                 </div>
                 <div class="spec-cell">
-                  <div class="spec-cell-label">Difficulty</div>
-                  <div class="spec-cell-val">${tea.difficulty}</div>
-                </div>
-                <div class="spec-cell">
-                  <div class="spec-cell-label">Recommended Vessel</div>
-                  <div class="spec-cell-val">${tea.brewingDetails.vessel}</div>
+                  <div class="spec-cell-label">Water Volume</div>
+                  <div class="spec-cell-val">${tea.waterQuantity || "200 ml"}</div>
                 </div>
               </div>
 
@@ -801,10 +801,10 @@
             </div>
           </div>
 
-          <!-- SECTION 1: WHAT YOU'LL NEED (Ingredients & Equipment) -->
+          <!-- SECTION 1: INGREDIENTS (উপকরণ) -->
           <div class="detail-card-panel" style="margin-bottom: 40px;">
-            <div class="label-caps" style="color: var(--color-olive);">Preparation Checklist</div>
-            <h2 class="panel-title" style="margin-bottom: 24px;">What You'll Need</h2>
+            <div class="label-caps" style="color: var(--color-olive);">Raw Materials & Teaware</div>
+            <h2 class="panel-title" style="margin-bottom: 24px;">উপকরণ — Required Ingredients</h2>
 
             <div class="detail-split-grid">
               <!-- Raw Ingredients -->
@@ -853,10 +853,10 @@
             </div>
           </div>
 
-          <!-- SECTION 2: HOW TO PREPARE (Step-by-Step Procedure) -->
+          <!-- SECTION 2: HOW TO PREPARE (প্রস্তুত প্রণালী) -->
           <div class="detail-card-panel" style="margin-bottom: 40px;">
             <div class="label-caps" style="color: var(--color-olive);">Master Brewing Procedure</div>
-            <h2 class="panel-title" style="margin-bottom: 24px;">How to Prepare (${tea.preparationTime} prep · ${tea.brewingTime} brew)</h2>
+            <h2 class="panel-title" style="margin-bottom: 24px;">প্রস্তুত প্রণালী — Step-by-Step Preparation (${tea.preparationTime} prep · ${tea.brewingTime} brew)</h2>
 
             <div class="timeline-steps">
               ${tea.preparationSteps.map(stepObj => `

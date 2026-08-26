@@ -863,130 +863,143 @@
   padding: 40px 0 80px 0;
 }
 
-.calculator-app-wrapper {
-  background: var(--bg-surface);
-  border-radius: var(--radius-xl);
-  padding: 40px 32px;
-  border: 1px solid var(--border-subtle);
-  box-shadow: var(--shadow-md);
-  margin-bottom: 60px;
-}
-
-.calculator-grid {
+.brewing-calc-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 48px;
-  align-items: center;
+  gap: 36px;
+  width: 100%;
 }
 
-@media (min-width: 992px) {
-  .calculator-grid {
-    grid-template-columns: 1.1fr 0.9fr;
+@media (min-width: 900px) {
+  .brewing-calc-grid {
+    grid-template-columns: 1.15fr 0.85fr;
   }
 }
 
-.calc-controls-col {
+.calc-card-panel {
+  background: var(--bg-surface);
+  border-radius: var(--radius-xl);
+  padding: 36px 32px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+}
+
+.calc-panel-title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--color-charcoal);
+  margin-bottom: 20px;
+}
+
+.calc-preset-row {
   display: flex;
-  flex-direction: column;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.calc-preset-btn {
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: var(--color-cream);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.calc-preset-btn:hover, .calc-preset-btn.active {
+  background: var(--color-charcoal);
+  color: #FFFFFF;
+  border-color: var(--color-charcoal);
 }
 
 .calc-control-group {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
+  margin-bottom: 22px;
 }
 
-.calc-label-row {
+.calc-control-label {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.calc-label {
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--color-charcoal);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
 }
 
-.calc-current-val {
+.calc-control-val {
   font-family: var(--font-serif);
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  color: var(--color-olive-dark);
+  color: var(--color-olive);
 }
 
-.calc-range-slider {
+.range-slider {
   -webkit-appearance: none;
+  appearance: none;
   width: 100%;
   height: 8px;
   border-radius: var(--radius-full);
   background: var(--color-cream);
   outline: none;
   border: 1px solid var(--border-subtle);
+  margin-top: 4px;
 }
 
-.calc-range-slider::-webkit-slider-thumb {
+.range-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   border-radius: var(--radius-full);
   background: var(--color-charcoal);
   cursor: pointer;
-  box-shadow: var(--shadow-md);
-  transition: transform var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), background var(--transition-fast);
 }
 
-.calc-range-slider::-webkit-slider-thumb:hover {
-  transform: scale(1.2);
-  background: var(--color-olive-dark);
+.range-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  background: var(--color-olive);
 }
 
 /* Digital Steeping Timer Dial */
-.timer-dial-panel {
-  background: var(--color-canvas);
-  border-radius: var(--radius-xl);
-  padding: 36px 24px;
-  border: 1px solid var(--border-medium);
-  text-align: center;
+.timer-dial-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 20px;
+  width: 100%;
 }
 
-.timer-circle-wrapper {
+.timer-dial-svg-wrap {
   position: relative;
   width: 220px;
   height: 220px;
-  margin: 0 auto 24px auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.timer-svg {
-  transform: rotate(-90deg);
-  width: 100%;
-  height: 100%;
-}
-
-.timer-bg-circle {
-  fill: none;
+.timer-dial-bg {
+  fill: none !important;
   stroke: var(--color-cream);
   stroke-width: 8;
 }
 
-.timer-progress-circle {
-  fill: none;
+.timer-dial-progress {
+  fill: none !important;
   stroke: var(--color-olive);
   stroke-width: 8;
   stroke-linecap: round;
-  stroke-dasharray: 565.48;
-  stroke-dashoffset: 0;
+  transform: rotate(-90deg);
+  transform-origin: center;
   transition: stroke-dashoffset 1s linear;
 }
 
@@ -996,23 +1009,24 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  pointer-events: none;
 }
 
-.timer-time-digits {
+.timer-countdown-text {
   font-family: var(--font-serif);
-  font-size: 3.4rem;
+  font-size: 3rem;
   font-weight: 700;
   color: var(--color-charcoal);
   line-height: 1;
 }
 
-.timer-status-label {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
+.timer-status-text {
+  font-size: 0.8rem;
+  font-weight: 600;
   text-transform: uppercase;
+  letter-spacing: 0.1em;
   color: var(--color-olive);
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 .timer-button-row {
@@ -1020,7 +1034,7 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  margin-top: 12px;
+  margin-top: 8px;
 }
 
 /* ==========================================================================
