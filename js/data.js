@@ -467,9 +467,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "60m – 150m",
         "harvestSeason": "Monsoon Flush"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=sreemangal-ctc-black&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=50&tea=sreemangal-ctc-black&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=sreemangal-ctc-black&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=50&tea=sreemangal-ctc-black&v=5"
       ],
       "description": "The quintessential bold CTC black tea from the Tea Capital of Bangladesh. Coppery amber with hearty malt and brisk body.",
       "tasteProfile": "Hearty Malt, Toasted Oak, Brisk Copper",
@@ -490,6 +490,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "2.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "4.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Sreemangal CTC Grand Reserve (2.5g)",
@@ -557,9 +566,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "50m – 110m",
         "harvestSeason": "Second Flush"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=malnicherra-estate-black&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=51&tea=malnicherra-estate-black&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=malnicherra-estate-black&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=51&tea=malnicherra-estate-black&v=5"
       ],
       "description": "From the oldest commercial tea garden in the subcontinent (Est. 1854). Golden tips, dried dark fruit, and silky tannins.",
       "tasteProfile": "Dried Plum, Wild Honeycomb, Toasted Cedar",
@@ -580,6 +589,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Malnicherra 1854 Heritage Orthodox (3.0g)",
@@ -647,9 +665,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "80m – 130m",
         "harvestSeason": "Spring First Flush"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=panchagarh-organic-green&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=52&tea=panchagarh-organic-green&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=panchagarh-organic-green&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=52&tea=panchagarh-organic-green&v=5"
       ],
       "description": "Certified organic green tea grown in view of Kanchenjunga. Sweet green pea, crisp bamboo, and morning dew.",
       "tasteProfile": "Sweet Green Pea, Fresh Bamboo, Spring Dew",
@@ -670,6 +688,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "80°C",
+        "teaAmount": "2.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "2.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Panchagarh Sub-Himalayan Organic Green (2.5g)",
@@ -735,9 +762,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "90m – 130m",
         "harvestSeason": "Autumn Flush"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=kazi-kazi-organic-oolong&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=53&tea=kazi-kazi-organic-oolong&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=kazi-kazi-organic-oolong&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=53&tea=kazi-kazi-organic-oolong&v=5"
       ],
       "description": "Artisanal semi-oxidized oolong with orange blossom fragrance, baked honey, and toasted walnuts.",
       "tasteProfile": "Orange Blossom, Baked Honey, Toasted Walnut",
@@ -758,6 +785,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "90°C",
+        "teaAmount": "4.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "0.7 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Tetulia Organic Amber Oolong (4.0g)",
@@ -823,9 +859,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "Undulating Plains",
         "harvestSeason": "Daily Special"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=seven-color-tea&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=54&tea=seven-color-tea&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=seven-color-tea&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=54&tea=seven-color-tea&v=5"
       ],
       "description": "Bangladesh's world-famous rainbow novelty tea invented by Romesh Ram Gour. Seven distinct stratified density layers.",
       "tasteProfile": "Condensed Sweet Milk, Spicy Black Cinnamon, Zesty Lemon Citrus",
@@ -846,6 +882,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "60°C",
+        "teaAmount": "5.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "10.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Nilkantha Seven-Color Layered Tea (5.0g)",
@@ -913,9 +958,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "All regions",
         "harvestSeason": "Daily Street Brew"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=bangladeshi-dudh-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=55&tea=bangladeshi-dudh-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=bangladeshi-dudh-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=55&tea=bangladeshi-dudh-cha&v=5"
       ],
       "description": "Strong CTC tea simmered in rich whole milk with bruised green cardamom, poured aerated from high spouts.",
       "tasteProfile": "Creamy Sweet Milk, Fragrant Green Cardamom, Bold Malty Tannin",
@@ -936,6 +981,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "8.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "6.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Strong Bangladesh CTC or Dust Tea (8.0g)",
@@ -1014,9 +1068,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "Urban Heritage",
         "harvestSeason": "Evening Indulgence"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=shahi-malai-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=56&tea=shahi-malai-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=shahi-malai-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=56&tea=shahi-malai-cha&v=5"
       ],
       "description": "Slow-reduced milk tea crowned with a thick dollop of fresh clotted cream (Malai) and cardamom.",
       "tasteProfile": "Rich Clotted Cream, Sweet Cardamom, Caramelized Reduced Milk",
@@ -1037,6 +1091,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "90°C",
+        "teaAmount": "6.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "12.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Strong Bangladesh CTC or Dust Tea (6.0g)",
@@ -1115,9 +1178,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "All regions",
         "harvestSeason": "Daily Refresher"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=lebu-cha-bit-lobon&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=57&tea=lebu-cha-bit-lobon&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=lebu-cha-bit-lobon&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=57&tea=lebu-cha-bit-lobon&v=5"
       ],
       "description": "Light black tea infused with fresh Kagoji lime, pink Himalayan black rock salt (Bit Lobon), and cane sugar.",
       "tasteProfile": "Zesty Bengal Lime, Savory Bit Lobon, Sweet Cane Sugar",
@@ -1138,6 +1201,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "90°C",
+        "teaAmount": "1.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "2.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Tonger Lebu Cha with Bit Lobon (1.5g)",
@@ -1205,9 +1277,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "120m – 200m",
         "harvestSeason": "Early Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=sylhet-silver-needle&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=58&tea=sylhet-silver-needle&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=sylhet-silver-needle&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=58&tea=sylhet-silver-needle&v=5"
       ],
       "description": "Hand-plucked tender downy buds yielding pale golden liquor with mountain honey, melon, and jasmine.",
       "tasteProfile": "Wild Mountain Honey, Honeydew Melon, White Jasmine",
@@ -1228,6 +1300,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "80°C",
+        "teaAmount": "3.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "4.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Sylhet Silver Needle White Tea (3.5g)",
@@ -1293,9 +1374,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "All elevations",
         "harvestSeason": "Year-round"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=bangladesh-tulsi-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=59&tea=bangladesh-tulsi-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=bangladesh-tulsi-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=59&tea=bangladesh-tulsi-cha&v=5"
       ],
       "description": "Naturally caffeine-free holy basil infusion. Warm, peppery, clove-like, and sweet with raw Sundarbans honey.",
       "tasteProfile": "Spicy Clove Herb, Sweet Basil Honey, Peppery Warmth",
@@ -1316,6 +1397,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "2.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "5.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Botanical Deshi Krishna Tulsi Leaf Tisane (2.5g)",
@@ -1384,9 +1474,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "All elevations",
         "harvestSeason": "Monsoon Comfort"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=ada-cha-ginger-tea&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=60&tea=ada-cha-ginger-tea&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=ada-cha-ginger-tea&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=60&tea=ada-cha-ginger-tea&v=5"
       ],
       "description": "Crushed fresh ginger rhizome vigorously boiled with CTC black tea, cloves, and cane sugar.",
       "tasteProfile": "Zesty Spicy Ginger, Warm Clove, Sweet Cane Sugar",
@@ -1407,6 +1497,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "5.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "5.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Fresh Ada Cha (Ginger Tea) (5.0g)",
@@ -1474,9 +1573,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "River plains",
         "harvestSeason": "Winter Harvest"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=khejur-gur-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=61&tea=khejur-gur-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=khejur-gur-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=61&tea=khejur-gur-cha&v=5"
       ],
       "description": "Rich milk tea sweetened with authentic liquid date palm jaggery (Nolen Gur) with smoky butterscotch notes.",
       "tasteProfile": "Smoky Butterscotch, Caramelized Date Nectar, Creamy Whole Milk",
@@ -1497,6 +1596,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "90°C",
+        "teaAmount": "6.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "5.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Strong Bangladesh CTC or Dust Tea (6.0g)",
@@ -1575,9 +1683,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "All elevations",
         "harvestSeason": "Daily Spicy"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=kacha-morich-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=62&tea=kacha-morich-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=kacha-morich-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=62&tea=kacha-morich-cha&v=5"
       ],
       "description": "Black tea infused with fresh slit green chilies, lemon juice, Bit Lobon, and sugar.",
       "tasteProfile": "Spicy Capsaicin Heat, Zesty Tart Lemon, Savory Bit Lobon",
@@ -1598,6 +1706,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "90°C",
+        "teaAmount": "1.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "2.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Spicy Green Chili Tong Cha (1.5g)",
@@ -1665,9 +1782,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "Urban alleys",
         "harvestSeason": "Daily Digestive"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=tetul-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=63&tea=tetul-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=tetul-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=63&tea=tetul-cha&v=5"
       ],
       "description": "Hot black tea blended with ripe sour tamarind pulp (Tetul), roasted cumin, and Bit Lobon.",
       "tasteProfile": "Tart Sour Tamarind, Toasted Cumin, Sweet Cane Sugar",
@@ -1688,6 +1805,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "90°C",
+        "teaAmount": "1.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Old Dhaka Tamarind Spiced Cha (1.5g)",
@@ -1755,9 +1881,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "Undulating tillas",
         "harvestSeason": "Year-round"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=pudina-pata-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=64&tea=pudina-pata-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=pudina-pata-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=64&tea=pudina-pata-cha&v=5"
       ],
       "description": "Fresh crushed garden spearmint leaves infused in light tea with lemon and sugar.",
       "tasteProfile": "Crisp Garden Spearmint, Cool Menthol Breeze, Sweet Cane",
@@ -1778,6 +1904,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "90°C",
+        "teaAmount": "2.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Sylhet Garden Mint Cha (2.0g)",
@@ -1845,9 +1980,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "All regions",
         "harvestSeason": "Year-round"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=tejpata-daruchini-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=65&tea=tejpata-daruchini-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=tejpata-daruchini-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=65&tea=tejpata-daruchini-cha&v=5"
       ],
       "description": "Aromatic black tea boiled with Indian bay leaves (Tejpata), cinnamon bark, and cloves.",
       "tasteProfile": "Fragrant Bay Leaf, Sweet Cinnamon Bark, Warm Woody Spice",
@@ -1868,6 +2003,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "2.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "4.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Bay Leaf & Cinnamon Tong Cha (2.5g)",
@@ -1935,9 +2079,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "River plains",
         "harvestSeason": "Winter Harvest"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=amloki-triphala-tisane&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=66&tea=amloki-triphala-tisane&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=amloki-triphala-tisane&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=66&tea=amloki-triphala-tisane&v=5"
       ],
       "description": "Dried wild Indian gooseberry (Amloki) simmered with raw honey into a tart, vitamin-rich golden tea.",
       "tasteProfile": "Tart Amloki Berry, Lingering Sweet Aftertaste, Mild Astringency",
@@ -1958,6 +2102,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "5.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "6.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Botanical Amloki Wild Berry Tisane (5.0g)",
@@ -2026,9 +2179,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "All elevations",
         "harvestSeason": "Spring Harvest"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=neem-pata-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=67&tea=neem-pata-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=neem-pata-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=67&tea=neem-pata-cha&v=5"
       ],
       "description": "Bittersweet cleansing infusion brewed from young tender spring leaves of the sacred Neem tree.",
       "tasteProfile": "Clean Bitter Herb, Sweet Honey Balance, Fresh Green Leaf",
@@ -2049,6 +2202,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "90°C",
+        "teaAmount": "1.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "2.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Botanical Bengal Neem Leaf Cleansing Tisane (1.0g)",
@@ -2117,9 +2279,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "River plains",
         "harvestSeason": "Year-round"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=basak-leaf-tea&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=68&tea=basak-leaf-tea&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=basak-leaf-tea&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=68&tea=basak-leaf-tea&v=5"
       ],
       "description": "Time-honored throat comfort tea brewed from fresh Basak leaves, black pepper, and ginger.",
       "tasteProfile": "Warm Herbal Vasaka, Peppery Ginger, Sweet Raw Honey",
@@ -2140,6 +2302,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "5.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Botanical Basak Leaf & Honey Throat Infusion (3.0g)",
@@ -2208,9 +2379,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "River plains",
         "harvestSeason": "Winter Harvest"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=kalo-jeera-tea&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=69&tea=kalo-jeera-tea&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=kalo-jeera-tea&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=69&tea=kalo-jeera-tea&v=5"
       ],
       "description": "Lightly toasted Nigella Sativa seeds (Kalo Jeera) simmered with raw honey.",
       "tasteProfile": "Peppery Nigella Seed, Toasted Nutty Earth, Sweet Honey Finish",
@@ -2231,6 +2402,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "4.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Botanical Nigella Sativa Black Seed Brew (3.0g)",
@@ -2299,9 +2479,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "Plains & Hills",
         "harvestSeason": "Autumn Calyx"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=chukair-roselle-tea&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=70&tea=chukair-roselle-tea&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=chukair-roselle-tea&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=70&tea=chukair-roselle-tea&v=5"
       ],
       "description": "Brilliant ruby-red infusion from dried Chukair hibiscus calyces with tart cranberry sweetness.",
       "tasteProfile": "Tart Crimson Cranberry, Wild Red Berry, Sweet Raw Honey",
@@ -2322,6 +2502,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "4.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "5.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Botanical Bengal Wild Chukair Roselle Tisane (4.0g)",
@@ -2390,9 +2579,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "80m – 140m",
         "harvestSeason": "Autumn Flush"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=moulvibazar-orthodox-gold&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=71&tea=moulvibazar-orthodox-gold&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=moulvibazar-orthodox-gold&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=71&tea=moulvibazar-orthodox-gold&v=5"
       ],
       "description": "Full-leaf orthodox black tea with glowing golden tips, honeyed malt, dried fig, and oak.",
       "tasteProfile": "Honeyed Malt, Dried Fig, Toasted Oak",
@@ -2413,6 +2602,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Moulvibazar Orthodox Golden Tip (3.0g)",
@@ -2480,9 +2678,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "70m – 150m",
         "harvestSeason": "Spring Pluck"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=lalakhal-riverbed-green&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=72&tea=lalakhal-riverbed-green&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=lalakhal-riverbed-green&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=72&tea=lalakhal-riverbed-green&v=5"
       ],
       "description": "Grown along the turquoise Shari River. Pan-fired whole leaf with sweet river reed and clover.",
       "tasteProfile": "Sweet River Reed, Wild White Clover, Crisp Grass",
@@ -2503,6 +2701,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "80°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "2.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Lalakhal Emerald Riverbed Green (3.0g)",
@@ -2568,9 +2775,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "80m – 160m",
         "harvestSeason": "Autumn Flush"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=finlay-camellia-estate&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=73&tea=finlay-camellia-estate&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=finlay-camellia-estate&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=73&tea=finlay-camellia-estate&v=5"
       ],
       "description": "Historic British-era broken orange pekoe (BOP) with rich barley malt, dark honey, and brisk body.",
       "tasteProfile": "Rich Barley Malt, Dark Honey, Toasted Oak",
@@ -2591,6 +2798,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Finlay Camellia Valley BOP (3.0g)",
@@ -2658,9 +2874,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "500m – 900m",
         "harvestSeason": "Spring Pluck"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=bandarban-mountain-tea&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=74&tea=bandarban-mountain-tea&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=bandarban-mountain-tea&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=74&tea=bandarban-mountain-tea&v=5"
       ],
       "description": "High-altitude artisanal green tea with sweet alpine flora, crisp rainwater, and bamboo.",
       "tasteProfile": "Sweet Mountain Flora, Fresh Bamboo, Rainwater Sweetness",
@@ -2681,6 +2897,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "80°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "2.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Bandarban Cloud Peak Green (3.0g)",
@@ -2746,9 +2971,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "80m – 120m",
         "harvestSeason": "Spring Pluck"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=madhabpur-lake-misty-tea&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=75&tea=madhabpur-lake-misty-tea&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=madhabpur-lake-misty-tea&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=75&tea=madhabpur-lake-misty-tea&v=5"
       ],
       "description": "Pan-fired green tea grown along the misty lake with sweet water lily florals and green pea.",
       "tasteProfile": "Water Lily Floral, Sweet Green Pea, Spring Dew",
@@ -2769,6 +2994,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "80°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "2.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Madhabpur Lake Misty Green (3.0g)",
@@ -2834,9 +3068,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "90m – 130m",
         "harvestSeason": "Early Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=tetulia-first-flush-black&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=76&tea=tetulia-first-flush-black&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=tetulia-first-flush-black&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=76&tea=tetulia-first-flush-black&v=5"
       ],
       "description": "Unblended spring harvest with sparkling champagne liquor, floral muscatel grape, and orchard notes.",
       "tasteProfile": "Muscatel Grape, Spring Blossom, Honey Dew",
@@ -2857,6 +3091,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "90°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Tetulia First Flush Himalayan Black (3.0g)",
@@ -2924,9 +3167,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "River plains",
         "harvestSeason": "Winter Bark"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=arjun-bark-tisane&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=77&tea=arjun-bark-tisane&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=arjun-bark-tisane&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=77&tea=arjun-bark-tisane&v=5"
       ],
       "description": "Ayurvedic tree bark decoction from inner Arjun bark with woody sweetness and earthiness.",
       "tasteProfile": "Warm Woody Bark, Mild Astringency, Sweet Honey",
@@ -2947,6 +3190,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "5.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "8.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Botanical Arjun Tree Bark Traditional Decoction (5.0g)",
@@ -3015,9 +3267,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "All regions",
         "harvestSeason": "Daily Brew"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=panta-ranga-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=78&tea=panta-ranga-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=panta-ranga-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=78&tea=panta-ranga-cha&v=5"
       ],
       "description": "Clear ruby-red black tea infused with cane sugar and a hint of crushed cardamom without milk.",
       "tasteProfile": "Bright Malty Black, Sweet Cane Sugar, Subtle Cardamom",
@@ -3038,6 +3290,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "2.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "2.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Traditional Ranga Cha (Clear Red Tea) (2.0g)",
@@ -3105,9 +3366,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "River plains",
         "harvestSeason": "Winter Seed"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=methi-dana-infusion&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=79&tea=methi-dana-infusion&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=methi-dana-infusion&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=79&tea=methi-dana-infusion&v=5"
       ],
       "description": "Golden fenugreek seeds simmered with raw honey into a nutty, bittersweet morning drink.",
       "tasteProfile": "Nutty Maple Earth, Mild Bittersweet Herb, Warm Grain",
@@ -3128,6 +3389,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "5.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Botanical Fenugreek Seed (Methi Dana) Tisane (3.0g)",
@@ -3196,9 +3466,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "80m",
         "harvestSeason": "Summer Flush"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=btri-2-clonal-tea&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=80&tea=btri-2-clonal-tea&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=btri-2-clonal-tea&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=80&tea=btri-2-clonal-tea&v=5"
       ],
       "description": "Specially bred high-theaflavin cultivar developed by Bangladesh Tea Research Institute.",
       "tasteProfile": "Intense Copper Theaflavin, Sweet Brioche, Ripe Plum",
@@ -3219,6 +3489,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "98°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf BTRI-2 Elite Clonal Black Reserve (3.0g)",
@@ -3286,9 +3565,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "300m – 600m",
         "harvestSeason": "Spring Pluck"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=chattogram-hill-tracts-green&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=81&tea=chattogram-hill-tracts-green&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=chattogram-hill-tracts-green&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=81&tea=chattogram-hill-tracts-green&v=5"
       ],
       "description": "Artisanal green tea harvested from hillside gardens by indigenous community cooperatives.",
       "tasteProfile": "Wild Forest Fern, Sweet Bamboo, Smoky Wok",
@@ -3309,6 +3588,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "80°C",
+        "teaAmount": "2.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "2.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf CHT Indigenous Forest Green Tea (2.5g)",
@@ -3374,9 +3662,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "150m – 350m",
         "harvestSeason": "Autumn Flush"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=rangamati-kaptai-highland&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=82&tea=rangamati-kaptai-highland&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=rangamati-kaptai-highland&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=82&tea=rangamati-kaptai-highland&v=5"
       ],
       "description": "Full-leaf orthodox black tea grown near Kaptai Lake with caramel malt and citrus peel.",
       "tasteProfile": "Caramel Malt, Citrus Peel, Warm Cedar",
@@ -3397,6 +3685,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Rangamati Kaptai Highland Orthodox (3.0g)",
@@ -3464,9 +3761,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "40m – 80m",
         "harvestSeason": "Monsoon Season"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=habiganj-valley-black&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=83&tea=habiganj-valley-black&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=habiganj-valley-black&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=83&tea=habiganj-valley-black&v=5"
       ],
       "description": "Heavy, full-bodied CTC black tea engineered for deep copper color and milk chai.",
       "tasteProfile": "Heavy Dark Malt, Molasses Tannin, Deep Copper",
@@ -3487,6 +3784,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "4.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Habiganj Valley CTC Bold Harvest (3.0g)",
@@ -3554,9 +3860,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "90m – 130m",
         "harvestSeason": "Spring Pluck"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=panchagarh-white-tea&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=84&tea=panchagarh-white-tea&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=panchagarh-white-tea&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=84&tea=panchagarh-white-tea&v=5"
       ],
       "description": "Single bud and two leaves white tea with honeysuckle, dried white peach, and fresh hay.",
       "tasteProfile": "Honeysuckle Nectar, White Peach, Sweet Hay",
@@ -3577,6 +3883,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "85°C",
+        "teaAmount": "3.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "4.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Panchagarh Himalayan White Peony (3.5g)",
@@ -3642,9 +3957,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "70m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=sreemangal-green-tea&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=85&tea=sreemangal-green-tea&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=sreemangal-green-tea&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=85&tea=sreemangal-green-tea&v=5"
       ],
       "description": "Lightly steamed Bangladeshi green tea with crisp green grass and sweet vegetal broth.",
       "tasteProfile": "Crisp Green Grass, Sweet Vegetal Broth, Spring Leaf",
@@ -3665,6 +3980,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "80°C",
+        "teaAmount": "2.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "2.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Sreemangal Steamed Green Tea (2.5g)",
@@ -3730,9 +4054,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "Urban",
         "harvestSeason": "Daily Adda"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=dhaka-special-masala-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=86&tea=dhaka-special-masala-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=dhaka-special-masala-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=86&tea=dhaka-special-masala-cha&v=5"
       ],
       "description": "Campus tong spiced tea with crushed cardamom, cinnamon, clove, ginger, and condensed milk.",
       "tasteProfile": "Crushed Cardamom, Fiery Ginger, Sweet Condensed Milk",
@@ -3753,6 +4077,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "7.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "5.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Strong Bangladesh CTC or Dust Tea (7.0g)",
@@ -3831,9 +4164,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "Coastal",
         "harvestSeason": "Daily"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=chittagong-port-kadak-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=87&tea=chittagong-port-kadak-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=chittagong-port-kadak-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=87&tea=chittagong-port-kadak-cha&v=5"
       ],
       "description": "Extra-strong, thick boiled milk tea favored by dock workers and maritime travelers.",
       "tasteProfile": "Extra Strong Malt, Thick Boiled Milk, Caramelized Sugar",
@@ -3854,6 +4187,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "8.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "6.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Strong Bangladesh CTC or Dust Tea (8.0g)",
@@ -3932,9 +4274,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "Heritage",
         "harvestSeason": "Winter Special"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=sylhet-seven-spice-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=88&tea=sylhet-seven-spice-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=sylhet-seven-spice-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=88&tea=sylhet-seven-spice-cha&v=5"
       ],
       "description": "Simmered with 7 whole spices (cardamom, cinnamon, clove, ginger, nutmeg, mace, black pepper).",
       "tasteProfile": "Rich Whole Spices, Nutmeg & Mace, Sweet Whole Milk",
@@ -3955,6 +4297,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "8.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "8.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Strong Bangladesh CTC or Dust Tea (8.0g)",
@@ -4033,9 +4384,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "Riverine",
         "harvestSeason": "Winter"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=borishal-nolen-gur-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=89&tea=borishal-nolen-gur-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=borishal-nolen-gur-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=89&tea=borishal-nolen-gur-cha&v=5"
       ],
       "description": "Brewed over riverside clay stoves with fresh winter date palm jaggery and fresh milk.",
       "tasteProfile": "Liquid Date Jaggery, Creamy River Milk, Smoky Caramel",
@@ -4056,6 +4407,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "90°C",
+        "teaAmount": "6.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "5.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Strong Bangladesh CTC or Dust Tea (6.0g)",
@@ -4134,9 +4494,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "100m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=kamalganj-wild-honey-green&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=90&tea=kamalganj-wild-honey-green&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=kamalganj-wild-honey-green&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=90&tea=kamalganj-wild-honey-green&v=5"
       ],
       "description": "Green tea infused with wild raw honey harvested from Lawachara National Park bees.",
       "tasteProfile": "Wild Forest Honey, Crisp Green Leaf, Floral Nectar",
@@ -4157,6 +4517,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "80°C",
+        "teaAmount": "2.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "2.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Kamalganj Wild Forest Honey Green (2.5g)",
@@ -4222,9 +4591,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "Sea Level",
         "harvestSeason": "Daily Sunset"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=coxs-bazar-coastal-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=91&tea=coxs-bazar-coastal-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=coxs-bazar-coastal-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=91&tea=coxs-bazar-coastal-cha&v=5"
       ],
       "description": "Sweet roadside black tea served hot while enjoying sea breeze along the world's longest beach.",
       "tasteProfile": "Brisk Black Tea, Sweet Cane Sugar, Cardamom Aroma",
@@ -4245,6 +4614,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "2.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "2.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Cox's Bazar Coastal Sea Breeze Cha (2.0g)",
@@ -4312,9 +4690,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "Plains",
         "harvestSeason": "Dessert Tea"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=mymensingh-kachagolla-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=92&tea=mymensingh-kachagolla-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=mymensingh-kachagolla-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=92&tea=mymensingh-kachagolla-cha&v=5"
       ],
       "description": "Milk tea infused with sweet cardamom and essence reminiscent of Muktagacha's famous Monda.",
       "tasteProfile": "Sweet Cardamom Milk, Creamy Curd Essence, Caramel Sugar",
@@ -4335,6 +4713,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "6.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "6.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Strong Bangladesh CTC or Dust Tea (6.0g)",
@@ -4413,9 +4800,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "Plains",
         "harvestSeason": "Dessert Tea"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=tangail-porabari-chamcham-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=93&tea=tangail-porabari-chamcham-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=tangail-porabari-chamcham-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=93&tea=tangail-porabari-chamcham-cha&v=5"
       ],
       "description": "Deeply caramelized condensed milk tea inspired by Tangail's historic Porabari Chamcham sweet.",
       "tasteProfile": "Deep Brown Caramel, Condensed Milk, Malty Black Tea",
@@ -4436,6 +4823,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "7.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "8.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Strong Bangladesh CTC or Dust Tea (7.0g)",
@@ -4514,9 +4910,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "Plains",
         "harvestSeason": "Winter"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=rangpur-tobacco-leaf-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=94&tea=rangpur-tobacco-leaf-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=rangpur-tobacco-leaf-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=94&tea=rangpur-tobacco-leaf-cha&v=5"
       ],
       "description": "Naturally caffeine-free roasted herbal tisane with toasted grain, woodsmoke, and wild honey.",
       "tasteProfile": "Toasted Grain, Gentle Woodsmoke, Wildflower Honey",
@@ -4537,6 +4933,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "4.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "5.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Botanical Rangpur Smoked Herbal Leaf Tisane (4.0g)",
@@ -4605,9 +5010,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "Plains",
         "harvestSeason": "Evening Sadhana"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=kushtia-lalon-sadhur-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=95&tea=kushtia-lalon-sadhur-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=kushtia-lalon-sadhur-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=95&tea=kushtia-lalon-sadhur-cha&v=5"
       ],
       "description": "A simple, meditative clear red tea boiled with ginger, tulsi, and molasses served at mystic gatherings.",
       "tasteProfile": "Spicy Ginger, Sacred Tulsi, Raw Molasses",
@@ -4628,6 +5033,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "2.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "4.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Kushtia Baul Akhra Sadhur Cha (2.5g)",
@@ -4695,9 +5109,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "Plains",
         "harvestSeason": "Evening Special"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=bogura-doi-infused-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=96&tea=bogura-doi-infused-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=bogura-doi-infused-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=96&tea=bogura-doi-infused-cha&v=5"
       ],
       "description": "Rich milk tea crafted to pair with Bogura's famous clay-pot sweet curd (Misti Doi).",
       "tasteProfile": "Creamy Sweet Milk, Cardamom Aroma, Malty Black Tea",
@@ -4718,6 +5132,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "6.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "5.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Strong Bangladesh CTC or Dust Tea (6.0g)",
@@ -4796,9 +5219,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "Plains",
         "harvestSeason": "Summer"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=rajshahi-amshotto-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=97&tea=rajshahi-amshotto-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=rajshahi-amshotto-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=97&tea=rajshahi-amshotto-cha&v=5"
       ],
       "description": "A unique fruit and leaf infusion brewed with tender mango leaves and sun-dried mango fruit leather.",
       "tasteProfile": "Sun-Dried Mango, Tender Mango Leaf, Sweet Honey",
@@ -4819,6 +5242,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "90°C",
+        "teaAmount": "4.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "5.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Botanical Rajshahi Sun-Dried Mango Leaf Cha (4.0g)",
@@ -4887,9 +5319,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "Tidal Delta",
         "harvestSeason": "Spring Pluck"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=sundarbans-kholisa-honey-tea&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=98&tea=sundarbans-kholisa-honey-tea&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=sundarbans-kholisa-honey-tea&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=98&tea=sundarbans-kholisa-honey-tea&v=5"
       ],
       "description": "Black tea infused with rare pure Kholisa flower wild mangrove honey harvested by Mowals.",
       "tasteProfile": "Wild Mangrove Honey, Floral Kholisa Nectar, Smooth Black Tea",
@@ -4910,6 +5342,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "90°C",
+        "teaAmount": "2.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Sundarbans Wild Mangrove Honey Tea (2.5g)",
@@ -4977,9 +5418,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "120m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=lawachara-rainforest-green&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=99&tea=lawachara-rainforest-green&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=lawachara-rainforest-green&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=99&tea=lawachara-rainforest-green&v=5"
       ],
       "description": "Green tea grown along rainforest borders with deep chlorophyll, tropical orchid, and sweet fern.",
       "tasteProfile": "Tropical Orchid, Rainforest Fern, Sweet Chlorophyll",
@@ -5000,6 +5441,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "80°C",
+        "teaAmount": "2.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "2.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Lawachara Canopy Rainforest Green (2.5g)",
@@ -5065,9 +5515,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "Wetlands",
         "harvestSeason": "Summer"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=baniachong-marshland-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=100&tea=baniachong-marshland-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=baniachong-marshland-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=100&tea=baniachong-marshland-cha&v=5"
       ],
       "description": "Sun-dried wild lotus leaves and pink lotus petals harvested from pristine freshwater haors.",
       "tasteProfile": "Sweet Lotus Petal, Haor Reed, Clean Rainwater",
@@ -5088,6 +5538,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "85°C",
+        "teaAmount": "3.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "4.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Botanical Baniachong Wetland Lotus Leaf Tisane (3.5g)",
@@ -5156,9 +5615,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "Wetlands",
         "harvestSeason": "Monsoon"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=tanguar-haor-water-lily-tea&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=101&tea=tanguar-haor-water-lily-tea&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=tanguar-haor-water-lily-tea&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=101&tea=tanguar-haor-water-lily-tea&v=5"
       ],
       "description": "Botanical infusion made from sun-dried blue water lily blossoms (Neel Shapla) with honey.",
       "tasteProfile": "Blue Water Lily, Sweet Wild Honey, Aquatic Dew",
@@ -5179,6 +5638,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "85°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "4.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Botanical Tanguar Haor Blue Water Lily Tisane (3.0g)",
@@ -5247,9 +5715,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "80m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=jaflong-stone-valley-green&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=102&tea=jaflong-stone-valley-green&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=jaflong-stone-valley-green&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=102&tea=jaflong-stone-valley-green&v=5"
       ],
       "description": "Grown near the crystal rocky waters of Jaflong with clean mineral clarity and crisp grass.",
       "tasteProfile": "Mineral Stone Clarity, Crisp River Grass, Sweet Vegetal",
@@ -5270,6 +5738,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "80°C",
+        "teaAmount": "2.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "2.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Jaflong Stone River Valley Green (2.5g)",
@@ -5335,9 +5812,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "90m",
         "harvestSeason": "Autumn"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=bichanakandi-mountain-mist&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=103&tea=bichanakandi-mountain-mist&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=bichanakandi-mountain-mist&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=103&tea=bichanakandi-mountain-mist&v=5"
       ],
       "description": "Malty black tea cultivated in the cool mountain shadow of the Khasi hills.",
       "tasteProfile": "Mountain Shadow Malt, Dark Honey, Toasted Oak",
@@ -5358,6 +5835,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Bichnakandi Meghalaya Border Black (3.0g)",
@@ -5425,9 +5911,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "80m",
         "harvestSeason": "Year-round"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=sreemangal-lemon-grass-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=104&tea=sreemangal-lemon-grass-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=sreemangal-lemon-grass-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=104&tea=sreemangal-lemon-grass-cha&v=5"
       ],
       "description": "Green tea blended with fresh estate-grown aromatic lemongrass stalks and Sundarbans honey.",
       "tasteProfile": "Zesty Lemongrass, Crisp Green Tea, Citrus Herb",
@@ -5448,6 +5934,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "85°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Botanical Sreemangal Estate Lemongrass Green (3.0g)",
@@ -5516,9 +6011,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "Urban",
         "harvestSeason": "Daily Adda"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=chattogram-masala-kadak&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=105&tea=chattogram-masala-kadak&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=chattogram-masala-kadak&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=105&tea=chattogram-masala-kadak&v=5"
       ],
       "description": "Thick spiced CTC milk tea with crushed black pepper, cloves, and ginger.",
       "tasteProfile": "Crushed Black Pepper, Fiery Ginger, Creamy Whole Milk",
@@ -5539,6 +6034,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "7.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "6.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Strong Bangladesh CTC or Dust Tea (7.0g)",
@@ -5617,9 +6121,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "Plains",
         "harvestSeason": "Road Trip Special"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=feni-chikon-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=106&tea=feni-chikon-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=feni-chikon-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=106&tea=feni-chikon-cha&v=5"
       ],
       "description": "Famous highway bus stop light milk tea brewed fast in pressurized aluminum kettles.",
       "tasteProfile": "Brisk Black Tea, Light Whole Milk, Sweet Sugar",
@@ -5640,6 +6144,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "5.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "4.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Strong Bangladesh CTC or Dust Tea (5.0g)",
@@ -5718,9 +6231,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "Plains",
         "harvestSeason": "Dessert Special"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=comilla-rasomalai-essence-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=107&tea=comilla-rasomalai-essence-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=comilla-rasomalai-essence-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=107&tea=comilla-rasomalai-essence-cha&v=5"
       ],
       "description": "Rich milk tea infused with cardamom and condensed milk inspired by famous Rasomalai.",
       "tasteProfile": "Sweet Clotted Milk, Fragrant Cardamom, Malty Black Tea",
@@ -5741,6 +6254,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "7.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "8.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Strong Bangladesh CTC or Dust Tea (7.0g)",
@@ -5819,9 +6341,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "Coastal",
         "harvestSeason": "Evening Special"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=khulna-nawabi-dudh-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=108&tea=khulna-nawabi-dudh-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=khulna-nawabi-dudh-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=108&tea=khulna-nawabi-dudh-cha&v=5"
       ],
       "description": "Rich evening milk tea brewed with saffron strands, crushed almonds, and cardamom.",
       "tasteProfile": "Aromatic Saffron, Crushed Almonds, Creamy Whole Milk",
@@ -5842,6 +6364,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "6.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "7.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Strong Bangladesh CTC or Dust Tea (6.0g)",
@@ -5920,9 +6451,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "Plains",
         "harvestSeason": "Spring Blossom"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=dinajpur-litchi-flower-tea&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=109&tea=dinajpur-litchi-flower-tea&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=dinajpur-litchi-flower-tea&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=109&tea=dinajpur-litchi-flower-tea&v=5"
       ],
       "description": "Sun-dried litchi tree flower blossoms infused with wild honey yielding sweet tropical floral aroma.",
       "tasteProfile": "Sweet Litchi Blossom, Tropical Floral Nectar, Wild Honey",
@@ -5943,6 +6474,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "85°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "4.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Botanical Dinajpur Royal Litchi Blossom Tisane (3.0g)",
@@ -6011,9 +6551,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "150m",
         "harvestSeason": "Mingqian Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=longjing&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=110&tea=longjing&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=longjing&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=110&tea=longjing&v=5"
       ],
       "description": "China's most famous pan-fired green tea with toasted chestnuts and sweet orchid broth.",
       "tasteProfile": "Toasted Chestnuts, Sweet Orchid, Tender Edamame",
@@ -6034,6 +6574,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "80°C",
+        "teaAmount": "3.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "2.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf West Lake Longjing (Dragon Well) (3.5g)",
@@ -6099,9 +6648,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "900m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=da-hong-pao&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=111&tea=da-hong-pao&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=da-hong-pao&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=111&tea=da-hong-pao&v=5"
       ],
       "description": "Legendary rock cliff oolong with heavy charcoal roasting, stone mineral Yan Yun, and molasses.",
       "tasteProfile": "Cliff Mineral Stone, Charcoal Woodsmoke, Roasted Dark Peach",
@@ -6122,6 +6671,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "98°C",
+        "teaAmount": "7.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "0.3 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Wuyi Da Hong Pao (Big Red Robe) (7.0g)",
@@ -6187,9 +6745,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "800m",
         "harvestSeason": "Autumn"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=tieguanyin&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=112&tea=tieguanyin&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=tieguanyin&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=112&tea=tieguanyin&v=5"
       ],
       "description": "Tightly rolled jade pearls bursting with gardenia blossoms, sweet cream, and orchid fragrance.",
       "tasteProfile": "Fresh Wild Orchid, Gardenia Blossom, Sweet Cream",
@@ -6210,6 +6768,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "7.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "0.3 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Anxi Tieguanyin (Iron Goddess) (7.0g)",
@@ -6275,9 +6842,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "600m",
         "harvestSeason": "Early Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=silver-needle&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=113&tea=silver-needle&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=silver-needle&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=113&tea=silver-needle&v=5"
       ],
       "description": "Downy unopened spring buds yielding pale apricot liquor with wildflower nectar and melon dew.",
       "tasteProfile": "Wildflower Nectar, Honeydew Melon, White Hay",
@@ -6298,6 +6865,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "80°C",
+        "teaAmount": "4.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "4.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Fuding Silver Needle (Baihao Yinzhen) (4.5g)",
@@ -6363,9 +6939,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "1,500m",
         "harvestSeason": "Aged Ripe"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=puerh-shou&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=114&tea=puerh-shou&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=puerh-shou&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=114&tea=puerh-shou&v=5"
       ],
       "description": "Microbially fermented dark tea cake with damp forest floor, sweet Chinese date, and cocoa.",
       "tasteProfile": "Damp Forest Floor, Sweet Red Date, Rich Earthy Wood",
@@ -6386,6 +6962,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "7.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "0.3 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Vintage Menghai Shou Pu-erh Cake (7.5g)",
@@ -6451,9 +7036,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "1,400m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=puerh-sheng&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=115&tea=puerh-sheng&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=puerh-sheng&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=115&tea=puerh-sheng&v=5"
       ],
       "description": "Naturally aged raw tea cake with wild apricot, camphor herb, and exhilarating mountain Cha Qi.",
       "tasteProfile": "Wild Apricot, Camphor Herb, Mineral Stone",
@@ -6474,6 +7059,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "7.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "0.3 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Yiwu Ancient Tree Sheng Pu-erh (7.0g)",
@@ -6539,9 +7133,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "800m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=huangshan-maofeng&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=116&tea=huangshan-maofeng&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=huangshan-maofeng&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=116&tea=huangshan-maofeng&v=5"
       ],
       "description": "Magnolia blossom, tender peach, and light sweet bamboo broth.",
       "tasteProfile": "Floral Magnolia, Tender Peach, Sweet Bamboo",
@@ -6562,6 +7156,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "80°C",
+        "teaAmount": "2.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Huangshan Maofeng (Yellow Mountain) (2.5g)",
@@ -6627,9 +7230,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "700m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=taiping-houkui&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=117&tea=taiping-houkui&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=taiping-houkui&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=117&tea=taiping-houkui&v=5"
       ],
       "description": "Massive flat emerald leaves with sweet wild orchid and deep forest sweetness.",
       "tasteProfile": "Wild Orchid, Forest Dew, Sweet Spinach",
@@ -6650,6 +7253,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "85°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Taiping Houkui (Monkey King) (3.0g)",
@@ -6715,9 +7327,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "600m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=lu-an-guapian&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=118&tea=lu-an-guapian&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=lu-an-guapian&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=118&tea=lu-an-guapian&v=5"
       ],
       "description": "Single leaf without bud or stalk pan-fired with toasted almond and vegetal broth.",
       "tasteProfile": "Toasted Almond, Sweet Melon, Vegetal Broth",
@@ -6738,6 +7350,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "80°C",
+        "teaAmount": "2.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Lu'an Guapian (Melon Seed) (2.5g)",
@@ -6803,9 +7424,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "300m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=bi-luo-chun&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=119&tea=bi-luo-chun&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=bi-luo-chun&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=119&tea=bi-luo-chun&v=5"
       ],
       "description": "Tightly curled spiraled downy buds grown amidst fruit orchards with ripe peach and floral nectar.",
       "tasteProfile": "Ripe Peach Nectar, Floral Plum, Fresh Dew",
@@ -6826,6 +7447,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "78°C",
+        "teaAmount": "2.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "2.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Dongting Bi Luo Chun (Green Snail) (2.0g)",
@@ -6891,9 +7521,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "600m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=bai-mudan&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=120&tea=bai-mudan&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=bai-mudan&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=120&tea=bai-mudan&v=5"
       ],
       "description": "One bud and two leaves with dried apricot, peony petals, and honeysuckle.",
       "tasteProfile": "Dried Apricot, Peony Flower, Honeysuckle",
@@ -6914,6 +7544,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "85°C",
+        "teaAmount": "4.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "4.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Fuding Bai Mudan (White Peony) (4.0g)",
@@ -6979,9 +7618,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "400m",
         "harvestSeason": "Autumn"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=shou-mei&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=121&tea=shou-mei&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=shou-mei&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=121&tea=shou-mei&v=5"
       ],
       "description": "Naturally aged mature white tea leaves with sweet Chinese jujube and woody honey.",
       "tasteProfile": "Sweet Chinese Jujube, Lotus Leaf, Woody Honey",
@@ -7002,6 +7641,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "5.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "5.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Aged Shou Mei White Tea (5.0g)",
@@ -7067,9 +7715,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "900m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=fenghuang-dancong&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=122&tea=fenghuang-dancong&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=fenghuang-dancong&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=122&tea=fenghuang-dancong&v=5"
       ],
       "description": "Single-bush rock oolong with natural honey orchid and tropical lychee fruit.",
       "tasteProfile": "Honey Orchid, Tropical Lychee, Charcoal Wood",
@@ -7090,6 +7738,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "6.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "0.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Phoenix Dancong (Mi Lan Xiang) (6.0g)",
@@ -7155,9 +7812,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "800m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=rougui-yancha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=123&tea=rougui-yancha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=rougui-yancha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=123&tea=rougui-yancha&v=5"
       ],
       "description": "Spicy, bold rock oolong with natural fiery cinnamon bark aromatics and mineral Yan Yun.",
       "tasteProfile": "Spicy Cinnamon Bark, Volcanic Mineral, Brown Sugar",
@@ -7178,6 +7835,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "98°C",
+        "teaAmount": "7.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "0.3 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Wuyi Rougui (Cinnamon Oolong) (7.0g)",
@@ -7243,9 +7909,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "1,000m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=lapsang-souchong&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=124&tea=lapsang-souchong&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=lapsang-souchong&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=124&tea=lapsang-souchong&v=5"
       ],
       "description": "Smoke-dried over local pine embers with pine woodsmoke, dried longan, and sweet molasses.",
       "tasteProfile": "Pine Woodsmoke, Dried Longan, Molasses Sugar",
@@ -7266,6 +7932,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "3.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Tongmu Lapsang Souchong (Smoked) (3.5g)",
@@ -7333,9 +8008,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "1,200m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=jin-jun-mei&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=125&tea=jin-jun-mei&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=jin-jun-mei&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=125&tea=jin-jun-mei&v=5"
       ],
       "description": "Tender spring buds yielding amber liquor with baked sweet potato and wildflower honey.",
       "tasteProfile": "Baked Sweet Potato, Wildflower Honey, Dark Cocoa",
@@ -7356,6 +8031,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "90°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "2.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Tongmu Jin Jun Mei Golden Tip (3.0g)",
@@ -7423,9 +8107,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "1,600m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=dianhong-black&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=126&tea=dianhong-black&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=dianhong-black&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=126&tea=dianhong-black&v=5"
       ],
       "description": "Golden tippy black tea from ancient broad-leaf trees in Yunnan with malt and chocolate.",
       "tasteProfile": "Rich Golden Malt, Sweet Honey, Dark Chocolate",
@@ -7446,6 +8130,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "3.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Yunnan Golden Tip Dianhong (3.5g)",
@@ -7513,9 +8206,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "500m",
         "harvestSeason": "Summer"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=jasmine-dragon-pearls&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=127&tea=jasmine-dragon-pearls&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=jasmine-dragon-pearls&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=127&tea=jasmine-dragon-pearls&v=5"
       ],
       "description": "Hand-rolled green tea pearls scented with fresh night-blooming jasmine flowers.",
       "tasteProfile": "Intense Jasmine Bloom, Sweet Green Tea, Honey Dew",
@@ -7536,6 +8229,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "80°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Fujian Jasmine Dragon Pearls (3.0g)",
@@ -7601,9 +8303,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "500m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=keemun-black&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=128&tea=keemun-black&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=keemun-black&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=128&tea=keemun-black&v=5"
       ],
       "description": "The 'Burgundy of Teas' with smoky pine wood, dried orchid, dark cocoa, and stewed plum.",
       "tasteProfile": "Smoky Pine Wood, Dried Orchid, Dark Cocoa",
@@ -7624,6 +8326,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "3.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Anhui Keemun Black (Qimen Hongcha) (3.5g)",
@@ -7691,9 +8402,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "800m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=anhui-huoshan-huangya&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=129&tea=anhui-huoshan-huangya&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=anhui-huoshan-huangya&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=129&tea=anhui-huoshan-huangya&v=5"
       ],
       "description": "Lightly sweltered yellow tea with buttery sweet corn, toasted hazelnut, and mellow vegetal finish.",
       "tasteProfile": "Sweet Buttered Corn, Toasted Hazelnut, Mellow Vegetal",
@@ -7714,6 +8425,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "82°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Huoshan Huangya (Yellow Sprout) (3.0g)",
@@ -7779,9 +8499,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "200m",
         "harvestSeason": "First Flush"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=matcha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=130&tea=matcha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=matcha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=130&tea=matcha&v=5"
       ],
       "description": "Shade-grown Tencha stone-ground into vibrant jade powder bursting with sweet umami and jade froth.",
       "tasteProfile": "Intense Umami, Sweet Cream Grass, Toasted Nori",
@@ -7802,6 +8522,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "75°C",
+        "teaAmount": "2.0 g",
+        "waterAmount": "70 ml",
+        "steepingTime": "0.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Ceremonial Ceremonial Uji Matcha powder (2.0g / 2 bamboo scoops)",
@@ -7876,9 +8605,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "100m",
         "harvestSeason": "First Flush"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=gyokuro&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=131&tea=gyokuro&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=gyokuro&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=131&tea=gyokuro&v=5"
       ],
       "description": "Japan's highest-grade shaded loose green tea. Brewed at 55°C for pure savory sweet umami.",
       "tasteProfile": "Pure Savory Umami, Sweet Sea Kelp Nori, Butter Greens",
@@ -7899,6 +8628,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "55°C",
+        "teaAmount": "6.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "2.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Japanese Uji Gyokuro (Jade Dew) (6.0g)",
@@ -7964,9 +8702,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "300m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=sencha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=132&tea=sencha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=sencha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=132&tea=sencha&v=5"
       ],
       "description": "Japan's most beloved everyday steamed green tea with crisp spring grass, nori, and brisk finish.",
       "tasteProfile": "Crisp Spring Grass, Marine Nori, Sweet Vegetal",
@@ -7987,6 +8725,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "75°C",
+        "teaAmount": "4.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "1.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Shizuoka First Flush Sencha (4.0g)",
@@ -8052,9 +8799,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "200m",
         "harvestSeason": "Autumn"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=hojicha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=133&tea=hojicha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=hojicha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=133&tea=hojicha&v=5"
       ],
       "description": "Charcoal roasted green bancha with toasted hazelnuts, warm caramel, and ultra-low caffeine.",
       "tasteProfile": "Toasted Hazelnut, Warm Caramel, Roasted Barley",
@@ -8075,6 +8822,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "90°C",
+        "teaAmount": "4.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "0.7 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Kyoto Roasted Hojicha (4.0g)",
@@ -8140,9 +8896,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "All",
         "harvestSeason": "Year-round"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=genmaicha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=134&tea=genmaicha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=genmaicha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=134&tea=genmaicha&v=5"
       ],
       "description": "Steamed green tea blended with toasted roasted brown rice kernels. Nutty, savory, and comforting.",
       "tasteProfile": "Toasted Brown Rice, Nutty Popcorn, Fresh Green Tea",
@@ -8163,6 +8919,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "85°C",
+        "teaAmount": "4.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "1.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Japanese Brown Rice Genmaicha (4.0g)",
@@ -8228,9 +8993,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "150m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=kukicha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=135&tea=kukicha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=kukicha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=135&tea=kukicha&v=5"
       ],
       "description": "Tender Gyokuro stems bursting with refreshing L-theanine umami and sweet cut grass.",
       "tasteProfile": "Sweet Stem Umami, Fresh Cut Grass, Crisp Apple",
@@ -8251,6 +9016,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "75°C",
+        "teaAmount": "4.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "1.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Kyoto Shaded Karigane Kukicha (4.0g)",
@@ -8316,9 +9090,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "200m",
         "harvestSeason": "Autumn"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=bancha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=136&tea=bancha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=bancha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=136&tea=bancha&v=5"
       ],
       "description": "Toasted straw, woody grain, and gentle savory astringency.",
       "tasteProfile": "Toasted Straw, Woody Grain, Light Astringency",
@@ -8339,6 +9113,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "85°C",
+        "teaAmount": "4.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "1.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Shizuoka Autumn Bancha (4.0g)",
@@ -8404,9 +9187,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "100m",
         "harvestSeason": "Late April"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=shincha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=137&tea=shincha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=shincha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=137&tea=shincha&v=5"
       ],
       "description": "First tender harvest with neon-green liquor and youthful vegetal sweetness.",
       "tasteProfile": "Youthful Greens, Sweet Seaweed, Sugarcane Broth",
@@ -8427,6 +9210,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "70°C",
+        "teaAmount": "4.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "1.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Kagoshima Shincha (New Season) (4.0g)",
@@ -8492,9 +9284,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "600m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=kamairicha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=138&tea=kamairicha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=kamairicha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=138&tea=kamairicha&v=5"
       ],
       "description": "Pan-fired in iron woks with roasted chestnut aroma and rounded sweetness.",
       "tasteProfile": "Roasted Chestnut, Sweet Grass, Toasted Sesame",
@@ -8515,6 +9307,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "80°C",
+        "teaAmount": "3.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "1.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Miyazaki Pan-Fired Kamairicha (3.5g)",
@@ -8580,9 +9381,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "400m",
         "harvestSeason": "Summer"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=wakoucha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=139&tea=wakoucha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=wakoucha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=139&tea=wakoucha&v=5"
       ],
       "description": "Smooth Japanese black tea with dried fig sweetness and zero bitterness.",
       "tasteProfile": "Sweet Dried Fig, Mild Woody Malt, Floral Blossom",
@@ -8603,6 +9404,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "90°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Yame Artisanal Japanese Black Tea (3.0g)",
@@ -8670,9 +9480,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "150m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=mecha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=140&tea=mecha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=mecha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=140&tea=mecha&v=5"
       ],
       "description": "Rolled from tender tips and leaf buds separated during Gyokuro processing. Intense umami.",
       "tasteProfile": "Intense Savory Umami, Dense Jade Broth, Sweet Seaweed",
@@ -8693,6 +9503,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "75°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "1.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Uji Mecha (Bud & Tip Green Tea) (3.0g)",
@@ -8758,9 +9577,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "300m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=tamaryokucha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=141&tea=tamaryokucha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=tamaryokucha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=141&tea=tamaryokucha&v=5"
       ],
       "description": "Comma-shaped green leaves with deep emerald broth, berry sweetness, and rich umami.",
       "tasteProfile": "Sweet Berry Dew, Savory Umami, Spring Grass",
@@ -8781,6 +9600,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "75°C",
+        "teaAmount": "3.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "1.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Ureshino Guricha (Coiled Green) (3.5g)",
@@ -8846,9 +9674,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "200m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=fukamushicha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=142&tea=fukamushicha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=fukamushicha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=142&tea=fukamushicha&v=5"
       ],
       "description": "Deeply steamed leaves yielding an opaque cloud of rich jade liquor and buttery grass sweetness.",
       "tasteProfile": "Dense Jade Cloud, Buttery Sweet Grass, Tender Seaweed",
@@ -8869,6 +9697,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "75°C",
+        "teaAmount": "4.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "0.7 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Shizuoka Deep-Steamed Fukamushi (4.0g)",
@@ -8934,9 +9771,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "150m",
         "harvestSeason": "Winter"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=kyoban-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=143&tea=kyoban-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=kyoban-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=143&tea=kyoban-cha&v=5"
       ],
       "description": "Smoky, rustic Kyoto roasted whole leaves and branches with wood campfire aroma and zero caffeine.",
       "tasteProfile": "Campfire Smoke, Toasted Oak Wood, Warm Earth",
@@ -8957,6 +9794,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "5.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Kyoto Smokey Roasted Kyobancha (5.0g)",
@@ -9022,9 +9868,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "All",
         "harvestSeason": "Year-round"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=matsucha-genmaicha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=144&tea=matsucha-genmaicha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=matsucha-genmaicha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=144&tea=matsucha-genmaicha&v=5"
       ],
       "description": "Brown rice tea coated in pure Uji matcha powder for vibrant green color and nutty warmth.",
       "tasteProfile": "Vibrant Matcha Froth, Toasted Popcorn, Sweet Rice Broth",
@@ -9045,6 +9891,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "80°C",
+        "teaAmount": "4.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "1.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Matcha-Iri Genmaicha Blend (4.0g)",
@@ -9110,9 +9965,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "1,800m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=darjeeling-first-flush&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=145&tea=darjeeling-first-flush&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=darjeeling-first-flush&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=145&tea=darjeeling-first-flush&v=5"
       ],
       "description": "Ethereal Himalayan spring pluck with sparkling champagne liquor, muscatel grape, and orchid.",
       "tasteProfile": "Crisp Muscatel Grape, Spring Blossoms, Green Almond",
@@ -9133,6 +9988,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "90°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Darjeeling First Flush (Champagne of Teas) (3.0g)",
@@ -9200,9 +10064,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "1,600m",
         "harvestSeason": "Summer"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=darjeeling-second-flush&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=146&tea=darjeeling-second-flush&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=darjeeling-second-flush&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=146&tea=darjeeling-second-flush&v=5"
       ],
       "description": "Mature summer harvest with muscatel grape, ripe peach, and amber warmth.",
       "tasteProfile": "Ripe Muscatel, Summer Peach, Wild Honey",
@@ -9223,6 +10087,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Darjeeling Second Flush (Summer Muscatel) (3.0g)",
@@ -9290,9 +10163,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "1,800m",
         "harvestSeason": "October"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=darjeeling-autumnal&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=147&tea=darjeeling-autumnal&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=darjeeling-autumnal&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=147&tea=darjeeling-autumnal&v=5"
       ],
       "description": "Mellow autumn harvest with dark ruby liquor, baked sweet bread, and dried fig.",
       "tasteProfile": "Dark Ruby Fig, Baked Bread, Mellow Honey",
@@ -9313,6 +10186,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "4.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Darjeeling Autumnal Ruby Harvest (3.0g)",
@@ -9380,9 +10262,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "100m",
         "harvestSeason": "Second Flush"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=assam-orthodox&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=148&tea=assam-orthodox&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=assam-orthodox&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=148&tea=assam-orthodox&v=5"
       ],
       "description": "Heavy with golden tips from Brahmaputra lowlands. Rich dark malt, honeycomb, and copper body.",
       "tasteProfile": "Rich Dark Malt, Honeycomb, Toasted Sourdough",
@@ -9403,6 +10285,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Assam Orthodox Golden Tip Reserve (3.0g)",
@@ -9470,9 +10361,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "80m",
         "harvestSeason": "Monsoon"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=assam-ctc-bold&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=149&tea=assam-ctc-bold&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=assam-ctc-bold&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=149&tea=assam-ctc-bold&v=5"
       ],
       "description": "Robust granular black tea providing rich color and strength for full-milk chai.",
       "tasteProfile": "Hearty Bread Malt, Molasses Tannin, Deep Amber",
@@ -9493,6 +10384,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "4.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Upper Assam CTC Golden Pekoe (3.0g)",
@@ -9560,9 +10460,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "All",
         "harvestSeason": "Daily"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=masala-chai&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=150&tea=masala-chai&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=masala-chai&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=150&tea=masala-chai&v=5"
       ],
       "description": "Strong Assam CTC simmered with whole milk, crushed ginger, cardamom, cinnamon, and cloves.",
       "tasteProfile": "Spicy Crushed Ginger, Sweet Cardamom, Creamy Milk",
@@ -9583,6 +10483,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "8.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "7.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Strong India CTC or Dust Tea (8.0g)",
@@ -9661,9 +10570,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "1,800m",
         "harvestSeason": "Winter"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=kashmiri-kahwa&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=151&tea=kashmiri-kahwa&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=kashmiri-kahwa&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=151&tea=kashmiri-kahwa&v=5"
       ],
       "description": "Aristocratic green tea infused with Kashmiri saffron, cardamom, cinnamon, and slivered almonds.",
       "tasteProfile": "Aromatic Saffron, Sweet Cardamom, Crunchy Almonds",
@@ -9684,6 +10593,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "90°C",
+        "teaAmount": "2.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "4.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Royal Kashmiri Saffron Kahwa (2.5g)",
@@ -9751,9 +10669,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "1,600m",
         "harvestSeason": "Winter"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=noon-chai&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=152&tea=noon-chai&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=noon-chai&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=152&tea=noon-chai&v=5"
       ],
       "description": "Iconic salty pink tea simmered with green tea, baking soda, milk, cardamom, and pistachios.",
       "tasteProfile": "Creamy Pink Milk, Savory Salt, Cardamom Aroma",
@@ -9774,6 +10692,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "4.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "15.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Strong India CTC or Dust Tea (4.0g)",
@@ -9852,9 +10779,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "Sea Level",
         "harvestSeason": "Daily"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=mumbai-cutting-chai&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=153&tea=mumbai-cutting-chai&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=mumbai-cutting-chai&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=153&tea=mumbai-cutting-chai&v=5"
       ],
       "description": "Extra-strong CTC dust boiled with fiery crushed ginger, cardamom, and thick evaporated milk.",
       "tasteProfile": "Fiery Ginger Heat, Sweet Condensed Milk, Bold CTC Dust",
@@ -9875,6 +10802,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "8.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "6.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Strong India CTC or Dust Tea (8.0g)",
@@ -9953,9 +10889,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "2,000m",
         "harvestSeason": "Winter Frost"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=nilgiri-frost-tea&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=154&tea=nilgiri-frost-tea&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=nilgiri-frost-tea&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=154&tea=nilgiri-frost-tea&v=5"
       ],
       "description": "Intensely crisp high-altitude harvest with citrus lemon blossom, passionfruit, and eucalyptus.",
       "tasteProfile": "Citrus Lemon Blossom, Passionfruit, Crisp Eucalyptus",
@@ -9976,6 +10912,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "90°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Nilgiri Blue Mountain Frost Tea (3.0g)",
@@ -10043,9 +10988,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "1,200m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=kangra-orthodox&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=155&tea=kangra-orthodox&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=kangra-orthodox&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=155&tea=kangra-orthodox&v=5"
       ],
       "description": "Cultivated in Himalayan shadow using pure Chinese Sinensis bushes with orchid and alpine meadow notes.",
       "tasteProfile": "Mountain Orchid, Crisp Alpine Meadow, Mild Malt",
@@ -10066,6 +11011,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "90°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Kangra Valley Valley of the Gods Orthodox (3.0g)",
@@ -10133,9 +11087,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "100m",
         "harvestSeason": "Monsoon"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=dooars-ctc-black&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=156&tea=dooars-ctc-black&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=dooars-ctc-black&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=156&tea=dooars-ctc-black&v=5"
       ],
       "description": "Heavy, brisk CTC black tea providing intense reddish liquor for rich milk chai.",
       "tasteProfile": "Dark Heavy Malt, Molasses Tannin, Deep Copper",
@@ -10156,6 +11110,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "4.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Dooars Terai CTC Bold Harvest (3.0g)",
@@ -10223,9 +11186,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "1,600m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=munnar-high-range-black&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=157&tea=munnar-high-range-black&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=munnar-high-range-black&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=157&tea=munnar-high-range-black&v=5"
       ],
       "description": "High-grown Southern Indian black tea with sweet fruitiness, mild spice, and golden amber liquor.",
       "tasteProfile": "Golden Amber, Sweet Dried Apricot, Mild Cardamom",
@@ -10246,6 +11209,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Munnar Kerala High-Range Orthodox (3.0g)",
@@ -10313,9 +11285,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "Sea Level",
         "harvestSeason": "Daily Adda"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=kolkata-kulhar-chai&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=158&tea=kolkata-kulhar-chai&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=kolkata-kulhar-chai&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=158&tea=kolkata-kulhar-chai&v=5"
       ],
       "description": "Black milk tea served in unglazed terracotta cups (Bhnad) with earthy clay aroma.",
       "tasteProfile": "Earthy Baked Clay, Sweet Creamy Milk, Bruised Cardamom",
@@ -10336,6 +11308,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "7.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "5.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Strong India CTC or Dust Tea (7.0g)",
@@ -10414,9 +11395,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "1,700m",
         "harvestSeason": "Spring Flush"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=sikkim-temi-orthodox&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=159&tea=sikkim-temi-orthodox&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=sikkim-temi-orthodox&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=159&tea=sikkim-temi-orthodox&v=5"
       ],
       "description": "Organic single-estate Himalayan tea with orange blossom floral notes, sweet honey, and golden tips.",
       "tasteProfile": "Orange Blossom, Sweet Honey, Almond Wood",
@@ -10437,6 +11418,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "90°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Sikkim Temi Estate Himalayan Orthodox (3.0g)",
@@ -10504,9 +11494,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "1,900m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=nuwara-eliya-ceylon&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=160&tea=nuwara-eliya-ceylon&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=nuwara-eliya-ceylon&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=160&tea=nuwara-eliya-ceylon&v=5"
       ],
       "description": "The 'Champagne of Ceylon'. Golden liquor with eucalyptus, citrus blossom, and bright briskness.",
       "tasteProfile": "Eucalyptus Mint, Citrus Blossom, Golden Honey",
@@ -10527,6 +11517,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "90°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Nuwara Eliya High Grown Ceylon (3.0g)",
@@ -10594,9 +11593,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "1,400m",
         "harvestSeason": "Western Season"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=dimbula-bop&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=161&tea=dimbula-bop&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=dimbula-bop&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=161&tea=dimbula-bop&v=5"
       ],
       "description": "Golden Ceylon black tea with fine jasmine florals, crisp lemon brightness, and full body.",
       "tasteProfile": "Crisp Lemon Zest, Jasmine Blossom, Rich Golden Amber",
@@ -10617,6 +11616,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Dimbula Broken Orange Pekoe (BOP) (3.0g)",
@@ -10684,9 +11692,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "1,200m",
         "harvestSeason": "August Monsoon"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=uva-highland-black&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=162&tea=uva-highland-black&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=uva-highland-black&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=162&tea=uva-highland-black&v=5"
       ],
       "description": "Famous for seasonal pungency with natural wintergreen, menthol, and sweet molasses.",
       "tasteProfile": "Wintergreen Menthol, Woody Pungency, Sweet Molasses",
@@ -10707,6 +11715,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Uva Highland Pungent Ceylon (3.0g)",
@@ -10774,9 +11791,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "800m",
         "harvestSeason": "Year-round"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=kandy-mid-grown&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=163&tea=kandy-mid-grown&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=kandy-mid-grown&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=163&tea=kandy-mid-grown&v=5"
       ],
       "description": "Full-bodied Ceylon black tea with hearty bread malt, warm spice, and rich mahogany tannins.",
       "tasteProfile": "Hearty Bread Malt, Warm Spice, Deep Mahogany",
@@ -10797,6 +11814,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "98°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "4.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Kandy Heritage Mid-Grown Ceylon (3.0g)",
@@ -10864,9 +11890,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "200m",
         "harvestSeason": "Year-round"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=ruhuna-low-grown&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=164&tea=ruhuna-low-grown&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=ruhuna-low-grown&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=164&tea=ruhuna-low-grown&v=5"
       ],
       "description": "Grown in rainforest soil near the sea with dark caramel, chocolate, and heavy malt.",
       "tasteProfile": "Dark Caramel, Milk Chocolate, Toasted Sourdough",
@@ -10887,6 +11913,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "98°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "4.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Ruhuna Low-Grown Tippy Reserve (3.0g)",
@@ -10954,9 +11989,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "1,600m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=ceylon-silver-tips&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=165&tea=ceylon-silver-tips&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=ceylon-silver-tips&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=165&tea=ceylon-silver-tips&v=5"
       ],
       "description": "Rare hand-plucked downy buds yielding pale golden liquor with pine honey and white rose notes.",
       "tasteProfile": "Pine Mountain Honey, White Rose Petal, Cucumber Dew",
@@ -10977,6 +12012,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "80°C",
+        "teaAmount": "3.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "4.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Adam's Peak Ceylon Silver Tips White (3.5g)",
@@ -11042,9 +12086,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "100m",
         "harvestSeason": "Post-Monsoon"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=ceylon-cinnamon-tea&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=166&tea=ceylon-cinnamon-tea&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=ceylon-cinnamon-tea&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=166&tea=ceylon-cinnamon-tea&v=5"
       ],
       "description": "Fragrant inner bark of Cinnamomum verum simmered with honey. Naturally sweet with zero bitterness.",
       "tasteProfile": "Sweet Cinnamon, Woody Spice, Citrus Blossom",
@@ -11065,6 +12109,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "4.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "8.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Botanical Ceylon True Cinnamon Quill Tisane (4.0g)",
@@ -11133,9 +12186,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "1,600m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=ceylon-green-tea&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=167&tea=ceylon-green-tea&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=ceylon-green-tea&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=167&tea=ceylon-green-tea&v=5"
       ],
       "description": "Bio-dynamic certified green tea with citrus peel, lemongrass, and sweet herbaceous broth.",
       "tasteProfile": "Citrus Lemon Peel, Lemongrass, Herbaceous Broth",
@@ -11156,6 +12209,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "80°C",
+        "teaAmount": "2.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "2.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Idalgashinna Bio-Dynamic Ceylon Green (2.5g)",
@@ -11221,9 +12283,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "300m",
         "harvestSeason": "Year-round"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=sabaragamuwa-black&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=168&tea=sabaragamuwa-black&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=sabaragamuwa-black&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=168&tea=sabaragamuwa-black&v=5"
       ],
       "description": "Low-grown black tea with sweet caramel, wild berry, and dark chocolate body.",
       "tasteProfile": "Sweet Caramel, Dark Chocolate, Wild Berry",
@@ -11244,6 +12306,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Sabaragamuwa Sinharaja Forest Black (3.0g)",
@@ -11311,9 +12382,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "1,300m",
         "harvestSeason": "Year-round"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=ceylon-earl-grey-reserve&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=169&tea=ceylon-earl-grey-reserve&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=ceylon-earl-grey-reserve&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=169&tea=ceylon-earl-grey-reserve&v=5"
       ],
       "description": "Single-origin Ceylon OP scented with natural cold-pressed bergamot oil.",
       "tasteProfile": "Zesty Bergamot, Bright Ceylon Black, Orange Blossom",
@@ -11334,6 +12405,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Pure Ceylon Bergamot Earl Grey (3.0g)",
@@ -11401,9 +12481,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "800m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=dong-ding&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=170&tea=dong-ding&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=dong-ding&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=170&tea=dong-ding&v=5"
       ],
       "description": "Medium-roasted high mountain oolong baked over charcoal with baked honey, chestnut, and gardenia.",
       "tasteProfile": "Baked Honey, Roasted Chestnut, Wild Gardenia",
@@ -11424,6 +12504,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "6.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "0.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Taiwanese Dong Ding Oolong (Frozen Peak) (6.0g)",
@@ -11489,9 +12578,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "400m",
         "harvestSeason": "Summer"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=oriental-beauty&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=171&tea=oriental-beauty&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=oriental-beauty&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=171&tea=oriental-beauty&v=5"
       ],
       "description": "Naturally bitten by leafhopper insects, yielding an amber liquor of blossom honey and summer peach.",
       "tasteProfile": "Blossom Honey, Summer Peach, Muscat Grape",
@@ -11512,6 +12601,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "88°C",
+        "teaAmount": "5.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "0.7 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Taiwan Oriental Beauty (Dongfang Meiren) (5.0g)",
@@ -11577,9 +12675,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "1,500m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=alishan-high-mountain&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=172&tea=alishan-high-mountain&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=alishan-high-mountain&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=172&tea=alishan-high-mountain&v=5"
       ],
       "description": "Grown in sea fog with buttery sweet cream, high alpine orchids, and mountain dew.",
       "tasteProfile": "Buttery Sweet Cream, Alpine Orchid, Mountain Rain",
@@ -11600,6 +12698,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "90°C",
+        "teaAmount": "6.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "0.7 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Alishan High Mountain Oolong (Gaoshan) (6.0g)",
@@ -11665,9 +12772,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "1,000m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=jin-xuan-milk-oolong&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=173&tea=jin-xuan-milk-oolong&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=jin-xuan-milk-oolong&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=173&tea=jin-xuan-milk-oolong&v=5"
       ],
       "description": "Natural creamy milk and sweet vanilla notes with fresh lily blossoms.",
       "tasteProfile": "Natural Creamy Milk, Sweet Vanilla, Fresh Lily Flower",
@@ -11688,6 +12795,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "90°C",
+        "teaAmount": "6.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "0.7 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Taiwan Jin Xuan #12 (Natural Milk Oolong) (6.0g)",
@@ -11753,9 +12869,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "800m",
         "harvestSeason": "Summer"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=sun-moon-lake-ruby&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=174&tea=sun-moon-lake-ruby&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=sun-moon-lake-ruby&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=174&tea=sun-moon-lake-ruby&v=5"
       ],
       "description": "Hybrid cultivar with natural aromas of cinnamon bark and wild cooling menthol.",
       "tasteProfile": "Natural Cinnamon Bark, Cool Wild Menthol, Ripe Red Cherry",
@@ -11776,6 +12892,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "3.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Sun Moon Lake Ruby Black #18 (3.5g)",
@@ -11843,9 +12968,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "1,800m",
         "harvestSeason": "Winter"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=shan-lin-xi-oolong&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=175&tea=shan-lin-xi-oolong&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=shan-lin-xi-oolong&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=175&tea=shan-lin-xi-oolong&v=5"
       ],
       "description": "Grown among primeval cedar forests with evergreen pine needle dew and mountain flowers.",
       "tasteProfile": "Evergreen Pine Forest, Fir Needle Dew, Alpine Orchid",
@@ -11866,6 +12991,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "90°C",
+        "teaAmount": "6.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "0.8 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Shan Lin Xi Fir Forest Gaoshan Oolong (6.0g)",
@@ -11931,9 +13065,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "400m",
         "harvestSeason": "Year-round"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=four-seasons-spring&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=176&tea=four-seasons-spring&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=four-seasons-spring&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=176&tea=four-seasons-spring&v=5"
       ],
       "description": "Aromatic everyday Taiwanese oolong bursting with gardenia blossoms and sugarcane.",
       "tasteProfile": "Gardenia Blossom, Fresh Lilac, Sugarcane",
@@ -11954,6 +13088,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "90°C",
+        "teaAmount": "5.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "0.7 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Si Ji Chun (Four Seasons Spring Oolong) (5.0g)",
@@ -12019,9 +13162,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "2,200m",
         "harvestSeason": "Summer"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=lishan-black-tea&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=177&tea=lishan-black-tea&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=lishan-black-tea&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=177&tea=lishan-black-tea&v=5"
       ],
       "description": "Sublime high-altitude black tea with dried longan, peach blossom, and honey nectar.",
       "tasteProfile": "Peach Blossom, Dried Longan, Wild Mountain Honey",
@@ -12042,6 +13185,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "90°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Lishan High-Altitude Highland Black (3.0g)",
@@ -12109,9 +13261,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "300m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=tieguanyin-roasted-taiwan&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=178&tea=tieguanyin-roasted-taiwan&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=tieguanyin-roasted-taiwan&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=178&tea=tieguanyin-roasted-taiwan&v=5"
       ],
       "description": "Heavily roasted in cloth balls with ripe fruit acidity, charcoal warmth, and roasted grain.",
       "tasteProfile": "Charcoal Roast, Ripe Plum Acid, Roasted Barley",
@@ -12132,6 +13284,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "98°C",
+        "teaAmount": "6.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "0.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Muzha Traditional Roasted Tieguanyin (6.0g)",
@@ -12197,9 +13358,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "600m",
         "harvestSeason": "Autumn Scenting"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=taiwan-osmanthus-oolong&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=179&tea=taiwan-osmanthus-oolong&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=taiwan-osmanthus-oolong&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=179&tea=taiwan-osmanthus-oolong&v=5"
       ],
       "description": "Golden osmanthus blossoms blended with jade oolong releasing sweet apricot and peach aroma.",
       "tasteProfile": "Osmanthus Apricot, Sweet Peach, Floral Blossom",
@@ -12220,6 +13381,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "90°C",
+        "teaAmount": "5.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "0.7 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Gui Hua (Osmanthus Scented Oolong) (5.0g)",
@@ -12285,9 +13455,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "500m",
         "harvestSeason": "Before April 20"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=bujeon-ujeon&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=180&tea=bujeon-ujeon&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=bujeon-ujeon&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=180&tea=bujeon-ujeon&v=5"
       ],
       "description": "Highest grade artisanal Korean green tea 9-times pan-roasted with sweet grain and bamboo.",
       "tasteProfile": "Roasted Sweet Grain, Wildflower Honey, Tender Bamboo",
@@ -12308,6 +13478,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "70°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "1.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Hadong Jirisan Ujeon Green Tea (3.0g)",
@@ -12373,9 +13552,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "200m",
         "harvestSeason": "Early May"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=boseong-sejak&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=181&tea=boseong-sejak&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=boseong-sejak&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=181&tea=boseong-sejak&v=5"
       ],
       "description": "Coastal terraced green tea balancing roasted grain with crisp sea breeze.",
       "tasteProfile": "Crisp Coastal Grass, Toasted Barley, Sweet Melon",
@@ -12396,6 +13575,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "75°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "2.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Boseong Organic Sejak Green Tea (3.0g)",
@@ -12461,9 +13649,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "600m",
         "harvestSeason": "Autumn"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=korean-omija-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=182&tea=korean-omija-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=korean-omija-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=182&tea=korean-omija-cha&v=5"
       ],
       "description": "Dried Schisandra berries expressing sweet, sour, bitter, salty, and pungent flavors.",
       "tasteProfile": "Tart Berry Sourness, Sweet Honey, Bittersweet Herb",
@@ -12484,6 +13672,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "60°C",
+        "teaAmount": "5.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "60.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Botanical Korean Five-Flavor Berry (Omija-cha) (5.0g)",
@@ -12552,9 +13749,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "All",
         "harvestSeason": "Daily"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=korean-bori-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=183&tea=korean-bori-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=korean-bori-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=183&tea=korean-bori-cha&v=5"
       ],
       "description": "Simmered roasted barley kernels. Deeply nutty, toasty, and caffeine-free.",
       "tasteProfile": "Toasted Whole Barley, Nutty Grain, Warm Roasted Bread",
@@ -12575,6 +13772,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "15.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "10.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Botanical Roasted Whole Barley Tea (Bori-cha) (15.0g)",
@@ -12643,9 +13849,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "Coastal",
         "harvestSeason": "Winter"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=korean-yuzu-cha&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=184&tea=korean-yuzu-cha&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=korean-yuzu-cha&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=184&tea=korean-yuzu-cha&v=5"
       ],
       "description": "Thinly sliced Goheung citron peels preserved in honey and stirred into hot water.",
       "tasteProfile": "Sweet Citron Marmalade, Bright Citrus Zest, Wildflower Honey",
@@ -12666,6 +13872,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "90°C",
+        "teaAmount": "20.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "2.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Botanical Korean Citron Honey Tisane (Yuja-cha) (20.0g)",
@@ -12734,9 +13949,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "All",
         "harvestSeason": "Year-round"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=english-breakfast&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=185&tea=english-breakfast&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=english-breakfast&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=185&tea=english-breakfast&v=5"
       ],
       "description": "The iconic British breakfast blend combining malty Assam, bright Ceylon, and brisk Kenyan black teas.",
       "tasteProfile": "Bold Dark Malt, Toasted Oak, Brisk Amber Tannin",
@@ -12757,6 +13972,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "4.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Royal English Breakfast Traditional Blend (3.0g)",
@@ -12824,9 +14048,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "All",
         "harvestSeason": "Year-round"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=imperial-earl-grey&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=186&tea=imperial-earl-grey&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=imperial-earl-grey&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=186&tea=imperial-earl-grey&v=5"
       ],
       "description": "Full-leaf black tea scented with 100% pure cold-pressed Italian bergamot orange oil.",
       "tasteProfile": "Bright Bergamot Citrus, Floral Cornflower, Smooth Black Tea",
@@ -12847,6 +14071,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Imperial Earl Grey with Pure Bergamot (3.0g)",
@@ -12914,9 +14147,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "All",
         "harvestSeason": "Year-round"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=scottish-breakfast&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=187&tea=scottish-breakfast&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=scottish-breakfast&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=187&tea=scottish-breakfast&v=5"
       ],
       "description": "The strongest and heartiest breakfast blend with heavy malty body.",
       "tasteProfile": "Heavy Peaty Malt, Dark Molasses, Brisk Copper",
@@ -12937,6 +14170,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "3.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "4.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Highland Scottish Breakfast Reserve (3.5g)",
@@ -13004,9 +14246,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "All",
         "harvestSeason": "Year-round"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=irish-breakfast&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=188&tea=irish-breakfast&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=irish-breakfast&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=188&tea=irish-breakfast&v=5"
       ],
       "description": "Deeply red, robust Assam-heavy blend engineered for generous splash of whole milk.",
       "tasteProfile": "Dark Heavy Malt, Molasses, Deep Red Copper",
@@ -13027,6 +14269,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "3.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "4.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Classic Dublin Irish Breakfast Blend (3.5g)",
@@ -13094,9 +14345,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "All",
         "harvestSeason": "Year-round"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=lady-grey-lavender&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=189&tea=lady-grey-lavender&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=lady-grey-lavender&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=189&tea=lady-grey-lavender&v=5"
       ],
       "description": "Gentler Earl Grey variation with lemon peel, orange peel, and French lavender flowers.",
       "tasteProfile": "Sweet Orange Peel, Lemon Zest, French Lavender",
@@ -13117,6 +14368,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Lady Grey Lavender Citrus Blend (3.0g)",
@@ -13184,9 +14444,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "All",
         "harvestSeason": "Daily"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=moroccan-mint&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=190&tea=moroccan-mint&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=moroccan-mint&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=190&tea=moroccan-mint&v=5"
       ],
       "description": "Gunpowder green tea simmered with fresh spearmint and sugar, poured from high silver spouts.",
       "tasteProfile": "Crisp Sweet Spearmint, Smoky Gunpowder Green, Rich Cane Sugar",
@@ -13207,6 +14467,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "8.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "5.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Moroccan Maghrebi Mint Tea (Atay) (8.0g)",
@@ -13274,9 +14543,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "400m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=turkish-rize-tea&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=191&tea=turkish-rize-tea&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=turkish-rize-tea&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=191&tea=turkish-rize-tea&v=5"
       ],
       "description": "Brewed in stacked double kettles (Çaydanlık) to deep ruby red with brisk malt and sugar cubes.",
       "tasteProfile": "Brisk Black Malt, Sweet Woody Tannin, Deep Ruby Earth",
@@ -13297,6 +14566,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "10.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "15.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Turkish Rize Black Tea (Çay) (10.0g)",
@@ -13364,9 +14642,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "300m",
         "harvestSeason": "Autumn"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=turkish-apple-tea&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=192&tea=turkish-apple-tea&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=turkish-apple-tea&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=192&tea=turkish-apple-tea&v=5"
       ],
       "description": "Simmered sun-dried sweet apple chunks, cinnamon stick, and cloves.",
       "tasteProfile": "Sweet Baked Apple, Warm Cinnamon Bark, Clove Spice",
@@ -13387,6 +14665,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "6.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "8.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Botanical Turkish Orchard Spiced Apple Tisane (Elma Çayı) (6.0g)",
@@ -13455,9 +14742,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "200m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=iranian-cardamom-black&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=193&tea=iranian-cardamom-black&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=iranian-cardamom-black&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=193&tea=iranian-cardamom-black&v=5"
       ],
       "description": "Fragrant northern Iranian black tea brewed with green cardamom pods and saffron threads.",
       "tasteProfile": "Royal Saffron, Green Cardamom, Amber Black Tea",
@@ -13478,6 +14765,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "4.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Persian Saffron & Cardamom Black Tea (3.0g)",
@@ -13545,9 +14841,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "900m",
         "harvestSeason": "Summer"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=moroccan-verbena-louisa&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=194&tea=moroccan-verbena-louisa&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=moroccan-verbena-louisa&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=194&tea=moroccan-verbena-louisa&v=5"
       ],
       "description": "Pure lemon verbena leaves (Aloysia citrodora) offering intense lemon sweetness without sour acidity.",
       "tasteProfile": "Sweet Lemon Candy, Herbaceous Verbena, Wild Honey",
@@ -13568,6 +14864,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "2.5 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "5.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Botanical Atlas Mountain Lemon Verbena (Louisa) (2.5g)",
@@ -13636,9 +14941,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "600m",
         "harvestSeason": "Summer"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=rooibos-red-bush&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=195&tea=rooibos-red-bush&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=rooibos-red-bush&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=195&tea=rooibos-red-bush&v=5"
       ],
       "description": "Naturally caffeine-free botanical infusion with sweet vanilla, honeybush, and woody notes.",
       "tasteProfile": "Sweet Honeybush, Vanilla Wood, Nutty Tobacco",
@@ -13659,6 +14964,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "5.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Botanical South African Cedarberg Rooibos (3.0g)",
@@ -13727,9 +15041,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "400m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=south-african-honeybush&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=196&tea=south-african-honeybush&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=south-african-honeybush&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=196&tea=south-african-honeybush&v=5"
       ],
       "description": "Naturally honey-scented indigenous Cape fynbos shrub with sweet apricot and floral notes.",
       "tasteProfile": "Wildflower Honey, Dried Apricot, Sweet Wood",
@@ -13750,6 +15064,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "100°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "5.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Botanical Cyclopia Coastal Wild Honeybush Tisane (3.0g)",
@@ -13818,9 +15141,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "2,100m",
         "harvestSeason": "Spring"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=kenyan-purple-tea&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=197&tea=kenyan-purple-tea&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=kenyan-purple-tea&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=197&tea=kenyan-purple-tea&v=5"
       ],
       "description": "Rare purple-leaf tea rich in anthocyanins with sweet plum and crisp apple notes.",
       "tasteProfile": "Sweet Red Plum, Huckleberry, Crisp Apple",
@@ -13841,6 +15164,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "90°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.0 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Mount Kenya High-Altitude Purple Tea (3.0g)",
@@ -13908,9 +15240,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "2,000m",
         "harvestSeason": "Year-round"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=kenyan-milima-orthodox&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=198&tea=kenyan-milima-orthodox&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=kenyan-milima-orthodox&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=198&tea=kenyan-milima-orthodox&v=5"
       ],
       "description": "Bright golden orthodox African black tea with intense floral aroma, citrus zest, and amber body.",
       "tasteProfile": "Bright Citrus Zest, Golden Amber, Floral Nectar",
@@ -13931,6 +15263,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "95°C",
+        "teaAmount": "3.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "3.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Kericho High-Grown Milima Orthodox (3.0g)",
@@ -13998,9 +15339,9 @@ const TeaVerseData = Object.freeze({
         "elevation": "200m",
         "harvestSeason": "Year-round"
       },
-      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=argentine-yerba-mate&v=4",
+      "heroImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=199&tea=argentine-yerba-mate&v=5",
       "gallery": [
-        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&tea=argentine-yerba-mate&v=4"
+        "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80&seed=199&tea=argentine-yerba-mate&v=5"
       ],
       "description": "Communal national infusion shared from hollowed calabash gourds with bombilla straw.",
       "tasteProfile": "Earthy Herbaceous Grass, Smoky Wood, Bittersweet Herbal",
@@ -14021,6 +15362,15 @@ const TeaVerseData = Object.freeze({
         "traditional"
       ],
       "bestTime": "Morning or Afternoon",
+      "brewingDetails": {
+        "temperature": "75°C",
+        "teaAmount": "25.0 g",
+        "waterAmount": "200 ml",
+        "steepingTime": "0.5 min",
+        "infusionCount": "3 steepings",
+        "vessel": "Ceramic teapot or glass",
+        "servingStyle": "Served pure or according to regional tradition"
+      },
       "ingredients": {
         "core": [
           "Whole-leaf Traditional Argentine Yerba Mate (25.0g)",

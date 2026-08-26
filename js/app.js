@@ -1362,35 +1362,29 @@
             </div>
           </div>
 
-          <!-- Global Origins List -->
-          <div style="display: grid; grid-template-columns: 1fr; gap: 32px;">
+          <!-- Global Origins List (2-3 per row) -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 28px;">
             ${TeaVerseData.origins.map(origin => `
-              <div class="detail-card-panel" style="display: grid; grid-template-columns: 1fr; gap: 20px;">
-                <div style="height: 180px; border-radius: var(--radius-md); overflow: hidden; background: var(--color-cream);">
-                  <img src="${origin.image}" alt="${origin.country}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=800&q=80'">
-                </div>
-                <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border-subtle); padding-bottom: 16px; flex-wrap: wrap; gap: 12px;">
-                  <div>
-                    <span class="label-caps">${origin.nativeName}</span>
-                    <h2 style="font-family: var(--font-serif); font-size: 2.2rem; color: var(--color-charcoal); margin: 4px 0;">${origin.flag || ''} ${origin.country}</h2>
+              <div class="detail-card-panel" style="display: flex; flex-direction: column; justify-content: space-between; gap: 16px;">
+                <div>
+                  <div style="height: 200px; border-radius: var(--radius-md); overflow: hidden; background: var(--color-cream); margin-bottom: 16px;">
+                    <img src="${origin.image}" alt="${origin.country}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=800&q=80'">
                   </div>
-                  <a href="#/explore?country=${encodeURIComponent(origin.country)}" class="btn btn-secondary btn-sm">Explore ${origin.country} Teas →</a>
-                </div>
-
-                <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7;">
-                  ${origin.description}
-                </p>
-
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; background: var(--color-canvas); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
-                  <div>
-                    <div class="label-caps" style="margin-bottom: 4px;">Key Regions</div>
-                    <div style="font-weight: 600; color: var(--color-charcoal);">${origin.regions.join(' · ')}</div>
+                  <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; flex-wrap: wrap; gap: 6px;">
+                    <h2 style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--color-charcoal); margin: 0;">${origin.flag || ''} ${origin.country}</h2>
+                    <span class="label-caps" style="color: var(--color-olive);">${origin.nativeName}</span>
                   </div>
-                  <div>
-                    <div class="label-caps" style="margin-bottom: 4px;">Climate & Soil</div>
-                    <div style="font-weight: 500; color: var(--text-secondary);">${origin.climate}</div>
+                  <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px;">
+                    ${origin.description}
+                  </p>
+                  <div style="background: var(--color-canvas); padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); margin-bottom: 16px;">
+                    <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 2px;">Key Terroirs</div>
+                    <div style="font-size: 0.88rem; font-weight: 600; color: var(--color-charcoal); margin-bottom: 8px;">${origin.regions.join(' · ')}</div>
+                    <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 2px;">Climate & Soil</div>
+                    <div style="font-size: 0.84rem; color: var(--text-secondary);">${origin.climate}</div>
                   </div>
                 </div>
+                <a href="#/explore?country=${encodeURIComponent(origin.country)}" class="btn btn-secondary btn-sm" style="width: 100%; text-align: center;">Explore ${origin.country} Teas →</a>
               </div>
             `).join('')}
           </div>
@@ -1502,33 +1496,39 @@
   // --- Helper: Render Standard Tea Card ---
   function renderTeaCard(tea) {
     const isBd = tea.countryCategory === 'bangladesh';
+    const temp = tea.waterTemperature || (tea.brewingDetails && tea.brewingDetails.temperature) || '95°C';
+    const time = tea.brewingTime || (tea.brewingDetails && tea.brewingDetails.steepingTime) || '3 min';
+    const flavors = (tea.flavorProfile && tea.flavorProfile.primary) || ['Malty', 'Aromatic', 'Rich'];
+    const country = (tea.origin && tea.origin.country) || 'Global';
+    const region = (tea.origin && tea.origin.region) || '';
+
     return `
       <div class="tea-card">
         <a href="#/tea/${tea.slug}" class="tea-card-image-wrap">
           <img src="${tea.heroImage}" alt="${tea.name}" class="tea-card-image" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80'">
           <div class="tea-card-category-badge ${isBd ? 'bd-badge' : ''}">
-            ${isBd ? '🇧🇩 ' : ''}${tea.origin.country}
+            ${isBd ? '🇧🇩 ' : ''}${country}
           </div>
         </a>
 
         <div class="tea-card-body">
           <div class="tea-card-origin-text">
-            <span class="origin-flag">${tea.nativeName}</span> · ${tea.origin.region}
+            <span class="origin-flag">${tea.nativeName || ''}</span> · ${region}
           </div>
           <h3 class="tea-card-title">
             <a href="#/tea/${tea.slug}" class="tea-card-title-link">${tea.name}</a>
           </h3>
-          <p class="tea-card-desc">${tea.description}</p>
+          <p class="tea-card-desc">${tea.description || ''}</p>
 
           <div class="tea-card-flavor-tags">
-            ${tea.flavorProfile.primary.slice(0, 3).map(f => `<span class="pill-tag">${f}</span>`).join('')}
+            ${flavors.slice(0, 3).map(f => `<span class="pill-tag">${f}</span>`).join('')}
           </div>
 
           <div class="tea-card-footer">
             <div class="tea-card-prep-info">
-              <span>${tea.brewingDetails.temperature}</span>
+              <span>${temp}</span>
               <span>·</span>
-              <span>${tea.brewingDetails.steepingTime}</span>
+              <span>${time}</span>
             </div>
             <a href="#/tea/${tea.slug}" class="btn btn-secondary btn-sm">Guide →</a>
           </div>
